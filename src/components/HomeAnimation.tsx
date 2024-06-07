@@ -6,7 +6,7 @@ export default function HomeAnimation() {
   const refContainer = createRef<HTMLDivElement>();
 
   // Get current mouse position
-  let event = { clientX: 0, clientY: 0 };
+  let event = { clientX: 500, clientY: 500 };
 
   // If on mobile device use touch events
   if ("ontouchstart" in window) {

@@ -7,9 +7,17 @@ export default function HomeAnimation() {
 
   // Get current mouse position
   let event = { clientX: 0, clientY: 0 };
-  window.addEventListener("mousemove", (e) => {
-    event = e;
-  });
+
+  // If on mobile device use touch events
+  if ("ontouchstart" in window) {
+    window.addEventListener("touchmove", (e) => {
+      event = e.touches[0];
+    });
+  } else {
+    window.addEventListener("mousemove", (e) => {
+      event = e;
+    });
+  }
 
   useEffect(() => {
     if (!refContainer.current) return;

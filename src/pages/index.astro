@@ -5,7 +5,6 @@ import Header from "@components/Header.astro";
 import HomeAnimation from "@components/HomeAnimation";
 import Hr from "@components/Hr.astro";
 import LinkButton from "@components/LinkButton.astro";
-import { SOCIALS } from "@config";
 import Layout from "@layouts/Layout.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { getCollection } from "astro:content";
@@ -15,8 +14,6 @@ const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
-
-const socialCount = SOCIALS.filter((social) => social.active).length;
 ---
 
 <Layout>

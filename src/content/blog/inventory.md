@@ -13,38 +13,9 @@ Here are some items I use and value highly; I would buy them again in a heartbea
 
 # Tech
 
-<div class="flex flex-row flex-wrap">
-  <div class="grow m-2 border rounded-lg border-black text-white bg-[#151515] flex flex-col justify-center hover:bg-[#323232]">
-    <img class="w-44 border-0" src="/assets/images/inventory/macbook.png"/>
-    <p class="text-center">Macbook Air 13" M2</p>
-  </div>
-
-  <div class="grow m-2 border rounded-lg border-black text-white bg-[#151515] flex flex-col justify-center hover:bg-[#323232]">
-    <img class="w-44 border-0" src="/assets/images/inventory/macbook.png"/>
-    <p class="text-center">Macbook Air 13" M2</p>
-  </div>
-
-  <div class="grow m-2 border rounded-lg border-black text-white bg-[#151515] flex flex-col justify-center hover:bg-[#323232]">
-    <img class="w-44 border-0" src="/assets/images/inventory/macbook.png"/>
-    <p class="text-center">Macbook Air 13" M2</p>
-  </div>
-
-  <div class="grow m-2 border rounded-lg border-black text-white bg-[#151515] flex flex-col justify-center hover:bg-[#323232]">
-    <img class="w-44 border-0" src="/assets/images/inventory/macbook.png"/>
-    <p class="text-center">Macbook Air 13" M2</p>
-  </div>
-
-  <div class="grow m-2 border rounded-lg border-black text-white bg-[#151515] flex flex-col justify-center hover:bg-[#323232]">
-    <img class="w-44 border-0" src="/assets/images/inventory/macbook.png"/>
-    <p class="text-center">Macbook Air 13" M2</p>
-  </div>
-
-  <div class="grow m-2 border rounded-lg border-black text-white bg-[#151515] flex flex-col justify-center hover:bg-[#323232]">
-    <img class="w-44 border-0" src="/assets/images/inventory/macbook.png"/>
-    <p class="text-center">Macbook Air 13" M2</p>
-  </div>
+<div class="inventory-container">
+  <a href="https://www.apple.com/fr/macbook-air/">
+    <img src="/assets/images/inventory/macbook.png"/>
+    <p>Macbook Air 13" M2</p>
+  </a>
 </div>
-
-<style>
-
-<style>

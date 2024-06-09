@@ -17,7 +17,6 @@ module.exports = {
     screens: {
       sm: "640px",
     },
-
     extend: {
       textColor: {
         skin: {
@@ -54,10 +53,6 @@ module.exports = {
         },
         transparent: "transparent",
       },
-      fontFamily: {
-        mono: ["IBM Plex Mono", "monospace"],
-      },
-
       typography: {
         DEFAULT: {
           css: {

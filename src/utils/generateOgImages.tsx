@@ -1,21 +1,23 @@
-import satori, { type SatoriOptions } from "satori";
 import { Resvg } from "@resvg/resvg-js";
 import { type CollectionEntry } from "astro:content";
+import fs from "fs";
+import satori, { type SatoriOptions } from "satori";
 import postOgImage from "./og-templates/post";
 import siteOgImage from "./og-templates/site";
 
+// Get dirname
+const __dirname = new URL(".", import.meta.url).pathname;
+
 const fetchFonts = async () => {
   // Regular Font
-  const fontFileRegular = await fetch(
-    "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf"
+  const fontRegular = fs.readFileSync(
+    `${__dirname}/../../assets/fonts/inter/Inter-Regular.ttf`
   );
-  const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
-  const fontFileBold = await fetch(
-    "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf"
+  const fontBold = fs.readFileSync(
+    `${__dirname}/../../assets/fonts/inter/Inter-Bold.ttf`
   );
-  const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
   return { fontRegular, fontBold };
 };

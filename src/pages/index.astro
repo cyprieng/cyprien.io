@@ -20,15 +20,20 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <Header />
   <main id="main-content">
     <section id="hero">
-      <HomeAnimation client:only />
+      <div class="flex justify-center items-center w-full">
+        <h1 class="absolute text-[64px] uppercase">Cyprien</h1>
+        <div class="w-full h-[500px]">
+          <HomeAnimation client:only />
+        </div>
+      </div>
 
       <p>
         Hey I'm Cyprien 👋
         <br />
         I'm a back-end developer from Montpellier, France 🇫🇷
         <br />
-        I share my insights on software development, my coding experiments, and a
-        bit of life advice.
+        I share my insights on software development, my coding experiments, and some
+        random stuff.
       </p>
     </section>
 

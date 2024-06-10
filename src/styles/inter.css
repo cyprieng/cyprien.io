@@ -3,7 +3,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 100;
-    src: url('/assets/fonts/inter/Inter-Thin.ttf') format('truetype');
+    src: url('/assets/fonts/inter/Inter-Thin.woff') format('woff');
 }
 
 /* Inter ExtraLight */
@@ -11,7 +11,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 200;
-    src: url('/assets/fonts/inter/Inter-ExtraLight.ttf') format('truetype');
+    src: url('/assets/fonts/inter/Inter-ExtraLight.woff') format('woff');
 }
 
 /* Inter Light */
@@ -19,7 +19,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 300;
-    src: url('/assets/fonts/inter/Inter-Light.ttf') format('truetype');
+    src: url('/assets/fonts/inter/Inter-Light.woff') format('woff');
 }
 
 /* Inter Regular */
@@ -27,7 +27,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    src: url('/assets/fonts/inter/Inter-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/inter/Inter-Regular.woff') format('woff');
 }
 
 /* Inter Medium */
@@ -35,7 +35,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
-    src: url('/assets/fonts/inter/Inter-Medium.ttf') format('truetype');
+    src: url('/assets/fonts/inter/Inter-Medium.woff') format('woff');
 }
 
 /* Inter SemiBold */
@@ -43,7 +43,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    src: url('/assets/fonts/inter/Inter-SemiBold.ttf') format('truetype');
+    src: url('/assets/fonts/inter/Inter-SemiBold.woff') format('woff');
 }
 
 /* Inter Bold */
@@ -51,7 +51,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    src: url('/assets/fonts/inter/Inter-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/inter/Inter-Bold.woff') format('woff');
 }
 
 /* Inter ExtraBold */
@@ -59,7 +59,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
-    src: url('/assets/fonts/inter/Inter-ExtraBold.ttf') format('truetype');
+    src: url('/assets/fonts/inter/Inter-ExtraBold.woff') format('woff');
 }
 
 /* Inter Black */
@@ -67,5 +67,5 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
-    src: url('/assets/fonts/inter/Inter-Black.ttf') format('truetype');
+    src: url('/assets/fonts/inter/Inter-Black.woff') format('woff');
 }

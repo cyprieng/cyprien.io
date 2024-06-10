@@ -134,10 +134,5 @@ export default function HomeAnimation() {
     window.addEventListener("mousemove", animate);
   }, []);
 
-  return (
-    <div className="flex justify-center items-center w-full">
-      <h1 className="absolute text-[64px] uppercase">Cyprien</h1>
-      <div ref={refContainer} className="w-full h-[500px]"></div>
-    </div>
-  );
+  return <div ref={refContainer} className="w-full h-full"></div>;
 }

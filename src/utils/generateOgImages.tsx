@@ -11,12 +11,12 @@ const __dirname = new URL(".", import.meta.url).pathname;
 const fetchFonts = async () => {
   // Regular Font
   const fontRegular = fs.readFileSync(
-    `${__dirname}/../../assets/fonts/inter/Inter-Regular.ttf`
+    `${__dirname}/../../assets/fonts/inter/Inter-Regular.woff`
   );
 
   // Bold Font
   const fontBold = fs.readFileSync(
-    `${__dirname}/../../assets/fonts/inter/Inter-Bold.ttf`
+    `${__dirname}/../../assets/fonts/inter/Inter-Bold.woff`
   );
 
   return { fontRegular, fontBold };

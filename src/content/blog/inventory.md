@@ -15,7 +15,7 @@ Here are some items I use and value highly; I would buy them again in a heartbea
 
 <div class="inventory-container">
   <a href="https://www.apple.com/fr/macbook-air/">
-    <img src="/assets/images/inventory/macbook.png"/>
+    <img alt="macbook air" src="/assets/images/inventory/macbook.png"/>
     <p>Macbook Air 13" M2</p>
   </a>
 </div>

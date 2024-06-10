@@ -3,7 +3,7 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://www.cyprien.io/",
   author: "Cyprien",
-  desc: "",
+  desc: "Personal site of a back-end developer from Montpellier, France 🇫🇷",
   title: "Cyprien",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
@@ -27,7 +27,7 @@ export const SOCIALS: SocialObjects = [
   {
     name: "Github",
     href: "https://github.com/cyprieng",
-    linkTitle: ` ${SITE.title} on Github`,
+    linkTitle: `${SITE.title} on Github`,
     active: true,
   },
   {

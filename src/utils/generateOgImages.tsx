@@ -30,13 +30,13 @@ const options: SatoriOptions = {
   embedFont: true,
   fonts: [
     {
-      name: "IBM Plex Mono",
+      name: "Inter",
       data: fontRegular,
       weight: 400,
       style: "normal",
     },
     {
-      name: "IBM Plex Mono",
+      name: "Inter",
       data: fontBold,
       weight: 600,
       style: "normal",

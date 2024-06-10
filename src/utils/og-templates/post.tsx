@@ -62,6 +62,16 @@ export default (post: CollectionEntry<"blog">) => {
           >
             {post.data.title}
           </p>
+          <p
+            style={{
+              fontSize: 40,
+              fontWeight: "bold",
+              maxHeight: "84%",
+              overflow: "hidden",
+            }}
+          >
+            {post.data.description}
+          </p>
           <div
             style={{
               display: "flex",
@@ -71,22 +81,8 @@ export default (post: CollectionEntry<"blog">) => {
               fontSize: 28,
             }}
           >
-            <span>
-              by{" "}
-              <span
-                style={{
-                  color: "transparent",
-                }}
-              >
-                "
-              </span>
-              <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-                {post.data.author}
-              </span>
-            </span>
-
             <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-              {SITE.title}
+              by {SITE.title}
             </span>
           </div>
         </div>

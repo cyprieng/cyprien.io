@@ -86,7 +86,6 @@ export default function HomeAnimation() {
       refContainer.current.getBoundingClientRect().width,
       refContainer.current.getBoundingClientRect().height
     );
-    renderer.setAnimationLoop(animate);
     refContainer.current &&
       refContainer.current.appendChild(renderer.domElement);
 
@@ -119,6 +118,7 @@ export default function HomeAnimation() {
       camera.bottom = h / -1;
 
       camera.updateProjectionMatrix();
+      animate();
     }
     window.addEventListener("resize", onWindowResize);
 
@@ -132,6 +132,7 @@ export default function HomeAnimation() {
       renderer.render(scene, camera);
     }
     window.addEventListener("mousemove", animate);
+    animate();
   }, []);
 
   return <div ref={refContainer} className="w-full h-full"></div>;

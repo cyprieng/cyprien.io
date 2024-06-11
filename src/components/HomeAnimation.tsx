@@ -8,19 +8,19 @@ export default function HomeAnimation() {
   // Get current mouse position
   let event = { clientX: 500, clientY: 500 };
 
-  // If on mobile device use touch events
-  if ("ontouchstart" in window) {
-    window.addEventListener("touchmove", (e) => {
-      event = e.touches[0];
-    });
-  } else {
-    window.addEventListener("mousemove", (e) => {
-      event = e;
-    });
-  }
-
   useEffect(() => {
     if (!refContainer.current) return;
+
+    // If on mobile device use touch events
+    if ("ontouchstart" in window) {
+      window.addEventListener("touchmove", (e) => {
+        event = e.touches[0];
+      });
+    } else {
+      window.addEventListener("mousemove", (e) => {
+        event = e;
+      });
+    }
 
     // Settings for the SDF geometry
     const settings = {

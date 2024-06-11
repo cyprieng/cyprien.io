@@ -17,6 +17,10 @@ module.exports = {
     screens: {
       sm: "640px",
     },
+    fontFamily: {
+      'body': ['Montserrat', 'serif'],
+      'title': ['Inter', 'sans-serif'],
+    },
     extend: {
       textColor: {
         skin: {

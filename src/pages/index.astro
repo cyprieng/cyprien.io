@@ -21,7 +21,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <main id="main-content">
     <section id="hero">
       <div class="flex justify-center items-center w-full">
-        <h1 class="absolute text-[64px] uppercase">Cyprien</h1>
+        <h1>Cyprien</h1>
         <div class="w-full h-[500px]">
           <HomeAnimation client:only />
         </div>
@@ -100,7 +100,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     @apply pb-6 pt-8;
   }
   #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+    @apply absolute text-[48px] uppercase my-4 inline-block font-bold sm:my-8 sm:text-5xl;
   }
   #hero .rss-link {
     @apply mb-6;

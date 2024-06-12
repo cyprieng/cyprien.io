@@ -2,7 +2,7 @@
 import Card from "@components/Card";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import HomeAnimation from "@components/HomeAnimation";
+import HomeAnimationLazy from "@components/HomeAnimationLazy";
 import Hr from "@components/Hr.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Layout from "@layouts/Layout.astro";
@@ -23,7 +23,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       <div class="flex justify-center items-center w-full">
         <h1>Cyprien</h1>
         <div class="w-full h-[500px]">
-          <HomeAnimation client:idle />
+          <HomeAnimationLazy client:idle />
         </div>
       </div>
 

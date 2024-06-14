@@ -3,9 +3,9 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://www.cyprien.io/",
   author: "Cyprien",
-  desc: "Personal site of a back-end developer from Montpellier, France 🇫🇷",
+  desc: "Personal site of a back-end developer from Montpellier, France",
   title: "Cyprien",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "og.png",
   lightAndDarkMode: true,
   postPerPage: 3,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes

@@ -41,6 +41,26 @@ export default () => {
           height: "80%",
         }}
       >
+        {/* Background container */}
+        <div
+          style={{
+            opacity: "0.4",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            position: "absolute",
+          }}
+        >
+          <img
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+            }}
+            src="https://www.cyprien.io/assets/images/home-animation.png"
+          />
+        </div>
+
         <div
           style={{
             display: "flex",

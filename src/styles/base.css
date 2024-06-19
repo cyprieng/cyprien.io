@@ -86,7 +86,7 @@
     prose-img:border-skin-line prose-hr:!border-skin-line;
   }
   .prose a {
-    @apply break-words hover:!text-skin-accent;
+    @apply break-words hover:!text-skin-accent underline;
   }
   .prose thead th:first-child,
   tbody td:first-child,
@@ -118,6 +118,10 @@
 
   pre > code {
     white-space: pre;
+  }
+
+  #main-content a {
+    @apply break-words hover:!text-skin-accent underline decoration-dashed underline-offset-4;
   }
 }
 

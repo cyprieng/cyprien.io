@@ -3,13 +3,29 @@
 }
 
 .inventory-container > a{
-    @apply no-underline grow m-2 border rounded-lg dark:border-black text-white dark:bg-gray-800 flex flex-col justify-center dark:hover:bg-gray-600 bg-gray-200 hover:bg-gray-100 border-slate-50;
+    @apply relative no-underline grow m-2 border rounded-lg dark:border-black text-white dark:bg-gray-800 flex flex-col justify-center dark:hover:bg-gray-600 bg-gray-200 hover:bg-gray-100 border-slate-50;
 }
 
 .inventory-container > a > img {
     @apply w-44 border-0;
 }
 
-.inventory-container > a > p {
+.inventory-container > a:hover > img {
+    @apply opacity-10;
+}
+
+.inventory-container > a > .title {
     @apply text-center;
+}
+
+.inventory-container > a:hover > .title {
+    @apply opacity-10;
+}
+
+.inventory-container > a > .description {
+    @apply hidden absolute w-full h-full p-2 text-center;
+}
+
+.inventory-container > a:hover > .description{
+    @apply flex justify-center items-center;
 }

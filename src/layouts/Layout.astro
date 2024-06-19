@@ -54,7 +54,13 @@ const socialImageURL = new URL(
 
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preload" as="image" href="/assets/images/home-animation.png" />
+
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/home-animation.webp"
+      media="(max-width: 768px)"
+    />
 
     <!-- General Meta Tags -->
     <title>{title}</title>

@@ -31,12 +31,18 @@ const HomeAnimationLazy = () => {
         <Suspense fallback={null}>
           {isMobile ? (
             <div className="h-full w-full flex justify-center items-center">
-              <img
-                src="/assets/images/home-animation.png"
-                height="401"
-                width="346"
-                alt=""
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet="/assets/images/home-animation.webp"
+                />
+                <img
+                  src="/assets/images/home-animation.png"
+                  height="401"
+                  width="346"
+                  alt=""
+                />
+              </picture>
             </div>
           ) : (
             <HomeAnimation />

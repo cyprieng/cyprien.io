@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "cyprien.io",
   "version": "4.2.0",
   "scripts": {
     "dev": "astro dev",

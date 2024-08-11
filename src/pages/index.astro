@@ -54,7 +54,6 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
               ))}
             </ul>
           </section>
-          {recentPosts.length > 0 && <Hr />}
         </>
       )
     }
@@ -121,7 +120,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   /* ===== Featured & Recent Posts Sections ===== */
   #featured,
   #recent-posts {
-    @apply pb-6 pt-12;
+    @apply pt-6;
   }
   #featured h2,
   #recent-posts h2 {

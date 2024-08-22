@@ -4,7 +4,7 @@ pubDatetime: 2024-06-07T00:47:00.000Z
 modDatetime: 2024-06-07T00:47:00.000Z
 title: Inventory
 slug: inventory
-featured: true
+featured: false
 draft: false
 description: A list of things that I use and (almost) can't live without
 ---

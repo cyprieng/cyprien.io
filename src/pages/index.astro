@@ -20,21 +20,18 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <Header activeNav="home" />
   <main id="main-content">
     <section id="hero">
-      <div class="flex justify-center items-center w-full">
-        <h1>Cyprien</h1>
-        <div class="w-full h-[500px]">
+      <div class="flex justify-center items-center">
+        <div class="hello-text">
+          <h2>Hey I'm Cyprien 👋</h2>
+          I'm a software engineer living in Montpellier, France 🇫🇷
+          <br />
+          I share my insights on software development, coding experiments, and various
+          other topics.
+        </div>
+        <div class="w-full h-[500px] opacity-20">
           <HomeAnimationLazy client:idle />
         </div>
       </div>
-
-      <p>
-        Hey I'm Cyprien 👋
-        <br />
-        I'm a back-end developer from Montpellier, France 🇫🇷
-        <br />
-        I share my insights on software development, coding experiments, and various
-        other topics.
-      </p>
     </section>
 
     <Hr />
@@ -61,7 +58,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     {
       recentPosts.length > 0 && (
         <section id="recent-posts">
-          <h2>Recent Posts</h2>
+          <h2>Posts</h2>
           <ul>
             {recentPosts.map(
               ({ data, slug }, index) =>
@@ -95,11 +92,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 <style>
   /* ===== Hero Section ===== */
-  #hero {
-    @apply pb-6 pt-8;
-  }
-  #hero h1 {
-    @apply absolute text-[48px] uppercase my-4 inline-block font-bold sm:my-8 sm:text-5xl;
+  #hero .hello-text {
+    @apply max-w-[500px] absolute z-50;
   }
   #hero .rss-link {
     @apply mb-6;

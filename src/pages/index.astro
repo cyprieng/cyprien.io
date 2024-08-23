@@ -2,9 +2,9 @@
 import Card from "@components/Card";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import HomeAnimationLazy from "@components/HomeAnimationLazy";
 import Hr from "@components/Hr.astro";
 import LinkButton from "@components/LinkButton.astro";
+import Terminal from "@components/Terminal.astro";
 import Layout from "@layouts/Layout.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { getCollection } from "astro:content";
@@ -20,18 +20,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <Header activeNav="home" />
   <main id="main-content">
     <section id="hero">
-      <div class="flex justify-center items-center">
-        <div class="hello-text">
-          <h2>Hey I'm Cyprien 👋</h2>
-          I'm a software engineer living in Montpellier, France 🇫🇷
-          <br />
-          Here is my personal corner of the web where I post mostly on technical
-          subject.
-        </div>
-        <div class="w-full h-[500px] opacity-20">
-          <HomeAnimationLazy client:idle />
-        </div>
-      </div>
+      <Terminal />
     </section>
 
     <Hr />
@@ -92,17 +81,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 <style>
   /* ===== Hero Section ===== */
-  #hero .hello-text {
-    @apply max-w-[500px] absolute z-50;
-  }
-  #hero .rss-link {
-    @apply mb-6;
-  }
-  #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
-  }
-  #hero p {
-    @apply my-2;
+  #hero {
+    @apply p-10;
   }
   .social-wrapper {
     @apply mt-4 flex flex-col sm:flex-row sm:items-center;

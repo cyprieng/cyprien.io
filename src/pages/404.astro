@@ -1,8 +1,8 @@
 ---
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import HomeAnimationLazy from "@components/HomeAnimationLazy";
 import LinkButton from "@components/LinkButton.astro";
+import Terminal from "@components/Terminal.astro";
 import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 ---
@@ -11,12 +11,9 @@ import Layout from "@layouts/Layout.astro";
   <Header />
 
   <main id="main-content">
-    <div class="flex justify-center items-center w-full">
-      <h1 class="absolute text-[48px] uppercase">404 - Not Found</h1>
-      <div class="w-full h-[500px]">
-        <HomeAnimationLazy client:idle />
-      </div>
-    </div>
+    <section class="w-full">
+      <Terminal command="ls /404">ls: /404: No such file or directory</Terminal>
+    </section>
 
     <div class="text-center">
       <LinkButton
@@ -33,6 +30,6 @@ import Layout from "@layouts/Layout.astro";
 
 <style>
   #main-content {
-    @apply mx-auto w-full;
+    @apply mx-auto pt-10 w-full;
   }
 </style>

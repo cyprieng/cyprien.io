@@ -1,16 +1,19 @@
+---
+export interface Props {
+  command: string;
+}
+
+const { command } = Astro.props;
+---
+
 <div class="fakeMenu">
   <div class="fakeButtons fakeClose"></div>
   <div class="fakeButtons fakeMinimize"></div>
   <div class="fakeButtons fakeZoom"></div>
 </div>
 <div class="fakeScreen">
-  <p class="line1">$ whoami</p>
-  <p class="line2">
-    Hey I'm Cyprien 👋 <br />
-    I'm a software engineer living in Montpellier, France 🇫🇷
-    <br />
-    Here is my personal corner of the web where I post mostly on technical subject.
-  </p>
+  <p class="line1">$ {command}</p>
+  <p class="line2"><slot /></p>
   <p class="line3">$ <span class="cursor">_</span></p>
 </div>
 

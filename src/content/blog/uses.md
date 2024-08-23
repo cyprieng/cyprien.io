@@ -2,8 +2,8 @@
 author: Cyprien
 pubDatetime: 2024-06-07T00:47:00.000Z
 modDatetime: 2024-06-07T00:47:00.000Z
-title: Inventory
-slug: inventory
+title: What I use and highly value
+slug: uses
 featured: false
 draft: false
 description: A list of things that I use and (almost) can't live without
@@ -102,6 +102,16 @@ Here are some items I use and value highly; I would buy them again in a heartbea
 <br/>
 
 # Sports
+
+<div class="inventory-container">
+  <a href="https://www.garmin.com/fr-FR/p/621802">
+    <img alt="garmin instinct" src="/assets/images/inventory/garmin.png"/>
+    <p class="title">Garmin Instinct</p>
+    <p class="description">Best sport watch for every day and running</p>
+  </a>
+</div>
+
+# Others
 
 <div class="inventory-container">
   <a href="https://www.garmin.com/fr-FR/p/621802">

@@ -4,14 +4,14 @@
   <div class="fakeButtons fakeZoom"></div>
 </div>
 <div class="fakeScreen">
-  <p class="line1">$ whoami<span class="cursor1">_</span></p>
+  <p class="line1">$ whoami</p>
   <p class="line2">
     Hey I'm Cyprien 👋 <br />
     I'm a software engineer living in Montpellier, France 🇫🇷
     <br />
     Here is my personal corner of the web where I post mostly on technical subject.
   </p>
-  <p class="line3">$ <span class="cursor2">_</span></p>
+  <p class="line3">$ <span class="cursor">_</span></p>
 </div>
 
 <style>
@@ -67,9 +67,6 @@
     font-size: 1.25em;
     font-family: monospace;
     white-space: normal;
-    overflow: hidden;
-    width: 0;
-    height: 25px;
   }
 
   span {
@@ -77,27 +74,17 @@
     font-weight: bold;
   }
 
-  .line1 {
+  .line1,
+  .line3 {
     color: #9cd9f0;
-    animation: type 1s 1s steps(20, end) forwards;
-  }
-
-  .cursor1 {
-    animation: blink 1s 2s 2 forwards;
   }
 
   .line2 {
     color: #cdee69;
-    animation: type 1s 4s steps(20, end) forwards;
   }
 
-  .line3 {
-    color: #9cd9f0;
-    animation: type 1s 5s steps(20, end) forwards;
-  }
-
-  .cursor2 {
-    animation: blink 1s 6s infinite forwards;
+  .cursor {
+    animation: blink 1s 0s infinite forwards;
   }
 
   @keyframes blink {
@@ -115,13 +102,6 @@
     }
     100% {
       opacity: 0;
-    }
-  }
-
-  @keyframes type {
-    to {
-      width: 100%;
-      height: auto;
     }
   }
 </style>

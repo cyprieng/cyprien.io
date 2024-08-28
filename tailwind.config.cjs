@@ -20,6 +20,7 @@ module.exports = {
     fontFamily: {
       'body': ['Montserrat', 'serif'],
       'title': ['Inter', 'sans-serif'],
+      'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
     },
     extend: {
       textColor: {

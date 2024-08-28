@@ -6,105 +6,74 @@ export interface Props {
 const { command } = Astro.props;
 ---
 
-<div class="fakeMenu">
-  <div class="fakeButtons fakeClose"></div>
-  <div class="fakeButtons fakeMinimize"></div>
-  <div class="fakeButtons fakeZoom"></div>
+<div class="menu">
+  <div class="buttons close"></div>
+  <div class="buttons minimize"></div>
+  <div class="buttons zoom"></div>
 </div>
-<div class="fakeScreen">
+<div class="screen">
   <p class="line1">$ {command}</p>
   <p class="line2"><slot /></p>
   <p class="line3">$ <span class="cursor">_</span></p>
 </div>
 
 <style>
-  .fakeButtons {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    border: 1px solid #000;
-    position: relative;
-    left: 6px;
-    background-color: #ff3b47;
-    border-color: #9d252b;
-    display: inline-block;
+  .buttons {
+    @apply h-[10px] w-[10px] rounded-full border border-solid relative left-[6px] bg-[#ff3b47] border-[#9d252b] inline-block;
   }
 
-  .fakeMinimize {
-    left: 11px;
-    background-color: #ffc100;
-    border-color: #9d802c;
+  .minimize {
+    @apply left-[11px] bg-[#ffc100] border-[#9d802c];
   }
 
-  .fakeZoom {
-    left: 16px;
-    background-color: #00d742;
-    border-color: #049931;
+  .zoom {
+    @apply left-[16px] bg-[#00d742] border-[#049931];
   }
 
-  .fakeMenu {
-    width: 100%;
-    box-sizing: border-box;
-    height: 25px;
-    background-color: #bbb;
-    margin: 0 auto;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+  .menu {
+    @apply w-full box-border h-[25px] bg-[#bbb] mx-auto rounded-t-[5px];
   }
 
-  .fakeScreen {
-    background-color: #151515;
-    box-sizing: border-box;
-    width: 100%;
-    min-height: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    cursor: text;
+  .screen {
+    @apply bg-[#151515] box-border w-full min-h-[300px] mx-auto p-[20px] rounded-b-[5px] cursor-text;
   }
 
   p {
-    margin-left: -8.5em;
-    text-align: left;
-    font-size: 1.25em;
-    font-family: monospace;
-    white-space: normal;
+    @apply -ml-[8.5em] text-left text-base font-mono whitespace-normal;
   }
 
   span {
-    color: #fff;
-    font-weight: bold;
+    @apply text-white font-bold;
   }
 
   .line1,
   .line3 {
-    color: #9cd9f0;
+    @apply text-[#9cd9f0];
   }
 
   .line2 {
-    color: #cdee69;
+    @apply text-[#cdee69];
   }
 
   .cursor {
-    animation: blink 1s 0s infinite forwards;
+    @apply animate-[blink_1s_0s_infinite_forwards];
   }
 
   @keyframes blink {
     0% {
-      opacity: 0;
+      @apply opacity-0;
     }
     40% {
-      opacity: 0;
+      @apply opacity-0;
     }
     50% {
-      opacity: 1;
+      @apply opacity-100;
     }
     90% {
-      opacity: 1;
+      @apply opacity-100;
     }
     100% {
-      opacity: 0;
+      @apply opacity-0;
     }
   }
 </style>

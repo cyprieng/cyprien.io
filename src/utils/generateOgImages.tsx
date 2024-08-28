@@ -9,20 +9,16 @@ import siteOgImage from "./og-templates/site";
 const __dirname = new URL(".", import.meta.url).pathname;
 
 const fetchFonts = async () => {
-  // Regular Font
-  const fontRegular = fs.readFileSync(
-    `${__dirname}/../../assets/fonts/inter/Inter-Regular.woff`
+  const robotoMonoRegular = await fs.promises.readFile(
+    `${__dirname}/../../assets/fonts/RobotoMono-Regular.ttf`
   );
-
-  // Bold Font
-  const fontBold = fs.readFileSync(
-    `${__dirname}/../../assets/fonts/inter/Inter-Bold.woff`
+  const robotoMonoBold = await fs.promises.readFile(
+    `${__dirname}/../../assets/fonts/RobotoMono-Bold.ttf`
   );
-
-  return { fontRegular, fontBold };
+  return { robotoMonoRegular, robotoMonoBold };
 };
 
-const { fontRegular, fontBold } = await fetchFonts();
+const { robotoMonoRegular, robotoMonoBold } = await fetchFonts();
 
 const options: SatoriOptions = {
   width: 1200,
@@ -30,15 +26,15 @@ const options: SatoriOptions = {
   embedFont: true,
   fonts: [
     {
-      name: "Inter",
-      data: fontRegular,
+      name: "Roboto Mono",
+      data: robotoMonoRegular,
       weight: 400,
       style: "normal",
     },
     {
-      name: "Inter",
-      data: fontBold,
-      weight: 600,
+      name: "Roboto Mono",
+      data: robotoMonoBold,
+      weight: 700,
       style: "normal",
     },
   ],

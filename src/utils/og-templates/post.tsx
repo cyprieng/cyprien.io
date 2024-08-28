@@ -5,107 +5,112 @@ export default (post: CollectionEntry<"blog">) => {
   return (
     <div
       style={{
-        background: "#fefbfb",
-        width: "100%",
-        height: "100%",
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        flexDirection: "column",
+        padding: "50px",
       }}
     >
       <div
         style={{
-          position: "absolute",
-          top: "-1px",
-          right: "-1px",
-          border: "4px solid #000",
-          background: "#ecebeb",
-          opacity: "0.9",
-          borderRadius: "4px",
+          width: "100%",
+          boxSizing: "border-box",
+          height: "25px",
+          backgroundColor: "#bbb",
+          margin: "0 auto",
+          borderTopRightRadius: "5px",
+          borderTopLeftRadius: "5px",
           display: "flex",
-          justifyContent: "center",
-          margin: "2.5rem",
-          width: "88%",
-          height: "80%",
-        }}
-      />
-
-      <div
-        style={{
-          border: "4px solid #000",
-          background: "#fefbfb",
-          borderRadius: "4px",
-          display: "flex",
-          justifyContent: "center",
-          margin: "2rem",
-          width: "88%",
-          height: "80%",
+          flexDirection: "row",
+          alignItems: "center",
+          paddingLeft: "6px",
         }}
       >
-        {/* Background container */}
         <div
           style={{
-            opacity: "0.4",
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            position: "absolute",
+            height: "10px",
+            width: "10px",
+            borderRadius: "50%",
+            border: "1px solid #000",
+            backgroundColor: "#ff3b47",
+            borderColor: "#9d252b",
+            marginRight: "5px",
           }}
-        >
-          <img
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-            }}
-            src="https://www.cyprien.io/assets/images/home-animation.png"
-          />
-        </div>
-
+        ></div>
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            margin: "20px",
-            width: "90%",
-            height: "90%",
+            height: "10px",
+            width: "10px",
+            borderRadius: "50%",
+            border: "1px solid #000",
+            backgroundColor: "#ffc100",
+            borderColor: "#9d802c",
+            marginRight: "5px",
+          }}
+        ></div>
+        <div
+          style={{
+            height: "10px",
+            width: "10px",
+            borderRadius: "50%",
+            border: "1px solid #000",
+            backgroundColor: "#00d742",
+            borderColor: "#049931",
+          }}
+        ></div>
+      </div>
+      <div
+        style={{
+          backgroundColor: "#151515",
+          boxSizing: "border-box",
+          width: "1100px",
+          height: "505px",
+          margin: "0 auto",
+          padding: "0 0 0 20px",
+          borderBottomLeftRadius: "5px",
+          borderBottomRightRadius: "5px",
+          display: "flex",
+          flexDirection: "column",
+          fontSize: "1.75em",
+          fontFamily: '"Roboto Mono", monospace',
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
+        }}
+      >
+        <p
+          style={{
+            textAlign: "left",
+            color: "#9cd9f0",
           }}
         >
-          <p
+          $ head -n 1 "{post.data.title}"
+        </p>
+        <p
+          style={{
+            textAlign: "left",
+            color: "#cdee69",
+            paddingLeft: "5px",
+            marginTop: "0",
+          }}
+        >
+          {post.data.description}
+        </p>
+        <p
+          style={{
+            textAlign: "left",
+            color: "#9cd9f0",
+          }}
+        >
+          $
+          <span
             style={{
-              fontSize: 72,
+              marginLeft: "20px",
+              color: "#fff",
               fontWeight: "bold",
-              maxHeight: "84%",
-              overflow: "hidden",
             }}
           >
-            {post.data.title}
-          </p>
-          <p
-            style={{
-              fontSize: 40,
-              fontWeight: "bold",
-              maxHeight: "84%",
-              overflow: "hidden",
-            }}
-          >
-            {post.data.description}
-          </p>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "100%",
-              marginBottom: "8px",
-              fontSize: 28,
-            }}
-          >
-            <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-              by {SITE.title}
-            </span>
-          </div>
-        </div>
+            _
+          </span>
+        </p>
       </div>
     </div>
   );

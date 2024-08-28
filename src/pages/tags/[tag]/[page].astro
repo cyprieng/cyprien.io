@@ -1,10 +1,10 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
 import TagPosts from "@layouts/TagPosts.astro";
-import getUniqueTags from "@utils/getUniqueTags";
-import getPostsByTag from "@utils/getPostsByTag";
 import getPageNumbers from "@utils/getPageNumbers";
 import getPagination from "@utils/getPagination";
+import getPostsByTag from "@utils/getPostsByTag";
+import getUniqueTags from "@utils/getUniqueTags";
+import { type CollectionEntry, getCollection } from "astro:content";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -21,7 +21,7 @@ export async function getStaticPaths() {
     const tagPosts = getPostsByTag(posts, tag);
     const totalPages = getPageNumbers(tagPosts.length);
 
-    return totalPages.map(page => ({
+    return totalPages.map((page) => ({
       params: { tag, page },
       props: { tag, tagName },
     }));

@@ -10,10 +10,10 @@ const __dirname = new URL(".", import.meta.url).pathname;
 
 const fetchFonts = async () => {
   const robotoMonoRegular = await fs.promises.readFile(
-    `${__dirname}/../../assets/fonts/RobotoMono-Regular.ttf`
+    `${__dirname}/../../assets/fonts/RobotoMono-Regular.ttf`,
   );
   const robotoMonoBold = await fs.promises.readFile(
-    `${__dirname}/../../assets/fonts/RobotoMono-Bold.ttf`
+    `${__dirname}/../../assets/fonts/RobotoMono-Bold.ttf`,
   );
   return { robotoMonoRegular, robotoMonoBold };
 };

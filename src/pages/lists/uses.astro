@@ -1,0 +1,145 @@
+---
+import { InventoryItem, InventoryList } from "@components/lists/inventory.tsx";
+import ListsLayout from "@layouts/ListsLayout.astro";
+---
+
+<ListsLayout frontmatter={{ title: "What I use and highly value" }}>
+  <p>
+    Here are some items I use and value highly; I would buy them again in a
+    heartbeat.
+  </p>
+
+  <h2>Main tech</h2>
+
+  <InventoryList>
+    <InventoryItem
+      href="https://www.apple.com/fr/macbook-air/"
+      img="/assets/images/inventory/macbook.png"
+      alt="macbook air"
+      title='Macbook Air 13" M2'
+      description="Due to using a MacBook for my day job, I decided to switch to a Mac for personal use as well to minimize context-switching. The MacBook Air has proven to be the perfect machine for me."
+    />
+
+    <InventoryItem
+      href="https://www.apple.com/fr/shop/buy-iphone/iphone-14"
+      img="/assets/images/inventory/iphone.png"
+      alt="iphone"
+      title="iPhone 14"
+      description="First iPhone since a 6S. Simply perfect for me."
+    />
+
+    <InventoryItem
+      href="https://www.apple.com/fr/airpods-pro/"
+      img="/assets/images/inventory/airpods.png"
+      alt="airpods pro"
+      title="Airpods pro 2"
+      description="Best headphones to focus anywhere."
+    />
+
+    <InventoryItem
+      href="https://www.anker.com/fr/products/a1654-maggo-6600mah-qi2-batterie-externe-magsafe-compatible"
+      img="/assets/images/inventory/battery.png"
+      alt="anker battery"
+      title="Anker battery"
+      description="Very handy during for long days without electricity access."
+    />
+
+    <InventoryItem
+      href="https://www.logitech.com/fr-fr/products/mice/mx-vertical-ergonomic-mouse.910-005448.html"
+      img="/assets/images/inventory/mouse.png"
+      alt="logitech mouse"
+      title="Logitech MX Vertical"
+      description="The only mouse that don't hurt my wrist after long days of work."
+    />
+
+    <InventoryItem
+      href="https://www.apple.com/fr/airtag/"
+      img="/assets/images/inventory/airtag.png"
+      alt="airtag"
+      title="AirTag"
+      description="I put those on my keys, cars, luggage..."
+    />
+
+    <InventoryItem
+      href="https://www.amazon.fr/kindle-paperwhite-16-gb-desormais-dote-dun-ecran-68-et-dun-eclairage-chaud-reglable-sans-publicites/dp/B09TMF6742/"
+      img="/assets/images/inventory/kindle.png"
+      alt="kindle"
+      title="Kindle Paperwhite"
+      description="Use it 80% of the time when reading."
+    />
+
+    <InventoryItem
+      href="https://www.belkin.com/fr/station-d%27accueil-universelle-usb-creg-triple%C2%A0affichage/P-INC007.html"
+      img="/assets/images/inventory/belkin_hub.png"
+      alt="belkin hub"
+      title="Belkin USB-C hub"
+      description="Too expensive, but allows me to plug my 3 screens on my macbook with one usb-c cable."
+    />
+
+    <InventoryItem
+      href="https://www.apple.com/fr/apple-tv-4k/"
+      img="/assets/images/inventory/apple_tv.png"
+      alt="apple tv"
+      title="Apple TV 4K"
+      description="Perfect when you are in the Apple ecosystem."
+    />
+
+    <InventoryItem
+      href="https://www.sonos.com/fr-fr/shop/amp"
+      img="/assets/images/inventory/sonos_amp.png"
+      alt="sonos amp"
+      title="Sonos Amp"
+      description="Perfect bridge between old hi-fi system and modernity."
+    />
+
+    <InventoryItem
+      href="https://fr.dreametech.com/products/dreamebot-l10s-ultra"
+      img="/assets/images/inventory/dreame_l10s.png"
+      alt="dreame l10s"
+      title="Dreame L10s Ultra"
+      description="Save so much time and the confort to always come back to a clean house is awesome."
+    />
+
+    <InventoryItem
+      href="https://www.withings.com/fr/fr/body-smart"
+      img="/assets/images/inventory/withings_body_smart.png"
+      alt="withings body smart"
+      title="Withings body smart"
+      description="The precision is always average on this kind of device but it gives a good overview on changes over time."
+    />
+
+    <InventoryItem
+      href="https://www.withings.com/fr/fr/sleep-analyzer/shop"
+      img="/assets/images/inventory/withings_sleep.png"
+      alt="withings sleep analyzer"
+      title="Withings sleep analyzer"
+      description="The precision is always average on this kind of device but it's the only one where you don't have to wear anything on you."
+    />
+  </InventoryList>
+
+  <br />
+
+  <h2>Sports</h2>
+
+  <InventoryList>
+    <InventoryItem
+      href="https://www.garmin.com/fr-FR/p/621802"
+      img="/assets/images/inventory/garmin.png"
+      alt="garmin instinct"
+      title="Garmin Instinct"
+      description="Best sport watch for every day and running"
+    />
+  </InventoryList>
+
+  <h2>Others</h2>
+
+  <InventoryList>
+    <InventoryItem
+      href="https://www.garmin.com/fr-FR/p/621802"
+      img="/assets/images/inventory/garmin.png"
+      alt="garmin instinct"
+      title="Garmin Instinct"
+      description="Best sport watch for every day and running"
+    />
+  </InventoryList>
+</ListsLayout>

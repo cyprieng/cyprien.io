@@ -10,9 +10,9 @@ _Updated August 22nd, 2024_
 After years of being entirely focused on my day job, here is my current TODO:
 
 - ✅ (Re-)Creating my blog
-- Post regulary on my blog
-- Get back to building side projects
+- ✍️ Post regularly on my blog
+- 🏗️ Get back to building side projects
 
 And on a more personal side:
 
-- Train for the 2025 marathon of Barcelona
+- 🏃‍♂️ Train for the 2025 marathon of Barcelona

@@ -133,3 +133,8 @@
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
 }
+
+/* Specific style for about page */
+section[id="about"] li img{
+  @apply w-5 h-5 mr-2 inline-block;
+}

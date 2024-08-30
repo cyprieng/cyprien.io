@@ -1,3 +1,5 @@
+import "@styles/inventory.css";
+
 export interface ListProps {
   children: React.ReactNode;
 }

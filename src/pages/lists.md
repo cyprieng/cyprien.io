@@ -3,6 +3,7 @@ layout: ../layouts/ListsLayout.astro
 title: "Lists"
 ---
 
-For now there is only the list of stuff I own and recommend, but I'll add more lists here in the future.
+I love making lists. Here are some random ones:
 
-- [Uses](/lists/uses)
+- [My essential gear](/lists/uses)
+- [My favorite softwares and services](/lists/softwares)

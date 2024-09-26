@@ -34,14 +34,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       featuredPosts.length > 0 && (
         <>
           <section id="featured">
-            <h2>Featured</h2>
+            <h1>Featured</h1>
             <ul>
               {featuredPosts.map(({ data, slug }) => (
-                <Card
-                  href={`/posts/${slug}/`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
+                <Card href={`/posts/${slug}/`} frontmatter={data} />
               ))}
             </ul>
           </section>
@@ -52,16 +48,12 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     {
       recentPosts.length > 0 && (
         <section id="recent-posts">
-          <h2>Posts</h2>
+          <h1>Posts</h1>
           <ul>
             {recentPosts.map(
               ({ data, slug }, index) =>
                 index < 4 && (
-                  <Card
-                    href={`/posts/${slug}/`}
-                    frontmatter={data}
-                    secHeading={false}
-                  />
+                  <Card href={`/posts/${slug}/`} frontmatter={data} />
                 ),
             )}
           </ul>
@@ -101,8 +93,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   #recent-posts {
     @apply pt-6;
   }
-  #featured h2,
-  #recent-posts h2 {
+  #featured h1,
+  #recent-posts h1 {
     @apply text-2xl font-semibold tracking-wide;
   }
   .all-posts-btn-wrapper {

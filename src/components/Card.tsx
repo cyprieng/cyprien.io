@@ -8,7 +8,7 @@ export interface Props {
   secHeading?: boolean;
 }
 
-export default function Card({ href, frontmatter, secHeading = true }: Props) {
+export default function Card({ href, frontmatter }: Props) {
   const { title, pubDatetime, modDatetime } = frontmatter;
 
   const headerProps = {
@@ -23,11 +23,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
         href={href}
         className="inline-block text-lg font-medium text-skin-accent !no-underline focus-visible:no-underline focus-visible:underline-offset-0"
       >
-        {secHeading ? (
-          <h2 {...headerProps}>{title}</h2>
-        ) : (
-          <h3 {...headerProps}>{title}</h3>
-        )}
+        <h2 {...headerProps}>{title}</h2>
       </a>
       <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
     </li>

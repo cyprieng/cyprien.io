@@ -7,7 +7,7 @@
 }
 
 .inventory-container > a > img {
-    @apply max-w-44 max-h-24 border-0;
+    @apply max-w-44 max-h-24 border-0 object-contain;
 }
 
 .inventory-container > a:hover > img {

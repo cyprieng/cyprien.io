@@ -3,10 +3,11 @@ layout: ../../layouts/ListsLayout.astro
 title: "My favorite softwares and services"
 ---
 
-Here's a list of softwares and services I appreciate.
+Here's a list of softwares and services I use and appreciate.
 
 - [Cursor](https://cursor.sh/) currently testing this as my main text editor
 - [Alacritty](https://alacritty.org/) as my terminal
+- [Rectangle](https://rectangleapp.com) clearly no idea how you can use a mac without this
 
 <br />
 
@@ -27,6 +28,8 @@ Here's a list of softwares and services I appreciate.
 - [Proxmox](https://www.proxmox.com/en/proxmox-ve) to manage my homelab
 - [Adguard Home](https://adguard.com/adguard-home/overview.html) to block all ads and trackers on my home network
 - [Frigate](https://frigate.video/) to monitor and detect motion on my home cameras
+
+<br />
 
 - [Spotify](https://www.spotify.com/) for music
 - [Endel](https://endel.io/) for focus music

@@ -6,29 +6,31 @@ title: How this blog is built
 slug: colophon
 featured: false
 draft: false
-description: A short description of the technologies used to make this blog
+description: A detailed look at the technologies and process behind creating this blog
 tags:
-  - dev
+  - development
+  - web development
 ---
 
-After years of wanting to build my blog, here it is.
+After years of wanting to build my blog, here it is finally.
 The first post of this blog will be a quick description on how I've built it.
 
 # Choose the tech stack
 
-One of my first two requirements was:
+My primary requirements were:
 
-- Blog posts should be written in markdown
-- The blog should be hostable with only static content
+1. Blog posts should be written in markdown
+2. The blog should be hostable with only static content
 
 With these two requirements, a list of obvious contenders was:
 
 - Hugo
 - Jekyll
 - Astro
-- ...
+- Gatsby
+- Eleventy
 
-I reviewed them and finally settled for Astro, as it seems to have gained much popularity recently, and I wanted to stay in the Javascript ecosystem.
+I reviewed them and finally settled for Astro, due to its recent surge in popularity, and its compatibility with the Javascript ecosystem and React.
 
 # Build it
 
@@ -47,20 +49,21 @@ All the source code is freely available here: [github.com/cyprieng/cyprien.io](h
 
 I use Cloudflare Pages to host the blog.
 It's very convenient as it automatically detects push on the main branch, builds it, and deploys it.
+It also provides a preview environment that deploys automatically my dev branch.
 And the cherry on the cake it's completely free.
 
 # Performance and accessibility
 
-I have made some effort to have a good performance even if it's not perfect:
+I've made significant efforts to optimize performance, although there's always room for improvement:
 ![Performance](assets/images/posts/colophon/performance.png)
 _Tested with [pagespeed.web.dev](https://pagespeed.web.dev/)_
 
 I've also checked the accessibility using these two Chrome extensions:
 
-- [Wave](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh)
-- [Axe](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+- [WAVE Evaluation Tool](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh)
+- [axe DevTools](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
 
-I have also checked the environmental cost of the site, and the result pleased me:
+I'm also proud of the site's environmental impact:
 ![Carbon impact](assets/images/posts/colophon/carbon.png)
 _Tested with [websitecarbon.com](https://www.websitecarbon.com/)_
 
@@ -71,7 +74,9 @@ All the files in the content directory (ie the blog posts) are under [CC BY 4.0]
 And all the other files are freely usable by anyone under the MIT license.
 Like this, all the technical parts can be used by anyone, but the content cannot be copied without attribution.
 
-# Notice an issue?
+# Notice an issue or have an idea?
 
-If you find an issue of any kind (typo, broken design, etc...) don't hesitate to file a bug here: [Github issues](https://github.com/cyprieng/cyprien.io/issues/new).
-Or contact me directly by email (see link at the bottom of the page).
+Your feedback is valuable! If you notice any issues (typos, broken design, etc.) or have suggestions for improvement, please:
+
+1. File an issue on [GitHub](https://github.com/cyprieng/cyprien.io/issues/new)
+2. Contact me directly via email (link in the footer)

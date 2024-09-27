@@ -106,6 +106,10 @@
     @apply hidden;
   }
 
+  .prose img + em {
+    @apply block text-center text-sm;
+  }
+
   /* ===== scrollbar ===== */
   html {
     overflow-y: scroll;

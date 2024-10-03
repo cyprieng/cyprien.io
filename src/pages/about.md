@@ -3,11 +3,11 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-Hey I'm Cyprien.
+Hey, I'm Cyprien.
 
-I'm a software engineer working in a small startup near Montpellier as a lead developer.
+I'm a software engineer working as a lead developer at a small startup near Montpellier.
 
-I'm mostly interested in backend developement, but here is a list of tech I use frequently :
+I'm mostly interested in backend development, but here is a list of tech I use frequently :
 
 - ![Swift logo](assets/images/icons/swift.svg) Swift
 - ![PHP logo](assets/images/icons/php.svg) PHP

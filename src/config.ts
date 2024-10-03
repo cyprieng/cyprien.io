@@ -3,7 +3,7 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://www.cyprien.io/",
   author: "Cyprien",
-  desc: "Personal site of a back-end developer from Montpellier, France",
+  desc: "Personal site of a software engineer from Montpellier, France",
   title: "Cyprien",
   ogImage: "og.png",
   lightAndDarkMode: true,

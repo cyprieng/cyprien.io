@@ -3,7 +3,7 @@ layout: ../layouts/NowLayout.astro
 title: "Now"
 ---
 
-Based on the brillant idea of <a href="https://nownownow.com/">nownownow.com</a>, here is what I'm doing now.
+Based on the brilliant idea of <a href="https://nownownow.com/">nownownow.com</a>, here is what I'm doing now.
 
 _Updated August 22nd, 2024_
 

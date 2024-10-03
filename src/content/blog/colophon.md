@@ -47,7 +47,6 @@ I think the value comes more from the content than the tech side of the blog.
 Moreover, I have a lot of more interesting projects on the shelf.
 So I decided not to start from scratch and instead start with an existing Astro theme.
 I settled for this one: [astro-paper](https://github.com/satnaing/astro-paper).
-I didn't appreciate the design very much, but it had all the functionality that I wanted.
 
 5min later my blog was up and running on my laptop.
 After some customization, here it is.

@@ -7,15 +7,15 @@ Hey, I'm Cyprien.
 
 I'm a software engineer working as a lead developer at a small startup near Montpellier.
 
-I'm mostly interested in backend development, but here is a list of tech I use frequently :
+I'm mostly interested in backend development, here is a list of tech I use frequently :
 
-- ![Swift logo](assets/images/icons/swift.svg) Swift
-- ![PHP logo](assets/images/icons/php.svg) PHP
 - ![TypeScript logo](assets/images/icons/typescript.svg) Javascript / Typescript
-- ![Go logo](assets/images/icons/gopher.svg) Go
 - ![React logo](assets/images/icons/react.svg) React
-- ![Python logo](assets/images/icons/python.svg) Python
 - ![Vue.js logo](assets/images/icons/vuejs.svg) Vuejs
+- ![Python logo](assets/images/icons/python.svg) Python
+- ![PHP logo](assets/images/icons/php.svg) PHP
+- ![Go logo](assets/images/icons/gopher.svg) Go
+- ![Swift logo](assets/images/icons/swift.svg) Swift
 - ![PostgreSQL logo](assets/images/icons/postgresql.svg) Postgres
 - ![ClickHouse logo](assets/images/icons/clickhouse.svg) Clickhouse
 - ![MongoDB logo](assets/images/icons/mongodb.svg) MongoDB

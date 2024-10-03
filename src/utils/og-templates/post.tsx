@@ -70,7 +70,7 @@ export default (post: CollectionEntry<"blog">) => {
           display: "flex",
           flexDirection: "column",
           fontSize: "1.75em",
-          fontFamily: '"Roboto Mono", monospace',
+          fontFamily: '"JetBrains Mono", monospace',
           justifyContent: "flex-start",
           alignItems: "flex-start",
         }}

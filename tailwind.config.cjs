@@ -18,9 +18,9 @@ module.exports = {
       sm: "640px",
     },
     fontFamily: {
-      'body': ['Montserrat', 'serif'],
-      'title': ['Inter', 'sans-serif'],
-      'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+      'body': ['JetBrains Mono', 'monospace'],
+      'title': ['JetBrains Mono', 'monospace'],
+      'mono': ['JetBrains Mono', 'monospace'],
     },
     extend: {
       textColor: {

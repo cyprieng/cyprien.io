@@ -30,7 +30,15 @@ With these two requirements, a list of obvious contenders was:
 - Gatsby
 - Eleventy
 
-I reviewed them and finally settled for Astro, due to its recent surge in popularity, and its compatibility with the Javascript ecosystem and React.
+|             | Hugo      | Jekyll | Astro      | Gatsby     | Eleventy   |
+| ----------- | --------- | ------ | ---------- | ---------- | ---------- |
+| Language    | Go        | Ruby   | JavaScript | JavaScript | JavaScript |
+| Year        | 2013      | 2008   | 2021       | 2015       | 2021       |
+| Build Speed | Very Fast | Fast   | Fast       | Moderate   | Fast       |
+| Ecosystem   | Large     | Large  | Growing    | Large      | Growing    |
+
+I wanted to have a framework in the Javascript ecosystem. And from this, the two best were, in my opinion, Astro and Eleventy.
+I finally settled for Astro as it seems to have a slightly bigger community and more features.
 
 # Build it
 

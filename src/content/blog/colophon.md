@@ -86,6 +86,16 @@ All the files in the content directory (ie the blog posts) are under [CC BY 4.0]
 And all the other files are freely usable by anyone under the MIT license.
 Like this, all the technical parts can be used by anyone, but the content cannot be copied without attribution.
 
+## Why colophon in the url?
+
+Colophon comes from the publishing world.
+
+From [Wikipedia](<https://en.wikipedia.org/wiki/Colophon_(publishing)>):
+
+> In publishing, a colophon is a brief statement containing information about the publication of a book such as an "imprint" (the place of publication, the publisher, and the date of publication).
+
+And I learned about it from [this blog post](https://eva.town/colophon).
+
 ## Notice an issue or have an idea?
 
 Your feedback is valuable! If you notice any issues (typos, broken design, etc.) or have suggestions for improvement, please:

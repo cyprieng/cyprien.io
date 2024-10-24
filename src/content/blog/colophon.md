@@ -15,7 +15,7 @@ tags:
 After years of wanting to build my blog, here it is finally.
 The first post of this blog will be a quick description on how I've built it.
 
-# Choose the tech stack
+## Choose the tech stack
 
 My primary requirements were:
 
@@ -40,7 +40,7 @@ With these two requirements, a list of obvious contenders was:
 I wanted to have a framework in the Javascript ecosystem. And from this, the two best were, in my opinion, Astro and Eleventy.
 I finally settled for Astro as it seems to have a slightly bigger community and more features.
 
-# Build it
+## Build it
 
 Then came the normally hard part, building the blog from the ground up.
 I think the value comes more from the content than the tech side of the blog.
@@ -52,14 +52,19 @@ I settled for this one: [astro-paper](https://github.com/satnaing/astro-paper).
 After some customization, here it is.
 All the source code is freely available here: [github.com/cyprieng/cyprien.io](https://github.com/cyprieng/cyprien.io).
 
-# Hosting
+## Comments
+
+I've added comments to the blog posts using [Giscus](https://giscus.app/).
+It's free, open source, and doesn't require any server.
+
+## Hosting
 
 I use Cloudflare Pages to host the blog.
 It's very convenient as it automatically detects push on the main branch, builds it, and deploys it.
 It also provides a preview environment that deploys automatically my dev branch.
 And the cherry on the cake it's completely free.
 
-# Performance and accessibility
+## Performance and accessibility
 
 I've made significant efforts to optimize performance, although there's always room for improvement:
 ![Performance](assets/images/posts/colophon/performance.png)
@@ -74,14 +79,14 @@ I'm also proud of the site's environmental impact:
 ![Carbon impact](assets/images/posts/colophon/carbon.png)
 _Tested with [websitecarbon.com](https://www.websitecarbon.com/)_
 
-# License
+## License
 
 The LICENSE for this kind of project is a bit tricky, here is mine: [LICENSE](https://github.com/cyprieng/cyprien.io/blob/main/LICENSE).
 All the files in the content directory (ie the blog posts) are under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 And all the other files are freely usable by anyone under the MIT license.
 Like this, all the technical parts can be used by anyone, but the content cannot be copied without attribution.
 
-# Notice an issue or have an idea?
+## Notice an issue or have an idea?
 
 Your feedback is valuable! If you notice any issues (typos, broken design, etc.) or have suggestions for improvement, please:
 

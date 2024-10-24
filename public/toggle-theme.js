@@ -23,8 +23,27 @@ function setPreference() {
   reflectPreference();
 }
 
+// Change giscus theme
+function changeGiscusTheme (theme) {
+  // Send message to giscus iframe
+  function sendMessage(message) {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+  }
+
+  sendMessage({
+    setConfig: {
+      theme: theme
+    }
+  });
+}
+
 function reflectPreference() {
   document.firstElementChild.setAttribute("data-theme", themeValue);
+
+  // Set the theme for giscus
+  changeGiscusTheme(themeValue);
 
   document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
 

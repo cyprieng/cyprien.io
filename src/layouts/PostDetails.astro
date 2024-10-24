@@ -81,6 +81,34 @@ const layoutProps = {
       {tags.map((tag) => <Tag tag={slugifyStr(tag)} />)}
     </ul>
 
+    <!-- Giscus comments -->
+    <div class="giscus mb-8"></div>
+    <script>
+      let giscusAttributes = {
+        src: "https://giscus.app/client.js",
+        "data-repo": "cyprieng/cyprien.io",
+        "data-repo-id": "R_kgDOME6MCQ",
+        "data-category": "Announcements",
+        "data-category-id": "DIC_kwDOME6MCc4CjqKi",
+        "data-mapping": "pathname",
+        "data-strict": "1",
+        "data-reactions-enabled": "1",
+        "data-emit-metadata": "0",
+        "data-input-position": "top",
+        "data-theme": themeValue || "preferred_color_scheme", // Use themeValue from toggle-theme.js
+        "data-lang": "en",
+        "data-loading": "lazy",
+        crossorigin: "anonymous",
+        async: "",
+      };
+
+      let giscusScript = document.createElement("script");
+      Object.entries(giscusAttributes).forEach(([key, value]) =>
+        giscusScript.setAttribute(key, value),
+      );
+      document.body.appendChild(giscusScript);
+    </script>
+
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
     >

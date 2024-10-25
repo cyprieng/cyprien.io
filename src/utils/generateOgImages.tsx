@@ -9,16 +9,16 @@ import siteOgImage from "./og-templates/site";
 const __dirname = new URL(".", import.meta.url).pathname;
 
 const fetchFonts = async () => {
-  const jetBrainsMonoRegular = await fs.promises.readFile(
-    `${__dirname}/../../assets/fonts/JetBrainsMono-Regular.ttf`,
+  const robotoMonoRegular = await fs.promises.readFile(
+    `${__dirname}/../../assets/fonts/RobotoMono-Regular.ttf`,
   );
-  const jetBrainsMonoBold = await fs.promises.readFile(
-    `${__dirname}/../../assets/fonts/JetBrainsMono-Bold.ttf`,
+  const robotoMonoBold = await fs.promises.readFile(
+    `${__dirname}/../../assets/fonts/RobotoMono-Bold.ttf`,
   );
-  return { jetBrainsMonoRegular, jetBrainsMonoBold };
+  return { robotoMonoRegular, robotoMonoBold };
 };
 
-const { jetBrainsMonoRegular, jetBrainsMonoBold } = await fetchFonts();
+const { robotoMonoRegular, robotoMonoBold } = await fetchFonts();
 
 const options: SatoriOptions = {
   width: 1200,
@@ -26,14 +26,14 @@ const options: SatoriOptions = {
   embedFont: true,
   fonts: [
     {
-      name: "JetBrains Mono",
-      data: jetBrainsMonoRegular,
+      name: "Roboto Mono",
+      data: robotoMonoRegular,
       weight: 400,
       style: "normal",
     },
     {
-      name: "JetBrains Mono",
-      data: jetBrainsMonoBold,
+      name: "Roboto Mono",
+      data: robotoMonoBold,
       weight: 700,
       style: "normal",
     },

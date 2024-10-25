@@ -18,9 +18,9 @@ module.exports = {
       sm: "640px",
     },
     fontFamily: {
-      'body': ['Montserrat', 'serif'],
-      'title': ['Inter', 'sans-serif'],
-      'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+      'body': ['Source Serif 4', 'serif'],
+      'title': ['Source Serif 4', 'sans-serif'],
+      'mono': ['monospace'],
     },
     extend: {
       textColor: {
@@ -61,6 +61,10 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            fontSize: "1.25rem",
+            lineHeight: "1.5",
+            fontWeight: "400",
+            textAlign: "justify",
             pre: {
               color: false,
             },

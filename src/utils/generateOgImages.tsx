@@ -10,10 +10,10 @@ const __dirname = new URL(".", import.meta.url).pathname;
 
 const fetchFonts = async () => {
   const jetBrainsMonoRegular = await fs.promises.readFile(
-    `${__dirname}/../../../src/utils/og-templates/fonts/JetBrainsMono-Regular.ttf`,
+    `${__dirname}../../src/utils/og-templates/fonts/JetBrainsMono-Regular.ttf`,
   );
   const jetBrainsMonoBold = await fs.promises.readFile(
-    `${__dirname}/../../../src/utils/og-templates/fonts/JetBrainsMono-Bold.ttf`,
+    `${__dirname}../../src/utils/og-templates/fonts/JetBrainsMono-Bold.ttf`,
   );
   return { jetBrainsMonoRegular, jetBrainsMonoBold };
 };

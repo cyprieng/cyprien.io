@@ -7,7 +7,7 @@ export const SITE: Site = {
   title: "Cyprien",
   ogImage: "og.png",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 20,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 

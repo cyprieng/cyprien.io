@@ -23,7 +23,7 @@ Here is my current setup:
 
 The homelab lives in an [Ikea Kallax](https://www.ikea.com/fr/fr/p/kallax-etagere-brun-noir-60275812/#content), with a [door](https://www.ikea.com/fr/fr/p/kallax-bloc-porte-brun-noir-60278170/#content). I have removed the back of the door to allow some airflow at the back.
 
-![Schema of the homelab](assets/images/posts/homelab/homelab.svg)
+![Schema of the homelab](assets/images/posts/homelab/homelab.png)
 
 ## Freebox Pop
 

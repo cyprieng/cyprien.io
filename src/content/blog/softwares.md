@@ -1,6 +1,14 @@
 ---
-layout: ../../layouts/ListsLayout.astro
-title: "My favorite softwares and services"
+author: Cyprien
+pubDatetime: 2024-10-24T13:40:00.000Z
+modDatetime: 2024-10-24T13:40:00.000Z
+title: Softwares
+slug: softwares
+featured: false
+draft: false
+description: My favorite softwares and services
+tags:
+  - softwares
 ---
 
 Here's a list of softwares and services I use and appreciate.

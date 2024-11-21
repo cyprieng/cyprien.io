@@ -9,7 +9,6 @@ draft: false
 description: A detailed look at the technologies and process behind creating this blog
 tags:
   - development
-  - web development
 ---
 
 After years of wanting to build my blog, here it is finally.
@@ -63,6 +62,12 @@ I use Cloudflare Pages to host the blog.
 It's very convenient as it automatically detects push on the main branch, builds it, and deploys it.
 It also provides a preview environment that deploys automatically my dev branch.
 And the cherry on the cake it's completely free.
+
+## Analytics
+
+I have wondered for a long time if an analytics is necessary for a blog. I think it's not, but I really like to have a basic understanding of who comes here, even if I should not care about this.
+
+So I set up [Goatcounter](https://www.goatcounter.com) as my analytics. It's free, simple and respectful of personal data.
 
 ## Performance and accessibility
 

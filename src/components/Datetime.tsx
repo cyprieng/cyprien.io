@@ -19,12 +19,12 @@ export default function Datetime({
   icon = true
 }: Props) {
   return (
-    <div className={`flex items-center space-x-2 opacity-80 ${className}`}>
+    <div className={`flex items-center opacity-80 ${className}`}>
       {icon ?
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={`${size === "sm" ? "scale-90" : "scale-100"
-            } inline-block h-6 w-6 min-w-[1.375rem] fill-skin-base`}
+            } inline-block h-6 w-6 min-w-[1.375rem] fill-skin-base mr-2`}
           aria-hidden="true"
         >
           <path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path>
@@ -33,7 +33,7 @@ export default function Datetime({
         : ""}
 
       {modDatetime && modDatetime > pubDatetime ? (
-        <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
+        <span className={`mr-2 italic ${size === "sm" ? "text-sm" : "text-base"}`}>
           Updated:
         </span>
       ) : (

@@ -21,7 +21,7 @@ export default function Card({ href, frontmatter }: Props) {
     <li className="my-6 flex">
       <a
         href={href}
-        className="inline-block text-lg font-medium text-skin-accent !no-underline focus-visible:no-underline focus-visible:underline-offset-0"
+        className="inline-block text-lg font-medium text-skin-accent !no-underline focus-visible:no-underline focus-visible:underline-offset-0 mr-2"
       >
         <h2 {...headerProps}>{title}</h2>
       </a>

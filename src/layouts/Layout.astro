@@ -60,13 +60,6 @@ const socialImageURL = new URL(
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <link
-      rel="preload"
-      as="image"
-      href="/assets/images/home-animation.webp"
-      media="(max-width: 768px)"
-    />
-
     <!-- General Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
@@ -129,8 +122,8 @@ const socialImageURL = new URL(
     <!-- Goat counter script -->
     <script
       is:inline
-      data-goatcounter="https://cyprienio.goatcounter.com/count"
+      data-goatcounter="https://stats.cyprien.io/count"
       async
-      src="//gc.zgo.at/count.js"></script>
+      src="https://stats.cyprien.io/count.js"></script>
   </body>
 </html>

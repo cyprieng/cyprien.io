@@ -13,7 +13,13 @@ const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+
+// Posts by category
+const techPosts = sortedPosts.filter(
+  ({ data }) => !data.featured && !data.tags.includes("list"),
+);
+
+const listsPost = sortedPosts.filter(({ data }) => data.tags.includes("list"));
 ---
 
 <Layout>
@@ -46,11 +52,11 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     }
 
     {
-      recentPosts.length > 0 && (
+      techPosts.length > 0 && (
         <section id="recent-posts">
-          <h1>Posts</h1>
+          <h1>Tech posts</h1>
           <ul>
-            {recentPosts.map(
+            {techPosts.map(
               ({ data, slug }, index) =>
                 index < 10 && (
                   <Card href={`/posts/${slug}/`} frontmatter={data} />
@@ -61,16 +67,21 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       )
     }
 
-    <div class="all-posts-btn-wrapper">
-      <LinkButton href="/posts/">
-        All Posts
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-          ></path>
-        </svg>
-      </LinkButton>
-    </div>
+    {
+      listsPost.length > 0 && (
+        <section id="recent-posts">
+          <h1>Lists</h1>
+          <ul>
+            {listsPost.map(
+              ({ data, slug }, index) =>
+                index < 10 && (
+                  <Card href={`/posts/${slug}/`} frontmatter={data} />
+                ),
+            )}
+          </ul>
+        </section>
+      )
+    }
   </main>
 
   <Footer />

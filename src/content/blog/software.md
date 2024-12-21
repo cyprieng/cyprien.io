@@ -8,9 +8,8 @@ featured: false
 draft: false
 description: My favorite softwares and services
 tags:
-  - random
+  - list
 ---
-
 Here's a list of software and services I use and appreciate.
 
 ## Main dev tools
@@ -52,3 +51,4 @@ You can find all my configurations files [here](https://github.com/cyprieng/dotf
 ## Random services
 
 - [Spotify](https://www.spotify.com/) for music
+

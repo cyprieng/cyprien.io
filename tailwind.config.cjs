@@ -9,8 +9,9 @@ function withOpacity(variableName) {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-  darkMode: ['selector', '[data-theme="dark"]'],
+  darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
     // Remove the following screen breakpoint or add other breakpoints
     // if one breakpoint is not enough for you
@@ -18,9 +19,9 @@ module.exports = {
       sm: "640px",
     },
     fontFamily: {
-      'body': ['Source Serif 4', 'serif'],
-      'title': ['Source Serif 4', 'sans-serif'],
-      'mono': ['monospace'],
+      body: ["Source Serif 4", "serif"],
+      title: ["Source Serif 4", "sans-serif"],
+      mono: ["monospace"],
     },
     extend: {
       textColor: {

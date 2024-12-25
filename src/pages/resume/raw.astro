@@ -1,0 +1,18 @@
+---
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+
+import Resume from "@components/Resume.astro";
+---
+
+<Layout title={`Résumé | ${SITE.title}`}>
+  <main id="main-content">
+    <Resume />
+  </main>
+</Layout>
+
+<style>
+  #main-content {
+    @apply mx-auto pt-10 w-full max-w-[65rem];
+  }
+</style>

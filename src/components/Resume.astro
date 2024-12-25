@@ -1,0 +1,242 @@
+---
+import { Image } from "astro:assets";
+
+//Icons
+import photo from "../assets/images/photo.jpeg";
+import octipas from "../assets/images/octipas.png";
+import profile from "../assets/images/icons/profile.svg?raw";
+import education from "../assets/images/icons/education.svg?raw";
+import location from "../assets/images/icons/location.svg?raw";
+import email from "../assets/images/icons/email.svg?raw";
+import birthday from "../assets/images/icons/birthday.svg?raw";
+import flag from "../assets/images/icons/flag.svg?raw";
+import work from "../assets/images/icons/work.svg?raw";
+---
+
+<div id="resume">
+  <div id="left-column">
+    <div id="resume-main">
+      <Image src={photo} alt="photo" />
+
+      <div id="resume-name">
+        <h1>Cyprien</h1>
+        <h2>Software engineer</h2>
+      </div>
+    </div>
+
+    <div id="resume-profile">
+      <h3>
+        <Fragment set:html={profile} />
+        Profile
+      </h3>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt
+      metus elit, a sodales risus pellentesque vel. Quisque nec sem ligula. Cras
+      facilisis nunc leo, nec lobortis tellus porta ut. Donec id risus ultricies,
+      eleifend nisi efficitur, hendrerit quam. Nulla et nunc varius lacus mattis
+      placerat. Aliquam in lacus sed ex pellentesque ullamcorper. Quisque sit amet
+      luctus urna. Quisque accumsan tristique ex, eu finibus dui molestie elementum.
+      Nullam maximus arcu vel nisl commodo, vel luctus turpis luctus. Etiam vel rutrum
+      leo. Nulla eu odio sodales, convallis ipsum vel, rhoncus erat. Curabitur eget
+      aliquam lorem, id imperdiet metus. Donec libero lacus, sollicitudin in ligula
+      a, accumsan sodales tellus.
+    </div>
+
+    <div id="resume-education">
+      <h3>
+        <Fragment set:html={education} />
+        Education
+      </h3>
+
+      <div class="row">
+        <h4>Université de Technologie de Troyes</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          tincidunt metus elit, a sodales risus pellentesque vel. Quisque nec
+          sem ligula. Cras facilisis nunc leo, nec lobortis tellus porta ut.
+          Donec id risus ultricies, eleifend nisi efficitur, hendrerit quam.
+          Nulla et nunc varius lacus mattis
+        </p>
+        <p class="date">2011-2017</p>
+      </div>
+    </div>
+
+    <div id="resume-work">
+      <h3>
+        <Fragment set:html={work} />
+        Work history
+      </h3>
+
+      <div class="row">
+        <div class="work-title">
+          <Image
+            src={octipas}
+            alt="octipas"
+            class="invert dark:invert-0 w-40"
+          />
+          <div>
+            <h4>Lead developer</h4>
+            <h5>Octipas</h5>
+          </div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          tincidunt metus elit, a sodales risus pellentesque vel. Quisque nec
+          sem ligula. Cras facilisis nunc leo, nec lobortis tellus porta ut.
+          Donec id risus ultricies, eleifend nisi efficitur, hendrerit quam.
+          Nulla et nunc varius lacus mattis
+        </p>
+        <p class="date">2011-2017</p>
+      </div>
+    </div>
+  </div>
+  <div id="right-column">
+    <h3>Details</h3>
+    <p>
+      <Fragment set:html={location} />
+      Montpellier, France
+    </p>
+    <a href="mailto:job@cyprien.io">
+      <Fragment set:html={email} />
+      job@cyprien.io
+    </a>
+    <p>
+      <Fragment set:html={birthday} />
+      2024-08-18
+    </p>
+    <p>
+      <Fragment set:html={flag} />
+      French
+    </p>
+
+    <h3 class="mt-8">Skills</h3>
+
+    <div class="skill">
+      <h4>Javascript</h4>
+      <div class="progress-bar">
+        <div style="width: 45%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <h4>Javascript</h4>
+      <div class="progress-bar">
+        <div style="width: 45%"></div>
+      </div>
+    </div>
+
+    <h3 class="mt-8">Languages</h3>
+
+    <div class="skill">
+      <h4>French</h4>
+      <div class="progress-bar">
+        <div style="width: 100%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <h4>English</h4>
+      <div class="progress-bar">
+        <div style="width: 80%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <h4>Spanish</h4>
+      <div class="progress-bar">
+        <div style="width: 30%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  :global(#resume-main img) {
+    @apply w-40 rounded-lg;
+  }
+
+  #resume {
+    @apply p-8 mb-8 mx-8 flex;
+
+    :global(svg) {
+      @apply h-4 mb-1;
+
+      :global(path) {
+        @apply fill-slate-600 dark:fill-slate-200 stroke-slate-600 dark:stroke-slate-200;
+      }
+    }
+
+    .progress-bar {
+      @apply w-full bg-gray-200 rounded-full h-2.5;
+
+      > div {
+        @apply bg-skin-accent h-2.5 rounded-full;
+      }
+    }
+
+    .skill {
+      @apply mt-4;
+    }
+
+    #right-column {
+      @apply basis-[30%] w-full;
+    }
+
+    #left-column {
+      @apply basis-[70%] mr-10;
+    }
+
+    #resume-main {
+      @apply flex;
+
+      :global(img) {
+        @apply w-40 rounded-lg;
+      }
+
+      #resume-name {
+        @apply ml-8;
+
+        h1 {
+          @apply text-5xl font-bold;
+        }
+
+        h2 {
+          @apply text-lg font-normal mt-3;
+        }
+      }
+    }
+
+    h3 {
+      @apply uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl font-extrabold;
+    }
+
+    #resume-profile {
+      @apply mt-8;
+    }
+
+    #resume-education {
+      @apply mt-8;
+    }
+
+    #resume-work {
+      @apply mt-8;
+
+      .work-title {
+        @apply flex mb-2;
+
+        img {
+          @apply mr-4;
+        }
+      }
+    }
+
+    .row {
+      h4 {
+        @apply font-extrabold text-lg;
+      }
+
+      .date {
+        @apply text-slate-400 dark:text-slate-300;
+      }
+    }
+  }
+</style>

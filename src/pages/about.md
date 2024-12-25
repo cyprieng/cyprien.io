@@ -1,8 +1,8 @@
 ---
-layout: ../layouts/AboutLayout.astro
-title: "About"
+layout: ../layouts/BasicLayout.astro
+title: About
+activeNav: about
 ---
-
 Hey, I'm Cyprien.
 
 I'm a software engineer working as a lead developer at a small startup near Montpellier.
@@ -31,3 +31,4 @@ And here is a random list of stuff I like:
 - 📸 Photography
 
 Feel free to reach me out at [hello@cyprien.io](mailto:hello@cyprien.io), I respond to everyone.
+

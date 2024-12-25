@@ -1,0 +1,32 @@
+---
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+
+import Resume from "@components/Resume.astro";
+---
+
+<Layout title={`Résumé | ${SITE.title}`}>
+  <Header activeNav="resume" />
+
+  <main id="main-content">
+    <Resume />
+
+    <div class="flex justify-center">
+      <a
+        href="#"
+        class="bg-black text-white px-6 py-2 rounded-lg text-lg hover:bg-opacity-80 dark:hover:bg-opacity-30 transition-opacity inline-block no-underline mb-10"
+      >
+        Download
+      </a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  #main-content {
+    @apply mx-auto pt-10 my-5 w-full max-w-[65rem] border dark:border-slate-400 shadow dark:shadow-slate-400;
+  }
+</style>

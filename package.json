@@ -18,6 +18,7 @@
     "@astrojs/check": "^0.7.0",
     "@astrojs/mdx": "^3.1.9",
     "@astrojs/rss": "^4.0.2",
+    "@phosphor-icons/react": "^2.1.7",
     "@resvg/resvg-js": "^2.6.0",
     "astro": "^4.2.1",
     "fuse.js": "^7.0.0",

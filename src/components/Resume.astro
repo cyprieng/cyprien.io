@@ -1,16 +1,20 @@
 ---
 import { Image } from "astro:assets";
 
-//Icons
+// Images
 import photo from "../assets/images/photo.jpeg";
 import octipas from "../assets/images/octipas.png";
-import profile from "../assets/images/icons/profile.svg?raw";
-import education from "../assets/images/icons/education.svg?raw";
-import location from "../assets/images/icons/location.svg?raw";
-import email from "../assets/images/icons/email.svg?raw";
-import birthday from "../assets/images/icons/birthday.svg?raw";
-import flag from "../assets/images/icons/flag.svg?raw";
-import work from "../assets/images/icons/work.svg?raw";
+
+// Icons
+import {
+  GraduationCap,
+  User,
+  MapPin,
+  EnvelopeSimple,
+  Cake,
+  Flag,
+  SuitcaseSimple,
+} from "@phosphor-icons/react/dist/ssr";
 ---
 
 <div id="resume">
@@ -26,7 +30,7 @@ import work from "../assets/images/icons/work.svg?raw";
 
     <div id="resume-profile">
       <h3>
-        <Fragment set:html={profile} />
+        <User />
         Profile
       </h3>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt
@@ -43,7 +47,7 @@ import work from "../assets/images/icons/work.svg?raw";
 
     <div id="resume-education">
       <h3>
-        <Fragment set:html={education} />
+        <GraduationCap />
         Education
       </h3>
 
@@ -62,7 +66,7 @@ import work from "../assets/images/icons/work.svg?raw";
 
     <div id="resume-work">
       <h3>
-        <Fragment set:html={work} />
+        <SuitcaseSimple />
         Work history
       </h3>
 
@@ -92,19 +96,19 @@ import work from "../assets/images/icons/work.svg?raw";
   <div id="right-column">
     <h3>Details</h3>
     <p>
-      <Fragment set:html={location} />
+      <MapPin />
       Montpellier, France
     </p>
     <a href="mailto:job@cyprien.io">
-      <Fragment set:html={email} />
+      <EnvelopeSimple />
       job@cyprien.io
     </a>
     <p>
-      <Fragment set:html={birthday} />
+      <Cake />
       2024-08-18
     </p>
     <p>
-      <Fragment set:html={flag} />
+      <Flag />
       French
     </p>
 

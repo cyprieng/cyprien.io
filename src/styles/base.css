@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -24,7 +24,12 @@
     --color-border: 255, 255, 255;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-title font-semibold -tracking-tight;
   }
 
@@ -136,9 +141,13 @@
     white-space: pre;
   }
 
-  #main-content a {
+  #main-content a:not(.button) {
     @apply break-words hover:!text-skin-accent underline decoration-dashed underline-offset-4;
   }
+}
+
+.button {
+  @apply bg-black text-white px-6 py-2 rounded-lg text-lg hover:bg-opacity-80 dark:hover:bg-opacity-30 transition-opacity inline-block !no-underline mb-10 hover:!text-[#FF79C6];
 }
 
 @layer components {
@@ -152,7 +161,7 @@
 }
 
 /* Avoid table overflow on small screens */
-table{
+table {
   @apply block overflow-x-auto;
 }
 
@@ -160,3 +169,4 @@ table{
 section[id="about"] li img {
   @apply w-5 h-5 mr-2 inline-block;
 }
+

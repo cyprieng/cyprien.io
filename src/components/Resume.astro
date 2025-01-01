@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 // Images
 import photo from "../assets/images/photo.jpeg";
 import octipas from "../assets/images/octipas.png";
+import slb from "../assets/images/slb.jpeg";
 
 // Icons
 import {
@@ -14,7 +15,27 @@ import {
   Cake,
   Flag,
   SuitcaseSimple,
+  GithubLogo,
 } from "@phosphor-icons/react/dist/ssr";
+
+const skills = {
+  Javascript: 100,
+  Python: 100,
+  Go: 80,
+  VueJS: 90,
+  React: 80,
+  PHP: 100,
+  "Docker/K8S/Terraform": 90,
+  "AWS/Azure": 80,
+  MongoDB: 70,
+  "MySQL/PostgreSQL": 80,
+};
+
+const languages = {
+  French: 100,
+  English: 80,
+  Spanish: 30,
+};
 ---
 
 <div id="resume">
@@ -33,16 +54,13 @@ import {
         <User />
         Profile
       </h3>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt
-      metus elit, a sodales risus pellentesque vel. Quisque nec sem ligula. Cras
-      facilisis nunc leo, nec lobortis tellus porta ut. Donec id risus ultricies,
-      eleifend nisi efficitur, hendrerit quam. Nulla et nunc varius lacus mattis
-      placerat. Aliquam in lacus sed ex pellentesque ullamcorper. Quisque sit amet
-      luctus urna. Quisque accumsan tristique ex, eu finibus dui molestie elementum.
-      Nullam maximus arcu vel nisl commodo, vel luctus turpis luctus. Etiam vel rutrum
-      leo. Nulla eu odio sodales, convallis ipsum vel, rhoncus erat. Curabitur eget
-      aliquam lorem, id imperdiet metus. Donec libero lacus, sollicitudin in ligula
-      a, accumsan sodales tellus.
+      Professional software engineer with 8+ years of experience spanning software
+      development, architecture, infrastructure, and leading teams.
+      <br />
+      Experienced in designing and delivering scalable, efficient solutions.
+      <br />
+      Passionate about technology, problem-solving, and continually exploring new
+      tools and frameworks. Seeking to bring my skills to an innovative organization.
     </div>
 
     <div id="resume-education">
@@ -52,15 +70,15 @@ import {
       </h3>
 
       <div class="row">
-        <h4>Université de Technologie de Troyes</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-          tincidunt metus elit, a sodales risus pellentesque vel. Quisque nec
-          sem ligula. Cras facilisis nunc leo, nec lobortis tellus porta ut.
-          Donec id risus ultricies, eleifend nisi efficitur, hendrerit quam.
-          Nulla et nunc varius lacus mattis
-        </p>
-        <p class="date">2011-2017</p>
+        <h4>Master's degree from Université de Technologie de Troyes</h4>
+        <p>Master's degree in Computer Science.</p>
+        <p class="date">2011–2017</p>
+      </div>
+
+      <div class="row">
+        <h4>Franklin W. Olin College of Engineering</h4>
+        <p>Exchange semester.</p>
+        <p class="date">September–December 2014</p>
       </div>
     </div>
 
@@ -71,25 +89,51 @@ import {
       </h3>
 
       <div class="row">
-        <div class="work-title">
-          <div>
-            <h4>Lead developer</h4>
-            <h5>Octipas</h5>
-          </div>
-          <Image
-            src={octipas}
-            alt="octipas"
-            class="invert dark:invert-0 w-40"
-          />
-        </div>
+        <Image src={octipas} alt="Octipas" class="invert dark:invert-0 w-40" />
+        <h4>Lead developer</h4>
+        <h5>Octipas by Chapsvision</h5>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-          tincidunt metus elit, a sodales risus pellentesque vel. Quisque nec
-          sem ligula. Cras facilisis nunc leo, nec lobortis tellus porta ut.
-          Donec id risus ultricies, eleifend nisi efficitur, hendrerit quam.
-          Nulla et nunc varius lacus mattis
+          <ul>
+            <li>
+              Designed and implemented RESTful APIs, microservices, and
+              databases to ensure robust and efficient backend systems.
+            </li>
+            <li>
+              Developed responsive and intuitive frontend applications using
+              VueJS.
+            </li>
+            <li>
+              Architected and maintained cloud-based infrastructure on AWS and
+              Azure, ensuring high availability, security, and performance.
+            </li>
+            <li>
+              Managed code reviews, provided mentoring, and offered technical
+              guidance as Lead Developer.
+            </li>
+          </ul>
+
+          <br />
+          <b>Stack:</b> Laravel, Node.js, VueJS, Python, MySQL, Clickhouse, MongoDB,
+          Terraform
         </p>
-        <p class="date">2011-2017</p>
+        <p class="date">2017–Present</p>
+      </div>
+
+      <div class="row">
+        <Image src={slb} alt="octipas" class="w-20" />
+        <h4>Developer (internship)</h4>
+        <h5>SLB (Schlumberger)</h5>
+        <p>
+          <ul>
+            <li>
+              Built a Python framework to simplify integration testing of
+              software in C++ / Qt
+            </li>
+            <li>Wrote tests using the framework.</li>
+            <li>Trained the team to use the framework.</li>
+          </ul>
+        </p>
+        <p class="date">September 2016–February 2017</p>
       </div>
     </div>
   </div>
@@ -111,45 +155,39 @@ import {
       <Flag />
       French
     </p>
+    <a href="https://github.com/cyprieng">
+      <GithubLogo />
+      Github
+    </a>
 
     <h3 class="mt-8">Skills</h3>
 
-    <div class="skill">
-      <h4>Javascript</h4>
-      <div class="progress-bar">
-        <div style="width: 45%"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <h4>Javascript</h4>
-      <div class="progress-bar">
-        <div style="width: 45%"></div>
-      </div>
-    </div>
+    {
+      Object.entries(skills).map(([skill, level]) => {
+        return (
+          <div class="skill">
+            <h4>{skill}</h4>
+            <div class="progress-bar">
+              <div style={{ width: `${level}%` }} />
+            </div>
+          </div>
+        );
+      })
+    }
 
     <h3 class="mt-8">Languages</h3>
-
-    <div class="skill">
-      <h4>French</h4>
-      <div class="progress-bar">
-        <div style="width: 100%"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <h4>English</h4>
-      <div class="progress-bar">
-        <div style="width: 80%"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <h4>Spanish</h4>
-      <div class="progress-bar">
-        <div style="width: 30%"></div>
-      </div>
-    </div>
+    {
+      Object.entries(languages).map(([language, level]) => {
+        return (
+          <div class="skill">
+            <h4>{language}</h4>
+            <div class="progress-bar">
+              <div style={{ width: `${level}%` }} />
+            </div>
+          </div>
+        );
+      })
+    }
   </div>
 </div>
 
@@ -159,7 +197,11 @@ import {
   }
 
   #resume {
-    @apply p-8 mb-8 mx-8 flex;
+    @apply p-8 mb-8 mx-8 flex print:text-xs;
+
+    ul {
+      @apply list-disc pl-5;
+    }
 
     :global(svg) {
       @apply h-4 mb-1;
@@ -200,7 +242,7 @@ import {
         @apply ml-8;
 
         h1 {
-          @apply text-5xl font-bold;
+          @apply text-5xl print:text-3xl font-bold;
         }
 
         h2 {
@@ -210,7 +252,7 @@ import {
     }
 
     h3 {
-      @apply uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl font-extrabold;
+      @apply uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold;
     }
 
     #resume-profile {
@@ -224,18 +266,16 @@ import {
     #resume-work {
       @apply mt-8;
 
-      .work-title {
-        @apply flex justify-between mb-2;
-
-        img {
-          @apply mr-4;
-        }
+      img {
+        @apply mr-4 float-right pl-4;
       }
     }
 
     .row {
+      @apply mb-8;
+
       h4 {
-        @apply font-extrabold text-lg;
+        @apply font-extrabold text-lg print:text-sm;
       }
 
       .date {

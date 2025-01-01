@@ -53,6 +53,7 @@ export default async function () {
       path: `${__dirname}/../../dist/assets/resume.pdf`,
       format: "A4",
       printBackground: true,
+      pageRanges: "1",
     });
 
     // Close browser

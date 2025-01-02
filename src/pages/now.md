@@ -7,13 +7,13 @@ Based on the brilliant idea of <a href="https://nownownow.com/">nownownow.com</a
 
 _Updated August 22nd, 2024_
 
-After years of being entirely focused on my day job, here is my current TODO:
+After years of being entirely focused on my day job, here is my current todo-list:
 
-- ✅ (Re-)Creating my blog
+- ✅ (Re-)Create my blog
 - ✍️ Post regularly on my blog
-- 🏗️ Get back to building side projects
+- 🏗️ Resume building side projects
 
-And on a more personal side:
+And on a more personal note:
 
-- 🏃‍♂️ Train for the 2025 marathon of Barcelona
+- 🏃‍♂️ Train for the 2025 Barcelona Marathon
 

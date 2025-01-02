@@ -1,0 +1,30 @@
+---
+import Card from "@components/Card";
+import type { CollectionEntry } from "astro:content";
+
+const posts = Astro.props.posts as CollectionEntry<"blog">[];
+const title = Astro.props.title as string;
+---
+
+{
+  posts.length > 0 && (
+    <section id="recent-posts">
+      <h1>{title}</h1>
+      <ul>
+        {posts.map(
+          ({ data, slug }, index) =>
+            index < 10 && <Card href={`/posts/${slug}/`} frontmatter={data} />,
+        )}
+      </ul>
+    </section>
+  )
+}
+
+<style>
+  section {
+    @apply pt-6;
+  }
+  h1 {
+    @apply !text-2xl font-semibold tracking-wide;
+  }
+</style>

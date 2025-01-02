@@ -1,25 +1,33 @@
 ---
-import Card from "@components/Card";
+import PostsList from "@components/PostsList.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Hr from "@components/Hr.astro";
-import LinkButton from "@components/LinkButton.astro";
 import Terminal from "@components/Terminal.astro";
 import Layout from "@layouts/Layout.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
-// Posts by category
-const techPosts = sortedPosts.filter(
-  ({ data }) => !data.featured && !data.tags.includes("list"),
-);
+const categorizedPosts = {
+  featured: [] as CollectionEntry<"blog">[],
+  tech: [] as CollectionEntry<"blog">[],
+  random: [] as CollectionEntry<"blog">[],
+};
 
-const listsPost = sortedPosts.filter(({ data }) => data.tags.includes("list"));
+sortedPosts.forEach((post) => {
+  if (post.data.featured) {
+    categorizedPosts.featured.push(post);
+  } else if (!post.data.tags.includes("list")) {
+    categorizedPosts.tech.push(post);
+  } else if (post.data.tags.includes("random")) {
+    categorizedPosts.random.push(post);
+  }
+});
 ---
 
 <Layout>
@@ -30,85 +38,22 @@ const listsPost = sortedPosts.filter(({ data }) => data.tags.includes("list"));
         Hey I'm Cyprien 👋 <br />
         I'm a software engineer living in Montpellier, France 🇫🇷
         <br />
-        Here is my corner of the web where I post mostly on technical matters.
+        Welcome to my corner of the web, where I mostly post about technical topics.
       </Terminal>
     </section>
 
     <Hr />
 
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h1>Featured</h1>
-            <ul>
-              {featuredPosts.map(({ data, slug }) => (
-                <Card href={`/posts/${slug}/`} frontmatter={data} />
-              ))}
-            </ul>
-          </section>
-        </>
-      )
-    }
-
-    {
-      techPosts.length > 0 && (
-        <section id="recent-posts">
-          <h1>Tech posts</h1>
-          <ul>
-            {techPosts.map(
-              ({ data, slug }, index) =>
-                index < 10 && (
-                  <Card href={`/posts/${slug}/`} frontmatter={data} />
-                ),
-            )}
-          </ul>
-        </section>
-      )
-    }
-
-    {
-      listsPost.length > 0 && (
-        <section id="recent-posts">
-          <h1>Lists</h1>
-          <ul>
-            {listsPost.map(
-              ({ data, slug }, index) =>
-                index < 10 && (
-                  <Card href={`/posts/${slug}/`} frontmatter={data} />
-                ),
-            )}
-          </ul>
-        </section>
-      )
-    }
+    <PostsList posts={categorizedPosts.featured} title="Featured posts" />
+    <PostsList posts={categorizedPosts.tech} title="Tech posts" />
+    <PostsList posts={categorizedPosts.random} title="Random posts" />
   </main>
 
   <Footer />
 </Layout>
 
 <style>
-  /* ===== Hero Section ===== */
   #hero {
     @apply p-10;
-  }
-  .social-wrapper {
-    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-  }
-  .social-links {
-    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
-  }
-
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
-  #recent-posts {
-    @apply pt-6;
-  }
-  #featured h1,
-  #recent-posts h1 {
-    @apply text-2xl font-semibold tracking-wide;
-  }
-  .all-posts-btn-wrapper {
-    @apply my-8 text-center;
   }
 </style>

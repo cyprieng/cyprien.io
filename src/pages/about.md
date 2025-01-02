@@ -5,9 +5,9 @@ activeNav: about
 ---
 Hey, I'm Cyprien.
 
-I'm a software engineer working as a lead developer at a small startup near Montpellier.
+I'm a software engineer working as a lead developer near Montpellier.
 
-I'm mostly interested in backend development, here is a list of tech I use frequently :
+I'm primarily interested in backend development. Here's a list of technologies I frequently use :
 
 - ![TypeScript logo](assets/images/icons/typescript.svg) Javascript / Typescript
 - ![React logo](assets/images/icons/react.svg) React
@@ -23,12 +23,11 @@ I'm mostly interested in backend development, here is a list of tech I use frequ
 - ![Azure logo](assets/images/icons/azure.svg) Azure
 - ![AWS logo](assets/images/icons/aws.svg) AWS
 
-And here is a random list of stuff I like:
+And here's a random list of things I enjoy:
 
 - 🏃‍♂️ Running
 - 🚲 Cycling
 - 🥾 Hiking
-- 📸 Photography
 
-Feel free to reach me out at [hello@cyprien.io](mailto:hello@cyprien.io), I respond to everyone.
+Feel free to reach out to me at [hello@cyprien.io](mailto:hello@cyprien.io). I respond to everyone!
 

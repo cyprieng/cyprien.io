@@ -18,19 +18,6 @@ import {
   GithubLogo,
 } from "@phosphor-icons/react/dist/ssr";
 
-const skills = {
-  Javascript: 100,
-  Python: 100,
-  Go: 80,
-  VueJS: 90,
-  React: 80,
-  PHP: 100,
-  "Docker/K8S/Terraform": 90,
-  "AWS/Azure": 80,
-  MongoDB: 70,
-  "MySQL/PostgreSQL": 80,
-};
-
 const languages = {
   French: 100,
   English: 80,
@@ -107,6 +94,11 @@ const languages = {
               Azure, ensuring high availability, security, and performance.
             </li>
             <li>
+              Implemented comprehensive observability solutions using Datadog
+              for monitoring, logging, and APM across the entire application
+              stack.
+            </li>
+            <li>
               Managed code reviews, provided mentoring, and offered technical
               guidance as Lead Developer.
             </li>
@@ -160,34 +152,38 @@ const languages = {
       Github
     </a>
 
-    <h3 class="mt-8">Skills</h3>
+    <div class="skills">
+      <h3 class="mt-8">Skills</h3>
 
-    {
-      Object.entries(skills).map(([skill, level]) => {
-        return (
-          <div class="skill">
-            <h4>{skill}</h4>
-            <div class="progress-bar">
-              <div style={{ width: `${level}%` }} />
-            </div>
-          </div>
-        );
-      })
-    }
+      <h4>Programming Languages</h4>
+      JavaScript, TypeScript, Python, Go, PHP, C/C++, Java, Swift, Objective-C, Bash
 
-    <h3 class="mt-8">Languages</h3>
-    {
-      Object.entries(languages).map(([language, level]) => {
-        return (
-          <div class="skill">
-            <h4>{language}</h4>
-            <div class="progress-bar">
-              <div style={{ width: `${level}%` }} />
+      <h4>Frontend</h4>
+      HTML, CSS, VueJS, React, TailwindCSS
+
+      <h4>Frameworks</h4>
+      Django, Laravel, Next.js, Serverless
+
+      <h4>Databases</h4>
+      MongoDB, MySQL, PostgreSQL, ClickHouse, SQL
+
+      <h4>Cloud & DevOps</h4>
+      Docker, Kubernetes, Terraform, AWS, Azure, Git, Subversion
+
+      <h3 class="mt-8">Languages</h3>
+      {
+        Object.entries(languages).map(([language, level]) => {
+          return (
+            <div class="skill">
+              <h4>{language}</h4>
+              <div class="progress-bar">
+                <div style={{ width: `${level}%` }} />
+              </div>
             </div>
-          </div>
-        );
-      })
-    }
+          );
+        })
+      }
+    </div>
   </div>
 </div>
 
@@ -280,6 +276,12 @@ const languages = {
 
       .date {
         @apply text-slate-400 dark:text-slate-300;
+      }
+    }
+
+    .skills {
+      h4 {
+        @apply mt-4;
       }
     }
   }

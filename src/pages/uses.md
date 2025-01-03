@@ -18,6 +18,9 @@ _Updated January 02, 2025_
 - [Orbea Vector 20](https://www.orbea.com/gb-en/bicycles/urban/vector/cat/vector-20) – My trusted bike for commuting.
 - Custom keyboard with an XD87 PCB
 
+As a bonus, here is a picture of my desk:
+![desk image](assets/images/desk.png)
+
 ---
 
 ## **Software**

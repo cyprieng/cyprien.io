@@ -12,7 +12,8 @@
     "format": "prettier --write . --plugin=prettier-plugin-astro",
     "cz": "cz",
     "prepare": "husky install",
-    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
+    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\"",
+    "generate:resume": "node src/utils/generateResumePDF.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",

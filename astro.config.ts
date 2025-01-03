@@ -6,7 +6,6 @@ import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
 import { SITE } from "./src/config";
 import mdx from "@astrojs/mdx";
-import resumePDFBuildPlugin from "./resume-pdf-build-plugin";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,7 +17,6 @@ export default defineConfig({
     react(),
     sitemap(),
     mdx(),
-    resumePDFBuildPlugin(),
   ],
   markdown: {
     remarkPlugins: [

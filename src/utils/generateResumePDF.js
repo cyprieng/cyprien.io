@@ -13,7 +13,7 @@ const __dirname = dirname(__filename);
  * @param url url to check
  * @param [timeout=30000] timeout to wait
  */
-async function waitForServer(url: string, timeout = 30000) {
+async function waitForServer(url, timeout = 30000) {
   const startTime = Date.now();
 
   while (Date.now() - startTime < timeout) {
@@ -30,7 +30,7 @@ async function waitForServer(url: string, timeout = 30000) {
 /**
  * Generate PDF
  */
-export default async function () {
+export default async function buildResume() {
   // Start dev server
   const devServer = spawn("npm", ["run", "dev"], {
     stdio: "inherit",
@@ -50,7 +50,7 @@ export default async function () {
 
     // Save to pdf
     await page.pdf({
-      path: `${__dirname}/../../dist/assets/resume.pdf`,
+      path: `${__dirname}/../../public/assets/resume.pdf`,
       format: "A4",
       printBackground: true,
       pageRanges: "1",
@@ -63,3 +63,5 @@ export default async function () {
     devServer.kill();
   }
 }
+
+buildResume();

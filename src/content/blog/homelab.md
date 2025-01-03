@@ -2,11 +2,13 @@
 author: Cyprien
 pubDatetime: 2024-10-24T13:40:00.000Z
 modDatetime: 2024-10-24T13:40:00.000Z
-title: My homelab
+title: 'Building my Homelab: Reliable, Quiet, and Powerful'
 slug: homelab
 featured: false
 draft: false
-description: My simple homelab
+description: >-
+  A deep dive into my homelab setup: balancing utility, cost, and performance
+  while keeping it simple and stress-free.
 tags:
   - devops
 ---
@@ -114,6 +116,11 @@ To be honest, that’s probably the next thing that will be replaced, preferably
 ## Eaton 3S 700
 
 All of these devices are plugged into the Eaton 3S 700 UPS, which provides around 30 minutes of autonomy in case of a power outage.
+
+## Raspberry Pi 3
+
+Not pictured in the schema above because it lives in a different place: my office.  
+It runs [shairport-sync](https://github.com/mikebrady/shairport-sync) to add AirPlay to my old sound amplifier.
 
 ## Energy
 

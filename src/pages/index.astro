@@ -22,10 +22,10 @@ const categorizedPosts = {
 sortedPosts.forEach((post) => {
   if (post.data.featured) {
     categorizedPosts.featured.push(post);
-  } else if (!post.data.tags.includes("list")) {
-    categorizedPosts.tech.push(post);
   } else if (post.data.tags.includes("random")) {
     categorizedPosts.random.push(post);
+  } else {
+    categorizedPosts.tech.push(post);
   }
 });
 ---

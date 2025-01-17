@@ -2,13 +2,11 @@
 author: Cyprien
 pubDatetime: 2024-10-24T13:40:00.000Z
 modDatetime: 2024-10-24T13:40:00.000Z
-title: 'Building my Homelab: Reliable, Quiet, and Powerful'
+title: Building my small Homelab
 slug: homelab
 featured: false
 draft: false
-description: >-
-  A deep dive into my homelab setup: balancing utility, cost, and performance
-  while keeping it simple and stress-free.
+description: A description of my homelab setup
 tags:
   - devops
 ---

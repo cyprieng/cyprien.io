@@ -37,7 +37,7 @@ _Note: This is an unofficial client and is not affiliated with Bitwarden Inc._
 
 ## Important Note About Security
 
-Since this is an open-source project, the app is **not signed** with an Apple developer certificate. When first launching the app, you'll need to:
+The app is **not signed** with an Apple developer certificate. When first launching the app, you'll need to:
 
 1. Right-click (or Control-click) the app
 2. Select "Open" from the context menu

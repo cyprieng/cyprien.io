@@ -67,7 +67,7 @@ While analytics might not be critical for a blog, I'm curious to have basic visi
 Optimizing performance and accessibility was a key goal. Here are some highlights:
 
 - **Performance testing:**  
-  ![Performance](assets/images/posts/colophon/performance.png)  
+  ![Performance](assets/images/posts/2024/colophon/performance.png)
   _Tested with [pagespeed.web.dev](https://pagespeed.web.dev/)._
 
 - **Accessibility testing:**  
@@ -77,7 +77,7 @@ Optimizing performance and accessibility was a key goal. Here are some highlight
   - [axe DevTools](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
 
 - **Environmental impact:**  
-  ![Carbon impact](assets/images/posts/colophon/carbon.png)  
+  ![Carbon impact](assets/images/posts/2024/colophon/carbon.png)  
   _Tested with [websitecarbon.com](https://www.websitecarbon.com/)._
 
 ## License

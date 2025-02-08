@@ -18,13 +18,13 @@ At least more useful than what it costs me in electricity.
 
 Here is my current setup:
 
-![Photo of the homelab](assets/images/posts/homelab/photo.png)
+![Photo of the homelab](assets/images/posts/2024/homelab/photo.png)
 
 The homelab lives in an [Ikea Kallax](https://www.ikea.com/fr/fr/p/kallax-etagere-brun-noir-60275812/#content), with a [door](https://www.ikea.com/fr/fr/p/kallax-bloc-porte-brun-noir-60278170/#content). I have removed the back of the door to allow some airflow at the back.
 
 Here is a simplified schema of the homelab:
 
-![Schema of the homelab](assets/images/posts/homelab/homelab.png)
+![Schema of the homelab](assets/images/posts/2024/homelab/homelab.png)
 
 ## Freebox Pop
 
@@ -48,7 +48,7 @@ OPNsense is an amazing piece of software. You can do pretty much anything you wa
 
 I’m lucky to have a pretty good connection speed. Here is a test directly made from OPNsense:
 
-![Speedtest from OPNsense](assets/images/posts/homelab/speedtest.png)
+![Speedtest from OPNsense](assets/images/posts/2024/homelab/speedtest.png)
 
 ## Switch (**Davuaz Da-K9801WP**)
 
@@ -106,7 +106,7 @@ The configurations are very limited.
 The CPU goes off the roof all the time, throttling the whole connection.  
 But as an AP, it does a decent job. Here is a speed test example done on my MacBook connected to WiFi through the Orbi:
 
-![Speedtest from MacBook connected to the Orbi](assets/images/posts/homelab/speedtest-wifi.png)
+![Speedtest from MacBook connected to the Orbi](assets/images/posts/2024/homelab/speedtest-wifi.png)
 
 The speed is limited by the 1Gbps-only port on the Orbi.  
 To be honest, that’s probably the next thing that will be replaced, preferably by something with 2.5Gbps RJ45 and WiFi 7. But that stuff is too expensive right now.

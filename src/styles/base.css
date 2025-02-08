@@ -93,8 +93,7 @@
       prose-table:text-skin-base prose-th:border
       prose-th:border-skin-line prose-td:border
       prose-td:border-skin-line prose-img:!my-2
-      prose-img:mx-auto prose-img:border-2
-      prose-img:border-skin-line prose-hr:!border-skin-line;
+      prose-img:mx-auto;
   }
 
   .prose a {
@@ -169,4 +168,3 @@ table {
 section[id="about"] li img {
   @apply w-5 h-5 mr-2 inline-block;
 }
-

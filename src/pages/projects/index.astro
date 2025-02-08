@@ -1,0 +1,71 @@
+---
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Layout from "@layouts/Layout.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("projects");
+
+const projects = getSortedPosts(posts);
+---
+
+<Layout>
+  <Header activeNav="projects" />
+  <main id="main-content">
+    {
+      projects.map(({ data, slug }) => (
+        <div>
+          <div class="project-container">
+            <img src={data.logo} alt={data.title} class="project-image" />
+            <div class="project-content">
+              <div class="project-header">
+                <h2 class="project-title">{data.title}</h2>
+              </div>
+              <p class="project-description">{data.description}</p>
+              <a href={`/projects/${slug}/`} class="read-more-link">
+                Read more →
+              </a>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    @apply mx-auto w-full max-w-3xl px-4 pb-12 mt-8;
+  }
+
+  .project-container {
+    @apply flex items-start gap-6;
+  }
+
+  .project-image {
+    @apply w-16 h-16 rounded-xl object-cover;
+  }
+
+  .project-content {
+    @apply flex-1;
+  }
+
+  .project-header {
+    @apply flex items-center gap-2 mb-2;
+  }
+
+  .project-title {
+    @apply text-xl font-semibold;
+  }
+
+  .project-description {
+    @apply mb-4;
+  }
+
+  .read-more-link {
+    @apply inline-flex items-center text-sm font-medium;
+  }
+</style>

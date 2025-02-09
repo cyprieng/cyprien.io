@@ -19,6 +19,7 @@ const schema = ({ image }: { image: ImageFunction }) =>
     description: z.string(),
     canonicalURL: z.string().optional(),
     logo: z.string().optional(),
+    link: z.string().optional(),
   });
 
 const blog = defineCollection({

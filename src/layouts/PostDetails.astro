@@ -25,6 +25,7 @@ const {
   modDatetime,
   tags,
   logo,
+  link,
 } = post.data;
 
 const { Content } = await post.render();
@@ -74,6 +75,7 @@ const layoutProps = {
       className="my-2"
     />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+      <!--LOGO-->
       {
         logo ? (
           <>
@@ -85,6 +87,17 @@ const layoutProps = {
               </p>
             </div>
           </>
+        ) : null
+      }
+
+      <!--Project link-->
+      {
+        post.collection === "projects" && link ? (
+          <div class="text-center">
+            <a href={link} class="button" target="_blank">
+              View Project
+            </a>
+          </div>
         ) : null
       }
       <Content />

@@ -3,17 +3,15 @@ layout: ../layouts/BasicLayout.astro
 title: Now
 activeNav: now
 ---
-Based on the brilliant idea of <a href="https://nownownow.com/">nownownow.com</a>, here is what I'm doing now.
+Based on the brilliant idea of [nownownow.com](https://nownownow.com/), here is what I'm doing now.
 
-_Updated August 22nd, 2024_
+_Updated February 9th, 2025_
 
-After years of being entirely focused on my day job, here is my current todo-list:
-
-- ✅ (Re-)Create my blog
-- ✍️ Post regularly on my blog
-- 🏗️ Resume building side projects
+- Finished building my first real project in years: [Wenigwarden](https://www.cyprien.io/projects/wenigwarden/). The main goal was to learn the basics of SwiftUI.
+- Learning more deeply how to build LLMs.
+- Switched from a TKL keyboard and a Logitech vertical mouse, to an hotdox and a Kensington trackball: [see on my uses page](https://www.cyprien.io/uses/). The switch is pretty rough but very promising.
 
 And on a more personal note:
 
-- 🏃‍♂️ Train for the 2025 Barcelona Marathon
+- 🏃 Training for the 2025 Barcelona Marathon (D-35).
 

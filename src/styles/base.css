@@ -93,8 +93,7 @@
       prose-table:text-skin-base prose-th:border
       prose-th:border-skin-line prose-td:border
       prose-td:border-skin-line prose-img:!my-2
-      prose-img:mx-auto prose-img:border-2
-      prose-img:border-skin-line prose-hr:!border-skin-line;
+      prose-img:mx-auto;
   }
 
   .prose a {
@@ -147,7 +146,7 @@
 }
 
 .button {
-  @apply bg-black text-white px-6 py-2 rounded-lg text-lg hover:bg-opacity-80 dark:hover:bg-opacity-30 transition-opacity inline-block !no-underline mb-10 hover:!text-[#FF79C6];
+  @apply bg-black !text-white px-6 py-2 rounded-lg text-lg hover:bg-opacity-80 dark:hover:bg-opacity-30 transition-opacity inline-block !no-underline mb-10 hover:!text-[#FF79C6];
 }
 
 @layer components {
@@ -169,4 +168,3 @@ table {
 section[id="about"] li img {
   @apply w-5 h-5 mr-2 inline-block;
 }
-

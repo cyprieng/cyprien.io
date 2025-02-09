@@ -7,13 +7,16 @@ import getUniqueTags from "@utils/getUniqueTags";
 import { type CollectionEntry, getCollection } from "astro:content";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  post: CollectionEntry<"blog"> | CollectionEntry<"projects">;
   tag: string;
   tagName: string;
 }
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = [
+    ...(await getCollection("blog")),
+    ...(await getCollection("projects")),
+  ];
 
   const tags = getUniqueTags(posts);
 

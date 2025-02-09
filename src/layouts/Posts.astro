@@ -11,7 +11,7 @@ import type { CollectionEntry } from "astro:content";
 export interface Props {
   currentPage: number;
   totalPages: number;
-  paginatedPosts: CollectionEntry<"blog">[];
+  paginatedPosts: CollectionEntry<"blog">[] | CollectionEntry<"projects">[];
 }
 
 const { currentPage, totalPages, paginatedPosts } = Astro.props;

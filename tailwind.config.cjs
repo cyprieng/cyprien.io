@@ -13,11 +13,6 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
-    // Remove the following screen breakpoint or add other breakpoints
-    // if one breakpoint is not enough for you
-    screens: {
-      sm: "640px",
-    },
     fontFamily: {
       body: ["Source Serif 4", "serif"],
       title: ["Source Serif 4", "sans-serif"],

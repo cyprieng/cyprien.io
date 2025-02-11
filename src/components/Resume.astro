@@ -33,6 +33,29 @@ const languages = {
       <div id="resume-name">
         <h1>Cyprien</h1>
         <h2>Software engineer</h2>
+
+        <div class="md:hidden">
+          <p>
+            <MapPin />
+            Montpellier, France
+          </p>
+          <a href="mailto:job@cyprien.io">
+            <EnvelopeSimple />
+            job@cyprien.io
+          </a>
+          <p>
+            <Cake />
+            2024-08-18
+          </p>
+          <p>
+            <Flag />
+            French
+          </p>
+          <a href="https://github.com/cyprieng">
+            <GithubLogo />
+            Github
+          </a>
+        </div>
       </div>
     </div>
 
@@ -134,27 +157,29 @@ const languages = {
     </div>
   </div>
   <div id="right-column">
-    <h3>Details</h3>
-    <p>
-      <MapPin />
-      Montpellier, France
-    </p>
-    <a href="mailto:job@cyprien.io">
-      <EnvelopeSimple />
-      job@cyprien.io
-    </a>
-    <p>
-      <Cake />
-      2024-08-18
-    </p>
-    <p>
-      <Flag />
-      French
-    </p>
-    <a href="https://github.com/cyprieng">
-      <GithubLogo />
-      Github
-    </a>
+    <div class="max-md:hidden">
+      <h3>Details</h3>
+      <p>
+        <MapPin />
+        Montpellier, France
+      </p>
+      <a href="mailto:job@cyprien.io">
+        <EnvelopeSimple />
+        job@cyprien.io
+      </a>
+      <p>
+        <Cake />
+        2024-08-18
+      </p>
+      <p>
+        <Flag />
+        French
+      </p>
+      <a href="https://github.com/cyprieng">
+        <GithubLogo />
+        Github
+      </a>
+    </div>
 
     <div class="skills">
       <h3 class="mt-8">Skills</h3>
@@ -193,11 +218,11 @@ const languages = {
 
 <style>
   :global(#resume-main img) {
-    @apply w-40 rounded-lg;
+    @apply w-40 h-40 rounded-lg;
   }
 
   #resume {
-    @apply p-8 mb-8 mx-8 flex print:text-xs print:p-2 print:mb-0 print:mx-6;
+    @apply md:p-8 mb-8 md:mx-8 md:flex print:text-xs print:p-2 print:mb-0 print:mx-6;
 
     ul {
       @apply list-disc pl-5;
@@ -224,25 +249,25 @@ const languages = {
     }
 
     #right-column {
-      @apply basis-[30%] w-full;
+      @apply md:basis-[30%] w-full;
     }
 
     #left-column {
-      @apply basis-[70%] mr-10;
+      @apply md:basis-[70%] md:mr-10;
     }
 
     #resume-main {
-      @apply flex;
+      @apply md:flex max-md:text-center;
 
       :global(img) {
-        @apply w-40 rounded-lg;
+        @apply w-40 rounded-lg max-md:mx-auto;
       }
 
       #resume-name {
-        @apply ml-8;
+        @apply md:ml-8 max-md:mt-3;
 
         h1 {
-          @apply text-5xl print:text-3xl font-bold;
+          @apply md:text-5xl max-md:text-3xl print:text-3xl font-bold;
         }
 
         h2 {

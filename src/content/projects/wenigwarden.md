@@ -38,13 +38,9 @@ _Note: This is an unofficial client and is not affiliated with Bitwarden Inc._
 
 ## Important Note About Security
 
-The app is **not signed** with an Apple developer certificate. When first launching the app, you'll need to:
+The app is **not signed** with an Apple developer certificate. Before running the app you should run:
 
-1. Right-click (or Control-click) the app
-2. Select "Open" from the context menu
-3. Allow the app in **System Settings** → **Privacy & Security**
-
-This only needs to be done once after installation.
+`sudo xattr -rd com.apple.quarantine /Applications/Wenigwarden.app`
 
 ## Screenshot
 

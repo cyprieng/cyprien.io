@@ -77,7 +77,7 @@ Optimizing performance and accessibility was a key goal. Here are some highlight
   - [axe DevTools](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
 
 - **Environmental impact:**  
-  ![Carbon impact](assets/images/posts/2024/colophon/carbon.png)  
+  ![Carbon impact](assets/images/posts/2024/colophon/carbon.png)
   _Tested with [websitecarbon.com](https://www.websitecarbon.com/)._
 
 ## License

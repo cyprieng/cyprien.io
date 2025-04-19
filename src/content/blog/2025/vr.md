@@ -6,7 +6,7 @@ title: Working with a VR headset
 slug: vr
 featured: false
 draft: false
-description: My take on working inside a VR environement
+description: My take on working inside a VR environment
 tags:
   - tech
 ---
@@ -20,24 +20,24 @@ But for me, to be honest, the idea of sticking a VR headset to your face during 
 
 But in early 2024 Apple started selling the Vision Pro, and with it, a new wave of people using it to work.
 
-And after seeing too many people using VR headsets to work I decided to give it a try.
+And after seeing too many people using VR headsets to work, I decided to give it a try.
 
-After some research, the most popular and cost-friendly option in late 2024 is to use a Meta Quest 3 with <https://immersed.com/>.
+After some research, the most popular and cost-friendly option is to use a Meta Quest 3 with <https://immersed.com/>.
 
 So a few minutes later I ordered my headset on Amazon and the next day here it is.
 
-To put some context, I never used a proper VR headset in my life, so some very basic stuff may have impressed me more than the average VR user.
+To put some context, I never used a VR headset in my life, so some very basic stuff may have impressed me more than the average VR user.
 
 After switching it on, the tutorial starts, and I have to admit, seeing those interfaces floating around me looks like some SF movies.
 
-![basic quest menu](assets/images/posts/2025/vr/vr1.jpg)  
+![basic quest menu](assets/images/posts/2025/vr/vr1.jpg)
 _Even this simple menu impressed me_
 
 I then installed Immersed and set up 3 screens with my MacBook. I used the USB connection to ensure the smallest latency (FYI not all USB cables are compatible but the OEM cable from an iPhone 16 Pro works).
 
 The result is pretty impressive, you have giant screens floating in front of you, the quality is decent, the passthrough is pretty good.
 
-![basic quest menu](assets/images/posts/2025/vr/vr2.jpg)  
+![productivity setup](assets/images/posts/2025/vr/vr2.jpg)
 _3 giant screens in front of you is pretty impressive the first time_
 
 You can use your hands to move the screens wherever you want.
@@ -46,16 +46,16 @@ The main issue at first is the comfort of the original strap. I bought a Kiwi st
 
 I have tried a lot of tasks in a few days: watching TV, coding, browsing web, etc…
 
-![basic quest menu](assets/images/posts/2025/vr/vr3.jpg)  
+![watching TV](assets/images/posts/2025/vr/vr3.jpg)
 _Watching TV/movies is probably the best usage I found_
 
 Overall everything works, I never had a connection issue and not even a lag. Immersed is definitely a really nice software.
 
 I only used the mixed reality settings, virtual environments make me sick and remind me of old PS1 games.
 
-My conclusion after a few days is that the technology is very impressive but there are too many drawbacks to really make it a viable option:
+My conclusion after a few days is that the technology is very impressive but there are too many drawbacks to really make it a viable option for me:
 
-- screen quality: even if it’s impressive at first, the quality is not as good as even a low-end monitor. You can clearly see every pixel and when you move your head you see some artefacts and checkerboard effect.
+- screen quality: even if it’s impressive at first, the quality is not as good as even a low-end monitor (and I currently have an old VGA display that I find better). You can clearly see every pixel and when you move your head you see some artefacts and checkerboard effect.
 - passthrough: it is decent, but the quality reminds me of the camera of very old phones. And in dark rooms it is even worse. You don’t really look at the environment, so it’s not a dealbreaker, but still a weakness.
 - comfort: after around 20 min I start having headaches. This is very personal, some people are very comfortable using VR headsets during hours, I’m not. I cannot imagine working my 8 hours with this.
 - isolation: I find it very isolating, and as I am already far too isolated when I work on my laptop, I really don’t want to worsen this.

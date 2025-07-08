@@ -13,7 +13,7 @@ tags:
 Searching the web is becoming more and more unpleasant.
 
 ![Google results](assets/images/posts/2025/kagi/google.png)
-_I want the result, not Youtube clickbait_
+_I want the result, not YouTube clickbait_
 
 Using Google is a necessary pain I have to endure every day: ads, clickbait, poor quality results, etc.
 
@@ -23,7 +23,7 @@ In late 2024, I encountered a lot of posts and comments about Kagi on [Hacker Ne
 
 In early 2025, almost 6 months ago, I decided to give it a try.
 
-Here is a small wrap-up about how I feel about it.
+Here is a small wrap-up of how I feel about it.
 
 # Paying for a search engine
 
@@ -52,9 +52,9 @@ The search seems good—very good.
 ![Kagi results](assets/images/posts/2025/kagi/kagi_results.png)
 _Straightforward results—no nonsense, nothing fancy, just what I want._
 
-To be honest, I didn’t do a lot of side-by-side comparisons against other browsers.
+To be honest, I didn’t do a lot of side-by-side comparisons against other search engines.
 
-But in the last 5 months, I feel the quality of my searches improved compared to Google.
+But in the last 5 months, I feel the quality of my searches has improved compared to Google.
 
 It’s really hard to tell why, but the search results seem more accurate and less “hostile” than the ones from Google. You manage to get what you want with less friction.
 
@@ -94,13 +94,13 @@ I trust a company that is not living off ads more. But even if you do not trust 
 
 # AI
 
-We live in a world where every product includes AI features—for the better, and more often, for the worse.
+We live in a world where every product includes AI features—for better, and more often, for worse.
 
 But Kagi provides pretty good features based on AI:
 
 ## Quick response
 
-As soon as you include “?” at the end of the query on Kagi, it will provide at the top a summary of the results.
+As soon as you include “?” at the end of the query on Kagi, it will provide a summary of the results at the top.
 
 Very handy to save time and avoid checking a few websites when you only need a quick answer.
 
@@ -124,11 +124,11 @@ It allows me to switch between Claude, ChatGPT, etc., without subscribing to eac
 
 And new models are usually available in less than 48h, so you can test all models as soon as they are available.
 
-Previously, the usage was unlimited, but now it’s limited to a $25 usage, so the value of the Ultimate plan has decreased a bit.
+Previously, the usage was unlimited, but now it’s limited to $25 usage, so the value of the Ultimate plan has decreased a bit.
 
 # Orion browser
 
-I won’t describe this much. But for the short span of time where I tried it on my Mac, I really liked:
+I won’t describe this much. But for the short span of time when I tried it on my Mac, I really liked:
 
 - the native look and feel
 - the ability to install Chrome extensions
@@ -139,5 +139,5 @@ Sadly, I encountered too many bugs and decided to give up for now. But I will de
 
 # Conclusion
 
-The price is pretty steep for a search engine. But I definitely encourage everybody to test it for a month to check if you find it valuable or not.
+The price is pretty steep for a search engine. But I definitely encourage everybody to test it for a month to see if you find it valuable or not.
 

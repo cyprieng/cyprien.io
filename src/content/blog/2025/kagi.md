@@ -27,13 +27,13 @@ Here is a small wrap-up of how I feel about it.
 
 # Paying for a search engine
 
-First thing, that almost stopped me. And I think it's one of the main reasons that would block most users.
+First thing that almost stopped me. And I think it's one of the main reasons that would block most users.
 
 You need to pay to use Kagi, which is unusual for a search engine.
 
 ![Kagi pricing](assets/images/posts/2025/kagi/pricing.png)
 
-If you ignore the $5/month plan, which is far too limited, the cheapest is $10/month plus tax.
+If you ignore the $5/month plan, which is far too limited, the cheapest plan is $10/month plus tax.
 
 That's a steep amount to pay every month for a search engine when all the competitors provide it for free. But I search a lot:
 
@@ -41,7 +41,7 @@ That's a steep amount to pay every month for a search engine when all the compet
 
 With around 1,500 searches per month, one search would cost me about $0.0067. That puts things in perspective, and if it improves my day-to-day experience, it may be worth it.
 
-The fact that the search engine is funded by its users and not by ads is, for me, an important point, and something I want to support.
+The fact that the search engine is funded by its users and not by ads is, for me, an important point and something I want to support.
 
 In the end, I decided to give it a try.
 
@@ -62,9 +62,9 @@ Other advantages include the following features:
 
 ## No Ads
 
-You don't have ads. EVER.
+You don't see ads. EVER.
 
-That might not sound like much, but the experience is a breeze when you’re used to Google pushing ads everywhere with poor quality.
+That might not sound like much, but the experience is a breeze when you’re used to Google pushing poor-quality ads everywhere.
 
 ## Lens
 
@@ -88,11 +88,11 @@ Pinterest and similar are a plague for search engines. Kagi allows you to block,
 
 ## Privacy
 
-I trust more a company that is not living off ads. But even if you don’t trust them, they provide <https://blog.kagi.com/kagi-privacy-pass> to ensure they cannot track you.
+I trust a company that is not living off ads more. But even if you don’t trust them, they provide <https://blog.kagi.com/kagi-privacy-pass> to ensure they cannot track you.
 
 # AI
 
-We live in a world where every product includes AI features, for the best, and more often, for worse.
+We live in a world where every product includes AI features, for the better, and more often, for the worse.
 
 But Kagi provides genuinely useful AI features:
 
@@ -100,13 +100,13 @@ But Kagi provides genuinely useful AI features:
 
 As soon as you include a “?” at the end of your query on Kagi, it will provide a summary of the results at the top.
 
-Very handy to save time and avoid checking a few websites when you only need a quick answer.
+It's very handy for saving time and avoiding checking several websites when you only need a quick answer.
 
 ![Quick response](assets/images/posts/2025/kagi/quick_response.png)
 
 ## Summarize
 
-If you have a long article, podcast, or video you don’t have time to read, Kagi Summarize allows you to get a short summary.
+If you have a long article, podcast, or video you don’t have time to read or watch, Kagi Summarize allows you to get a short summary.
 
 I mainly use it to check if the content is worth my time.
 
@@ -122,7 +122,7 @@ It allows me to switch between Claude, ChatGPT, and others, without subscribing 
 
 New models are usually available in less than 48 hours, so you can test them as soon as they are released.
 
-Previously, usage was unlimited, but now it’s capped at $25, so the value of the Ultimate plan has decreased a bit.
+Previously, usage was unlimited, but now it’s capped at $25 worth of AI usage, so the value of the Ultimate plan has decreased a bit.
 
 # Orion browser
 
@@ -130,7 +130,7 @@ Kagi is also working on a web browser.
 
 I won’t describe this much, but for the short time I tried it on my Mac, I really liked:
 
-- the native macos look and feel
+- the native macOS look and feel
 - the ability to install Chrome extensions
 - the handling of window/tab groups
 - the ability to have tabs vertically on the left

@@ -8,14 +8,26 @@ export default function GithubBreakoutForm() {
   const [svg, setSvg] = useState<string | null>(null);
   const [svgDark, setSvgDark] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // Generate SVGs based on the provided username and token
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    setSvg(await generateSVG(username, token, false));
-    setSvgDark(await generateSVG(username, token, true));
-    setIsLoading(false);
+    setError(null);
+    try {
+      setSvg(await generateSVG(username, token, false));
+      setSvgDark(await generateSVG(username, token, true));
+    } catch (err: any) {
+      setError(
+        err?.message ||
+          "Failed to generate SVG. Please check your credentials and try again.",
+      );
+      setSvg(null);
+      setSvgDark(null);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   // Show loading state while SVGs are being generated
@@ -25,6 +37,7 @@ export default function GithubBreakoutForm() {
 
   return (
     <div>
+      {error && <div className="mb-4 text-red-600 text-center">{error}</div>}
       {!svg || !svgDark ? (
         <form onSubmit={handleSubmit} autoComplete="off">
           <div className="mb-4">

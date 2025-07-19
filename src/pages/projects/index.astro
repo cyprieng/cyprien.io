@@ -15,7 +15,7 @@ const projects = getSortedPosts(posts);
   <main id="main-content">
     {
       projects.map(({ data, slug }) => (
-        <div>
+        <div class="mb-10">
           <div class="project-container">
             <img src={data.logo} alt={data.title} class="project-image" />
             <div class="project-content">

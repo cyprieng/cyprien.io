@@ -23,6 +23,7 @@
     "@resvg/resvg-js": "^2.6.0",
     "astro": "^4.2.1",
     "fuse.js": "^7.0.0",
+    "github-breakout": "github:cyprieng/github-breakout",
     "github-slugger": "^2.0.0",
     "puppeteer": "^23.11.1",
     "remark-collapse": "^0.1.2",

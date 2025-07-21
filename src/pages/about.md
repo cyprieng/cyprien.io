@@ -23,11 +23,13 @@ I'm primarily interested in backend development. Here's a list of technologies I
 - ![Azure logo](assets/images/icons/azure.svg) Azure
 - ![AWS logo](assets/images/icons/aws.svg) AWS
 
-And here's a random list of things I enjoy:
+And here's a random list of things I also enjoy:
 
 - 🏃‍♂️ Running
 - 🚲 Cycling
+- 🏊‍♂️ Swimming
 - 🥾 Hiking
+- 📚 Reading
 
 Feel free to reach out to me at [hello@cyprien.io](mailto:hello@cyprien.io). I respond to everyone!
 

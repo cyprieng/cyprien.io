@@ -3,7 +3,7 @@ layout: ../layouts/BasicLayout.astro
 title: Uses
 activeNav: uses
 ---
-_Updated February 9th, 2025_
+_Updated July 21st, 2025_
 
 ## **Hardware**
 
@@ -15,7 +15,7 @@ _Updated February 9th, 2025_
 - [Kindle Paperwhite](https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB) – My go-to device for reading.
 - [Belkin USB-C Hub](https://www.belkin.com/p/universal-usb-c-triple-display-dock/P-INC007.html) – One of the few hubs that allows me to connect three external screens to my MacBook.
 - [Apple TV 4K](https://www.apple.com/apple-tv-4k/) – Perfect for streaming and entertainment.
-- [Garmin Instinct](https://www.garmin.com/en-US/p/621802/pn/010-02064-00) – A robust and simple watch for sports and everyday life.
+- [Garmin Fenix 7 Pro Sapphire Solar](https://www.garmin.com/en-US/p/866191/pn/010-02777-11/) – Awesome sport watch that I wear 24/7.
 - [Orbea Vector 20](https://www.orbea.com/gb-en/bicycles/urban/vector/cat/vector-20) – My trusted bike for commuting.
 
 As a bonus, here is a picture of my desk:
@@ -45,5 +45,5 @@ As a bonus, here is a picture of my desk:
 - [Spotify](https://www.spotify.com/) – For all my music needs.
 - [GitHub Copilot](https://github.com/features/copilot) – For coding assistance and productivity.
 - [Proton](https://proton.me/mail) – My secure personal email service.
-- [Kagi](https://kagi.com) – My search engine plus access to all major LLMs.
+- [Kagi](https://kagi.com) – Search engine.
 

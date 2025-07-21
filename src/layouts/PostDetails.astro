@@ -56,18 +56,24 @@ const layoutProps = {
 
   <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
     <button
-      class="focus-outline mb-2 mt-8 flex hover:opacity-75"
+      class="mb-2 mt-8 flex hover:opacity-75 cursor-pointer"
       onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
     >
-      <svg xmlns="http://www.w3.org/2000/svg"
-        ><path
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
-      </svg><span>Go back</span>
+      </svg>
+      <span>Go back</span>
     </button>
   </div>
-  <main id="main-content">
-    <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
+  <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-12">
+    <h1
+      transition:name={slugifyStr(title)}
+      class="text-2xl font-semibold text-accent"
+    >
+      {title}
+    </h1>
     <Datetime
       pubDatetime={pubDatetime}
       modDatetime={modDatetime}
@@ -115,7 +121,7 @@ const layoutProps = {
     >
       <button
         id="back-to-top"
-        class="focus-outline whitespace-nowrap py-1 hover:opacity-75"
+        class="whitespace-nowrap py-1 hover:opacity-75 cursor-pointer"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
           <path
@@ -131,15 +137,6 @@ const layoutProps = {
   <Footer />
 </Layout>
 
-<style>
-  main {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12;
-  }
-  .post-title {
-    @apply text-2xl font-semibold text-skin-accent;
-  }
-</style>
-
 <script is:inline>
   /** Create a progress indicator
    *  at the top */
@@ -147,11 +144,11 @@ const layoutProps = {
     // Create the main container div
     const progressContainer = document.createElement("div");
     progressContainer.className =
-      "progress-container fixed top-0 z-10 h-1 w-full bg-skin-fill";
+      "progress-container fixed top-0 z-10 h-1 w-full bg-background";
 
     // Create the progress bar div
     const progressBar = document.createElement("div");
-    progressBar.className = "progress-bar h-1 w-0 bg-skin-accent";
+    progressBar.className = "progress-bar h-1 w-0 bg-accent";
     progressBar.id = "myBar";
 
     // Append the progress bar to the progress container
@@ -208,7 +205,7 @@ const layoutProps = {
 
       let copyButton = document.createElement("button");
       copyButton.className =
-        "copy-code absolute right-3 -top-3 rounded bg-skin-card px-2 py-1 text-xs leading-4 text-skin-base font-medium";
+        "copy-code absolute right-3 -top-3 rounded bg-card px-2 py-1 text-xs leading-4 text-base font-medium cursor-pointer";
       copyButton.innerHTML = copyButtonLabel;
       codeBlock.setAttribute("tabindex", "0");
       codeBlock.appendChild(copyButton);

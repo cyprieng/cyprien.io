@@ -10,7 +10,10 @@ import Resume from "@components/Resume.astro";
 <Layout title={`Résumé | ${SITE.title}`}>
   <Header activeNav="resume" />
 
-  <main id="main-content">
+  <main
+    id="main-content"
+    class="mx-auto pt-10 my-5 w-[calc(100%-3rem)] max-w-260 md:border md:dark:border-slate-400 md:shadow md:dark:shadow-slate-400"
+  >
     <Resume />
 
     <div class="flex justify-center">
@@ -19,9 +22,3 @@ import Resume from "@components/Resume.astro";
   </main>
   <Footer />
 </Layout>
-
-<style>
-  #main-content {
-    @apply mx-auto pt-10 my-5 w-[calc(100%-3rem)] max-w-[65rem] md:border md:dark:border-slate-400 md:shadow md:dark:shadow-slate-400;
-  }
-</style>

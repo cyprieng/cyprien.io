@@ -16,24 +16,29 @@ export default function Datetime({
   modDatetime,
   size = "sm",
   className,
-  icon = true
+  icon = true,
 }: Props) {
   return (
     <div className={`flex items-center opacity-80 ${className}`}>
-      {icon ?
+      {icon ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={`${size === "sm" ? "scale-90" : "scale-100"
-            } inline-block h-6 w-6 min-w-[1.375rem] fill-skin-base mr-2`}
+          className={`${
+            size === "sm" ? "scale-90" : "scale-100"
+          } inline-block h-6 w-6 min-w-5.5  mr-2`}
           aria-hidden="true"
         >
           <path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path>
           <path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path>
         </svg>
-        : ""}
+      ) : (
+        ""
+      )}
 
       {modDatetime && modDatetime > pubDatetime ? (
-        <span className={`mr-2 italic ${size === "sm" ? "text-sm" : "text-base"}`}>
+        <span
+          className={`mr-2 italic ${size === "sm" ? "text-sm" : "text-base"}`}
+        >
           Updated:
         </span>
       ) : (

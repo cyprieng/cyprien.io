@@ -12,18 +12,25 @@ const projects = getSortedPosts(posts);
 
 <Layout>
   <Header activeNav="projects" />
-  <main id="main-content">
+  <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-12 mt-8">
     {
       projects.map(({ data, slug }) => (
         <div class="mb-10">
-          <div class="project-container">
-            <img src={data.logo} alt={data.title} class="project-image" />
-            <div class="project-content">
-              <div class="project-header">
-                <h2 class="project-title">{data.title}</h2>
+          <div class="flex items-start gap-6">
+            <img
+              src={data.logo}
+              alt={data.title}
+              class="w-16 h-16 rounded-xl object-cover"
+            />
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-2">
+                <h2 class="text-xl font-semibold">{data.title}</h2>
               </div>
-              <p class="project-description">{data.description}</p>
-              <a href={`/projects/${slug}/`} class="read-more-link">
+              <p class="mb-4">{data.description}</p>
+              <a
+                href={`/projects/${slug}/`}
+                class="inline-flex items-center text-sm font-medium"
+              >
                 Read more →
               </a>
             </div>
@@ -35,37 +42,3 @@ const projects = getSortedPosts(posts);
 
   <Footer />
 </Layout>
-
-<style>
-  main {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12 mt-8;
-  }
-
-  .project-container {
-    @apply flex items-start gap-6;
-  }
-
-  .project-image {
-    @apply w-16 h-16 rounded-xl object-cover;
-  }
-
-  .project-content {
-    @apply flex-1;
-  }
-
-  .project-header {
-    @apply flex items-center gap-2 mb-2;
-  }
-
-  .project-title {
-    @apply text-xl font-semibold;
-  }
-
-  .project-description {
-    @apply mb-4;
-  }
-
-  .read-more-link {
-    @apply inline-flex items-center text-sm font-medium;
-  }
-</style>

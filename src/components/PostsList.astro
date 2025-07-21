@@ -8,8 +8,8 @@ const title = Astro.props.title as string;
 
 {
   posts.length > 0 && (
-    <section id="recent-posts">
-      <h1>{title}</h1>
+    <section id="recent-posts" class="pt-6">
+      <h1 class="text-2xl font-semibold tracking-wide">{title}</h1>
       <ul>
         {posts.map(
           ({ data, slug }, index) =>
@@ -19,12 +19,3 @@ const title = Astro.props.title as string;
     </section>
   )
 }
-
-<style>
-  section {
-    @apply pt-6;
-  }
-  h1 {
-    @apply !text-2xl font-semibold tracking-wide;
-  }
-</style>

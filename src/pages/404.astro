@@ -10,7 +10,7 @@ import Layout from "@layouts/Layout.astro";
 <Layout title={`404 Not Found | ${SITE.title}`}>
   <Header />
 
-  <main id="main-content">
+  <main id="main-content" class="mx-auto pt-10 w-full">
     <section class="w-full">
       <Terminal command="cat /404"
         >cat: /404: No such file or directory</Terminal
@@ -29,9 +29,3 @@ import Layout from "@layouts/Layout.astro";
 
   <Footer />
 </Layout>
-
-<style>
-  #main-content {
-    @apply mx-auto pt-10 w-full;
-  }
-</style>

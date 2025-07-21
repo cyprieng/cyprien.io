@@ -6,74 +6,45 @@ export interface Props {
 const { command } = Astro.props;
 ---
 
-<div class="menu">
-  <div class="buttons close"></div>
-  <div class="buttons minimize"></div>
-  <div class="buttons zoom"></div>
+<div class="w-full box-border h-[25px] bg-[#bbb] mx-auto rounded-t-[5px]">
+  <div
+    class="h-[10px] w-[10px] rounded-full border border-solid relative left-[6px] bg-[#ff3b47] border-[#9d252b] inline-block"
+  >
+  </div>
+  <div
+    class="h-[10px] w-[10px] rounded-full border border-solid relative left-[11px] bg-[#ffc100] border-[#9d802c] inline-block"
+  >
+  </div>
+  <div
+    class="h-[10px] w-[10px] rounded-full border border-solid relative left-[16px] bg-[#00d742] border-[#049931] inline-block"
+  >
+  </div>
 </div>
-<div class="screen">
-  <p class="line1">$ {command}</p>
-  <p class="line2"><slot /></p>
-  <p class="line3">$ <span class="cursor">_</span></p>
+<div
+  class="bg-[#151515] box-border w-full mx-auto p-[20px] rounded-b-[5px] cursor-text"
+>
+  <p class="text-left text-base font-mono whitespace-normal text-[#9cd9f0]">
+    $ {command}
+  </p>
+  <p class="text-left text-base font-mono whitespace-normal text-[#cdee69]">
+    <slot />
+  </p>
+  <p class="text-left text-base font-mono whitespace-normal text-[#9cd9f0]">
+    $ <span class="text-white font-bold animate-[blink_1s_0s_infinite_forwards]"
+      >_</span>
+  </p>
 </div>
 
 <style>
-  .buttons {
-    @apply h-[10px] w-[10px] rounded-full border border-solid relative left-[6px] bg-[#ff3b47] border-[#9d252b] inline-block;
-  }
-
-  .minimize {
-    @apply left-[11px] bg-[#ffc100] border-[#9d802c];
-  }
-
-  .zoom {
-    @apply left-[16px] bg-[#00d742] border-[#049931];
-  }
-
-  .menu {
-    @apply w-full box-border h-[25px] bg-[#bbb] mx-auto rounded-t-[5px];
-  }
-
-  .screen {
-    @apply bg-[#151515] box-border w-full mx-auto p-[20px] rounded-b-[5px] cursor-text;
-  }
-
-  p {
-    @apply text-left text-base font-mono whitespace-normal;
-  }
-
-  span {
-    @apply text-white font-bold;
-  }
-
-  .line1,
-  .line3 {
-    @apply text-[#9cd9f0];
-  }
-
-  .line2 {
-    @apply text-[#cdee69];
-  }
-
-  .cursor {
-    @apply animate-[blink_1s_0s_infinite_forwards];
-  }
-
   @keyframes blink {
-    0% {
-      @apply opacity-0;
-    }
-    40% {
-      @apply opacity-0;
-    }
-    50% {
-      @apply opacity-100;
-    }
-    90% {
-      @apply opacity-100;
-    }
+    0%,
+    40%,
     100% {
-      @apply opacity-0;
+      opacity: 0;
+    }
+    50%,
+    90% {
+      opacity: 1;
     }
   }
 </style>

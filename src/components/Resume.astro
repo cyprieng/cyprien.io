@@ -25,43 +25,56 @@ const languages = {
 };
 ---
 
-<div id="resume">
-  <div id="left-column">
-    <div id="resume-main">
-      <Image src={photo} alt="photo" />
+<div
+  id="resume"
+  class="md:p-8 mb-8 md:mx-8 md:flex print:text-xs print:p-2 print:mb-0 print:mx-6"
+>
+  <div id="left-column" class="md:basis-[70%] md:mr-10 w-full">
+    <div id="resume-main" class="md:flex max-md:text-center">
+      <Image
+        src={photo}
+        alt="photo"
+        class="w-40 h-40 rounded-lg max-md:mx-auto"
+      />
 
-      <div id="resume-name">
-        <h1>Cyprien</h1>
-        <h2>Senior software engineer</h2>
+      <div id="resume-name" class="md:ml-8 max-md:mt-3">
+        <h1 class="md:text-5xl max-md:text-3xl print:text-3xl font-bold">
+          Cyprien
+        </h1>
+        <h2 class="text-lg font-normal mt-3">Senior software engineer</h2>
 
         <div class="md:hidden">
           <p>
-            <MapPin />
+            <MapPin class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
             Montpellier, France
           </p>
           <a href="mailto:job@cyprien.io">
-            <EnvelopeSimple />
+            <EnvelopeSimple
+              class="h-4 mb-1 text-slate-600 dark:text-slate-200"
+            />
             job@cyprien.io
           </a>
           <p>
-            <Cake />
+            <Cake class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
             2024-08-18
           </p>
           <p>
-            <Flag />
+            <Flag class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
             French
           </p>
           <a href="https://github.com/cyprieng">
-            <GithubLogo />
+            <GithubLogo class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
             github.com/cyprieng
           </a>
         </div>
       </div>
     </div>
 
-    <div id="resume-profile">
-      <h3>
-        <User />
+    <div id="resume-profile" class="mt-8">
+      <h3
+        class="uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+      >
+        <User class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
         Profile
       </h3>
       Professional software engineer with 8+ years of experience spanning software
@@ -73,37 +86,51 @@ const languages = {
       tools and frameworks. Seeking to bring my skills to an innovative organization.
     </div>
 
-    <div id="resume-education">
-      <h3>
-        <GraduationCap />
+    <div id="resume-education" class="mt-8">
+      <h3
+        class="uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+      >
+        <GraduationCap class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
         Education
       </h3>
 
-      <div class="row">
-        <h4>Master's degree from Université de Technologie de Troyes</h4>
+      <div class="row mb-8">
+        <h4 class="font-extrabold text-lg print:text-sm">
+          Master's degree from Université de Technologie de Troyes
+        </h4>
         <p>Master's degree in Computer Science.</p>
-        <p class="date">2011–2017</p>
+        <p class="date text-slate-400 dark:text-slate-300">2011–2017</p>
       </div>
 
-      <div class="row">
-        <h4>Franklin W. Olin College of Engineering</h4>
+      <div class="row mb-8">
+        <h4 class="font-extrabold text-lg print:text-sm">
+          Franklin W. Olin College of Engineering
+        </h4>
         <p>Exchange semester.</p>
-        <p class="date">September–December 2014</p>
+        <p class="date text-slate-400 dark:text-slate-300">
+          September–December 2014
+        </p>
       </div>
     </div>
 
-    <div id="resume-work">
-      <h3>
-        <SuitcaseSimple />
+    <div id="resume-work" class="mt-8">
+      <h3
+        class="uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+      >
+        <SuitcaseSimple class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
         Work history
       </h3>
 
-      <div class="row">
-        <Image src={octipas} alt="Octipas" class="invert dark:invert-0 w-40" />
-        <h4>Lead developer</h4>
+      <div class="row mb-8">
+        <Image
+          src={octipas}
+          alt="Octipas"
+          class="invert dark:invert-0 w-40 mr-4 float-right pl-4"
+        />
+        <h4 class="font-extrabold text-lg print:text-sm">Lead developer</h4>
         <h5>Octipas by Chapsvision</h5>
         <p>
-          <ul>
+          <ul class="list-disc pl-5">
             <li>
               Designed and implemented RESTful APIs, microservices, and
               databases to ensure robust and efficient backend systems.
@@ -131,15 +158,17 @@ const languages = {
           <b>Stack:</b> Node.js, VueJS, Laravel, Python, MySQL, Clickhouse, MongoDB,
           Terraform
         </p>
-        <p class="date">2017–Present</p>
+        <p class="date text-slate-400 dark:text-slate-300">2017–Present</p>
       </div>
 
-      <div class="row">
-        <Image src={slb} alt="octipas" class="w-20" />
-        <h4>Developer (internship)</h4>
+      <div class="row mb-8">
+        <Image src={slb} alt="octipas" class="w-20 mr-4 float-right pl-4" />
+        <h4 class="font-extrabold text-lg print:text-sm">
+          Developer (internship)
+        </h4>
         <h5>SLB (Schlumberger)</h5>
         <p>
-          <ul>
+          <ul class="list-disc pl-5">
             <li>
               Built a Python framework to simplify integration testing of
               software written in C++/Qt. The framework provides high-level APIs
@@ -152,61 +181,78 @@ const languages = {
             </li>
           </ul>
         </p>
-        <p class="date">September 2016–February 2017</p>
+        <p class="date text-slate-400 dark:text-slate-300">
+          September 2016–February 2017
+        </p>
       </div>
     </div>
   </div>
-  <div id="right-column">
+  <div id="right-column" class="md:basis-[30%] w-full">
     <div class="max-md:hidden">
-      <h3>Details</h3>
+      <h3
+        class="uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+      >
+        Details
+      </h3>
       <p>
-        <MapPin />
+        <MapPin class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
         Montpellier, France
       </p>
       <a href="mailto:job@cyprien.io">
-        <EnvelopeSimple />
+        <EnvelopeSimple class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
         job@cyprien.io
       </a>
       <p>
-        <Cake />
+        <Cake class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
         2024-08-18
       </p>
       <p>
-        <Flag />
+        <Flag class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
         French
       </p>
       <a href="https://github.com/cyprieng">
-        <GithubLogo />
+        <GithubLogo class="h-4 mb-1 text-slate-600 dark:text-slate-200" />
         github.com/cyprieng
       </a>
     </div>
 
     <div class="skills">
-      <h3 class="mt-8">Skills</h3>
+      <h3
+        class="mt-8 uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+      >
+        Skills
+      </h3>
 
-      <h4>Programming Languages</h4>
+      <h4 class="mt-4">Programming Languages</h4>
       JavaScript, TypeScript, Python, Go, PHP, C/C++, Java, Swift, Shell
 
-      <h4>Frontend</h4>
+      <h4 class="mt-4">Frontend</h4>
       HTML, CSS, VueJS, React, TailwindCSS
 
-      <h4>Frameworks</h4>
+      <h4 class="mt-4">Frameworks</h4>
       Django, Laravel, Next.js, Serverless
 
-      <h4>Databases</h4>
+      <h4 class="mt-4">Databases</h4>
       MySQL, PostgreSQL, ClickHouse, MongoDB, SQL
 
-      <h4>Cloud & DevOps</h4>
+      <h4 class="mt-4">Cloud & DevOps</h4>
       Docker, Kubernetes, Terraform, AWS, Azure, Git, Subversion
 
-      <h3 class="mt-8">Languages</h3>
+      <h3
+        class="mt-8 uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+      >
+        Languages
+      </h3>
       {
         Object.entries(languages).map(([language, level]) => {
           return (
-            <div class="skill">
+            <div class="skill mt-4">
               <h4>{language}</h4>
-              <div class="progress-bar">
-                <div style={{ width: `${level}%` }} />
+              <div class="progress-bar w-full bg-gray-200 rounded-full h-2.5">
+                <div
+                  style={{ width: `${level}%` }}
+                  class="bg-accent h-2.5 rounded-full"
+                />
               </div>
             </div>
           );
@@ -215,103 +261,3 @@ const languages = {
     </div>
   </div>
 </div>
-
-<style>
-  :global(#resume-main img) {
-    @apply w-40 h-40 rounded-lg;
-  }
-
-  #resume {
-    @apply md:p-8 mb-8 md:mx-8 md:flex print:text-xs print:p-2 print:mb-0 print:mx-6;
-
-    ul {
-      @apply list-disc pl-5;
-    }
-
-    :global(svg) {
-      @apply h-4 mb-1;
-
-      :global(path) {
-        @apply fill-slate-600 dark:fill-slate-200 stroke-slate-600 dark:stroke-slate-200;
-      }
-    }
-
-    .progress-bar {
-      @apply w-full bg-gray-200 rounded-full h-2.5;
-
-      > div {
-        @apply bg-skin-accent h-2.5 rounded-full;
-      }
-    }
-
-    .skill {
-      @apply mt-4;
-    }
-
-    #right-column {
-      @apply md:basis-[30%] w-full;
-    }
-
-    #left-column {
-      @apply md:basis-[70%] md:mr-10;
-    }
-
-    #resume-main {
-      @apply md:flex max-md:text-center;
-
-      :global(img) {
-        @apply w-40 rounded-lg max-md:mx-auto;
-      }
-
-      #resume-name {
-        @apply md:ml-8 max-md:mt-3;
-
-        h1 {
-          @apply md:text-5xl max-md:text-3xl print:text-3xl font-bold;
-        }
-
-        h2 {
-          @apply text-lg font-normal mt-3;
-        }
-      }
-    }
-
-    h3 {
-      @apply uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold;
-    }
-
-    #resume-profile {
-      @apply mt-8;
-    }
-
-    #resume-education {
-      @apply mt-8;
-    }
-
-    #resume-work {
-      @apply mt-8;
-
-      img {
-        @apply mr-4 float-right pl-4;
-      }
-    }
-
-    .row {
-      @apply mb-8;
-
-      h4 {
-        @apply font-extrabold text-lg print:text-sm;
-      }
-
-      .date {
-        @apply text-slate-400 dark:text-slate-300;
-      }
-    }
-
-    .skills {
-      h4 {
-        @apply mt-4;
-      }
-    }
-  }
-</style>

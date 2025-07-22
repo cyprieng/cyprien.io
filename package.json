@@ -4,68 +4,48 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build && jampack ./dist",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
     "format:check": "prettier --check . --plugin=prettier-plugin-astro",
     "format": "prettier --write . --plugin=prettier-plugin-astro",
-    "cz": "cz",
-    "prepare": "husky install",
     "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\"",
     "generate:resume": "node src/utils/generateResumePDF.js"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^4.3.1",
     "@astrojs/rss": "^4.0.12",
-    "@phosphor-icons/react": "^2.1.7",
-    "@resvg/resvg-js": "^2.6.0",
+    "@phosphor-icons/react": "^2.1.10",
+    "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.1.11",
-    "@types/react-dom": "^19.1.6",
-    "astro": "^5.12.0",
-    "fuse.js": "^7.0.0",
+    "astro": "^5.12.1",
+    "fuse.js": "^7.1.0",
     "github-breakout": "github:cyprieng/github-breakout",
     "github-slugger": "^2.0.0",
-    "puppeteer": "^23.11.1",
+    "puppeteer": "^24.14.0",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",
-    "satori": "^0.10.11",
-    "tailwindcss": "^4.1.11",
-    "three": "^0.165.0",
-    "typescript": "^5.4.5"
+    "satori": "^0.16.0",
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/react": "^4.3.0",
     "@astrojs/sitemap": "^3.4.1",
-    "@divriots/jampack": "^0.23.2",
-    "@tailwindcss/typography": "^0.5.10",
-    "@types/github-slugger": "^1.3.0",
-    "@types/react": "^19.0.0",
-    "@types/three": "^0.165.0",
-    "@typescript-eslint/parser": "^8.3.0",
-    "astro-eslint-parser": "^0.16.2",
-    "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-astro": "^0.31.4",
-    "eslint-plugin-jsx-a11y": "^6.9.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.0",
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.13.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/github-slugger": "^2.0.0",
+    "@types/react": "^19.1.8",
+    "@typescript-eslint/parser": "^8.38.0",
+    "astro-eslint-parser": "^1.2.2",
+    "eslint": "^9.31.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.14",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,md,mdx,json,astro}": [
-      "prettier --write --plugin=prettier-plugin-astro"
-    ]
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
   }
 }

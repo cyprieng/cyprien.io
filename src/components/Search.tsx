@@ -6,8 +6,9 @@ import { useEffect, useMemo, useRef, useState } from "react";
 export type SearchItem = {
   title: string;
   description: string;
-  data: CollectionEntry<"blog">["data"];
+  data: CollectionEntry<"blog">["data"] | CollectionEntry<"projects">["data"];
   slug: string;
+  type: "posts" | "projects";
 };
 
 interface Props {
@@ -109,7 +110,7 @@ export default function SearchBar({ searchList }: Props) {
         {searchResults &&
           searchResults.map(({ item, refIndex }) => (
             <Card
-              href={`/posts/${item.slug}/`}
+              href={`/${item.type}/${item.slug}/`}
               frontmatter={item.data}
               key={`${refIndex}-${item.slug}`}
             />

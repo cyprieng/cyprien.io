@@ -56,7 +56,7 @@ const layoutProps = {
 
   <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
     <button
-      class="mb-2 mt-8 flex hover:opacity-75 cursor-pointer"
+      class="mt-8 mb-2 flex cursor-pointer hover:opacity-75"
       onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
     >
       <svg xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@ const layoutProps = {
   <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-12">
     <h1
       transition:name={slugifyStr(title)}
-      class="text-2xl font-semibold text-accent"
+      class="text-accent text-2xl font-semibold"
     >
       {title}
     </h1>
@@ -121,7 +121,7 @@ const layoutProps = {
     >
       <button
         id="back-to-top"
-        class="whitespace-nowrap py-1 hover:opacity-75 cursor-pointer"
+        class="cursor-pointer py-1 whitespace-nowrap hover:opacity-75"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
           <path
@@ -180,10 +180,12 @@ const layoutProps = {
   /** Attaches links to headings in the document,
    *  allowing sharing of sections easily */
   function addHeadingLinks() {
-    let headings = Array.from(document.querySelectorAll("h2, h3, h4, h5, h6"));
-    for (let heading of headings) {
+    const headings = Array.from(
+      document.querySelectorAll("h2, h3, h4, h5, h6"),
+    );
+    for (const heading of headings) {
       heading.classList.add("group");
-      let link = document.createElement("a");
+      const link = document.createElement("a");
       link.innerText = "#";
       link.className = "heading-link hidden group-hover:inline-block ml-2";
       link.href = "#" + heading.id;
@@ -196,14 +198,14 @@ const layoutProps = {
   /** Attaches copy buttons to code blocks in the document,
    * allowing users to copy code easily. */
   function attachCopyButtons() {
-    let copyButtonLabel = "Copy";
-    let codeBlocks = Array.from(document.querySelectorAll("pre"));
+    const copyButtonLabel = "Copy";
+    const codeBlocks = Array.from(document.querySelectorAll("pre"));
 
-    for (let codeBlock of codeBlocks) {
-      let wrapper = document.createElement("div");
+    for (const codeBlock of codeBlocks) {
+      const wrapper = document.createElement("div");
       wrapper.style.position = "relative";
 
-      let copyButton = document.createElement("button");
+      const copyButton = document.createElement("button");
       copyButton.className =
         "copy-code absolute right-3 -top-3 rounded bg-card px-2 py-1 text-xs leading-4 text-base font-medium cursor-pointer";
       copyButton.innerHTML = copyButtonLabel;
@@ -220,8 +222,8 @@ const layoutProps = {
     }
 
     async function copyCode(block, button) {
-      let code = block.querySelector("code");
-      let text = code?.innerText;
+      const code = block.querySelector("code");
+      const text = code?.innerText;
 
       await navigator.clipboard.writeText(text ?? "");
 
@@ -237,7 +239,7 @@ const layoutProps = {
 
   // Load discus comments
   function loadDiscus() {
-    let giscusAttributes = {
+    const giscusAttributes = {
       src: "https://giscus.app/client.js",
       "data-repo": "cyprieng/cyprien.io",
       "data-repo-id": "R_kgDOME6MCQ",
@@ -254,7 +256,7 @@ const layoutProps = {
       async: "",
     };
 
-    let giscusScript = document.createElement("script");
+    const giscusScript = document.createElement("script");
     Object.entries(giscusAttributes).forEach(([key, value]) =>
       giscusScript.setAttribute(key, value),
     );

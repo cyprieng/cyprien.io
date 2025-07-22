@@ -10,6 +10,7 @@ description: A description of my homelab setup
 tags:
   - devops
 ---
+
 I have had a homelab for many years, which has evolved many times.  
 Previously, I mainly used my homelab to experiment and learn how some tech worked: Kubernetes, Proxmox, etc.
 
@@ -140,4 +141,3 @@ My homelab is very simple, relying mostly on commercial appliances without custo
 So I’m very happy with this setup, and I probably won’t change it anytime soon.
 
 If you have specific questions on how to set up some of the stuff I use, do not hesitate to contact me (see the email icon in the footer).
-

@@ -27,46 +27,46 @@ const languages = {
 
 <div
   id="resume"
-  class="md:p-8 mb-8 md:mx-8 md:flex print:text-xs print:p-2 print:mb-0 print:mx-6"
+  class="mb-8 md:mx-8 md:flex md:p-8 print:mx-6 print:mb-0 print:p-2 print:text-xs"
 >
-  <div id="left-column" class="md:basis-[70%] md:mr-10 w-full">
-    <div id="resume-main" class="md:flex max-md:text-center">
+  <div id="left-column" class="w-full md:mr-10 md:basis-[70%]">
+    <div id="resume-main" class="max-md:text-center md:flex">
       <Image
         src={photo}
         alt="photo"
-        class="w-40 h-40 rounded-lg max-md:mx-auto"
+        class="h-40 w-40 rounded-lg max-md:mx-auto"
       />
 
-      <div id="resume-name" class="md:ml-8 max-md:mt-3">
-        <h1 class="md:text-5xl max-md:text-3xl print:text-3xl font-bold">
+      <div id="resume-name" class="max-md:mt-3 md:ml-8">
+        <h1 class="font-bold max-md:text-3xl md:text-5xl print:text-3xl">
           Cyprien
         </h1>
-        <h2 class="text-lg font-normal mt-3">Senior software engineer</h2>
+        <h2 class="mt-3 text-lg font-normal">Senior software engineer</h2>
 
         <div class="md:hidden">
           <p>
             <MapPinIcon
-              className="h-4 mb-1 text-slate-600 dark:text-slate-200"
+              className="mb-1 h-4 text-slate-600 dark:text-slate-200"
             />
             Montpellier, France
           </p>
           <a href="mailto:job@cyprien.io">
             <EnvelopeSimpleIcon
-              className="h-4 mb-1 text-slate-600 dark:text-slate-200"
+              className="mb-1 h-4 text-slate-600 dark:text-slate-200"
             />
             job@cyprien.io
           </a>
           <p>
-            <CakeIcon className="h-4 mb-1 text-slate-600 dark:text-slate-200" />
+            <CakeIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
             2024-08-18
           </p>
           <p>
-            <FlagIcon className="h-4 mb-1 text-slate-600 dark:text-slate-200" />
+            <FlagIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
             French
           </p>
           <a href="https://github.com/cyprieng">
             <GithubLogoIcon
-              className="h-4 mb-1 text-slate-600 dark:text-slate-200"
+              className="mb-1 h-4 text-slate-600 dark:text-slate-200"
             />
             github.com/cyprieng
           </a>
@@ -76,9 +76,9 @@ const languages = {
 
     <div id="resume-profile" class="mt-8">
       <h3
-        class="uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+        class="mb-3 text-xl font-extrabold text-slate-600 uppercase dark:text-slate-200 print:text-base"
       >
-        <UserIcon className="h-4 mb-1 text-slate-600 dark:text-slate-200" />
+        <UserIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
         Profile
       </h3>
       Professional software engineer with 8+ years of experience spanning software
@@ -92,16 +92,16 @@ const languages = {
 
     <div id="resume-education" class="mt-8">
       <h3
-        class="uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+        class="mb-3 text-xl font-extrabold text-slate-600 uppercase dark:text-slate-200 print:text-base"
       >
         <GraduationCapIcon
-          className="h-4 mb-1 text-slate-600 dark:text-slate-200"
+          className="mb-1 h-4 text-slate-600 dark:text-slate-200"
         />
         Education
       </h3>
 
       <div class="row mb-8">
-        <h4 class="font-extrabold text-lg print:text-sm">
+        <h4 class="text-lg font-extrabold print:text-sm">
           Master's degree from Université de Technologie de Troyes
         </h4>
         <p>Master's degree in Computer Science.</p>
@@ -109,7 +109,7 @@ const languages = {
       </div>
 
       <div class="row mb-8">
-        <h4 class="font-extrabold text-lg print:text-sm">
+        <h4 class="text-lg font-extrabold print:text-sm">
           Franklin W. Olin College of Engineering
         </h4>
         <p>Exchange semester.</p>
@@ -121,10 +121,10 @@ const languages = {
 
     <div id="resume-work" class="mt-8">
       <h3
-        class="uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+        class="mb-3 text-xl font-extrabold text-slate-600 uppercase dark:text-slate-200 print:text-base"
       >
         <SuitcaseSimpleIcon
-          className="h-4 mb-1 text-slate-600 dark:text-slate-200"
+          className="mb-1 h-4 text-slate-600 dark:text-slate-200"
         />
         Work history
       </h3>
@@ -133,9 +133,9 @@ const languages = {
         <Image
           src={octipas}
           alt="Octipas"
-          class="invert dark:invert-0 w-40 mr-4 float-right pl-4"
+          class="float-right mr-4 w-40 pl-4 invert dark:invert-0"
         />
-        <h4 class="font-extrabold text-lg print:text-sm">Lead developer</h4>
+        <h4 class="text-lg font-extrabold print:text-sm">Lead developer</h4>
         <h5>Octipas by Chapsvision</h5>
         <p>
           <ul class="list-disc pl-5">
@@ -170,8 +170,8 @@ const languages = {
       </div>
 
       <div class="row mb-8">
-        <Image src={slb} alt="octipas" class="w-20 mr-4 float-right pl-4" />
-        <h4 class="font-extrabold text-lg print:text-sm">
+        <Image src={slb} alt="octipas" class="float-right mr-4 w-20 pl-4" />
+        <h4 class="text-lg font-extrabold print:text-sm">
           Developer (internship)
         </h4>
         <h5>SLB (Schlumberger)</h5>
@@ -195,34 +195,34 @@ const languages = {
       </div>
     </div>
   </div>
-  <div id="right-column" class="md:basis-[30%] w-full">
+  <div id="right-column" class="w-full md:basis-[30%]">
     <div class="max-md:hidden">
       <h3
-        class="uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+        class="mb-3 text-xl font-extrabold text-slate-600 uppercase dark:text-slate-200 print:text-base"
       >
         Details
       </h3>
       <p>
-        <MapPinIcon className="h-4 mb-1 text-slate-600 dark:text-slate-200" />
+        <MapPinIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
         Montpellier, France
       </p>
       <a href="mailto:job@cyprien.io">
         <EnvelopeSimpleIcon
-          className="h-4 mb-1 text-slate-600 dark:text-slate-200"
+          className="mb-1 h-4 text-slate-600 dark:text-slate-200"
         />
         job@cyprien.io
       </a>
       <p>
-        <CakeIcon className="h-4 mb-1 text-slate-600 dark:text-slate-200" />
+        <CakeIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
         2024-08-18
       </p>
       <p>
-        <FlagIcon className="h-4 mb-1 text-slate-600 dark:text-slate-200" />
+        <FlagIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
         French
       </p>
       <a href="https://github.com/cyprieng">
         <GithubLogoIcon
-          className="h-4 mb-1 text-slate-600 dark:text-slate-200"
+          className="mb-1 h-4 text-slate-600 dark:text-slate-200"
         />
         github.com/cyprieng
       </a>
@@ -230,7 +230,7 @@ const languages = {
 
     <div class="skills">
       <h3
-        class="mt-8 uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+        class="mt-8 mb-3 text-xl font-extrabold text-slate-600 uppercase dark:text-slate-200 print:text-base"
       >
         Skills
       </h3>
@@ -251,7 +251,7 @@ const languages = {
       Docker, Kubernetes, Terraform, AWS, Azure, Git, Subversion
 
       <h3
-        class="mt-8 uppercase mb-3 text-slate-600 dark:text-slate-200 text-xl print:text-base font-extrabold"
+        class="mt-8 mb-3 text-xl font-extrabold text-slate-600 uppercase dark:text-slate-200 print:text-base"
       >
         Languages
       </h3>
@@ -260,7 +260,7 @@ const languages = {
           return (
             <div class="skill mt-4">
               <h4>{language}</h4>
-              <div class="progress-bar w-full bg-gray-200 rounded-full h-2.5">
+              <div class="progress-bar h-2.5 w-full rounded-full bg-gray-200">
                 <div
                   style={{ width: `${level}%` }}
                   class="bg-accent h-2.5 rounded-full"

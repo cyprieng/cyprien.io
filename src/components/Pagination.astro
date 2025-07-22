@@ -16,7 +16,7 @@ const next = currentPage < totalPages ? "" : "disabled";
 
 {
   totalPages > 1 && (
-    <nav class="mb-8 mt-auto flex justify-center" aria-label="Pagination">
+    <nav class="mt-auto mb-8 flex justify-center" aria-label="Pagination">
       <LinkButton
         disabled={prev === "disabled"}
         href={prevUrl}

@@ -18,10 +18,9 @@ export default function GithubBreakoutForm() {
     try {
       setSvg(await generateSVG(username, token, false));
       setSvgDark(await generateSVG(username, token, true));
-    } catch (err: any) {
+    } catch {
       setError(
-        err?.message ||
-          "Failed to generate SVG. Please check your credentials and try again.",
+        "Failed to generate SVG. Please check your credentials and try again.",
       );
       setSvg(null);
       setSvgDark(null);
@@ -37,7 +36,7 @@ export default function GithubBreakoutForm() {
 
   return (
     <div>
-      {error && <div className="mb-4 text-red-600 text-center">{error}</div>}
+      {error && <div className="mb-4 text-center text-red-600">{error}</div>}
       {!svg || !svgDark ? (
         <form onSubmit={handleSubmit} autoComplete="off">
           <div className="mb-4">
@@ -49,7 +48,7 @@ export default function GithubBreakoutForm() {
                 onChange={(e) => setUsername(e.target.value)}
                 required
                 autoComplete="off"
-                className="mt-2 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="mt-2 w-full rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
             </label>
           </div>
@@ -62,13 +61,13 @@ export default function GithubBreakoutForm() {
                 onChange={(e) => setToken(e.target.value)}
                 required
                 autoComplete="off"
-                className="mt-2 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="mt-2 w-full rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
             </label>
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition"
+            className="w-full rounded bg-blue-600 px-4 py-2 font-semibold text-white transition hover:bg-blue-700"
           >
             Generate SVG
           </button>
@@ -76,13 +75,13 @@ export default function GithubBreakoutForm() {
       ) : (
         <div>
           <div
-            className="svg-full-width w-full block dark:hidden"
+            className="svg-full-width block w-full dark:hidden"
             dangerouslySetInnerHTML={{
               __html: svg,
             }}
           />
           <div
-            className="svg-full-width w-full hidden dark:block"
+            className="svg-full-width hidden w-full dark:block"
             dangerouslySetInnerHTML={{
               __html: svgDark,
             }}
@@ -98,7 +97,7 @@ export default function GithubBreakoutForm() {
           </style>
 
           <button
-            className="mt-6 w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition"
+            className="mt-6 w-full rounded bg-blue-600 px-4 py-2 font-semibold text-white transition hover:bg-blue-700"
             onClick={() => setSvg(null)}
           >
             Generate Another

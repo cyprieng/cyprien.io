@@ -3,6 +3,7 @@ layout: ../layouts/BasicLayout.astro
 title: Uses
 activeNav: uses
 ---
+
 _Updated July 21st, 2025_
 
 ## **Hardware**
@@ -46,4 +47,3 @@ As a bonus, here is a picture of my desk:
 - [GitHub Copilot](https://github.com/features/copilot) – For coding assistance and productivity.
 - [Proton](https://proton.me/mail) – My secure personal email service.
 - [Kagi](https://kagi.com) – Search engine.
-

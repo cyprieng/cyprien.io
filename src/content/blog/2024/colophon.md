@@ -10,6 +10,7 @@ description: A detailed look at the technologies and process behind creating thi
 tags:
   - development
 ---
+
 After years of wanting to build my blog, here it is finally
 
 The first post of this blog will be a quick description of how I built it.
@@ -72,7 +73,6 @@ Optimizing performance and accessibility was a key goal. Here are some highlight
 
 - **Accessibility testing:**  
   I used these tools to ensure accessibility compliance:
-
   - [WAVE Evaluation Tool](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh)
   - [axe DevTools](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
 
@@ -104,4 +104,3 @@ Your feedback is invaluable! If you notice any issues or have suggestions, you c
 
 1. File an issue on [GitHub](https://github.com/cyprieng/cyprien.io/issues/new).
 2. Contact me directly via email (link in the footer).
-

@@ -21,11 +21,15 @@ export default function Card({ href, frontmatter }: Props) {
     <li className="my-6 flex">
       <a
         href={href}
-        className="inline-block text-lg font-medium text-accent no-underline! focus-visible:no-underline focus-visible:underline-offset-0 mr-2"
+        className="text-accent mr-2 inline-block text-lg font-medium no-underline! focus-visible:no-underline focus-visible:underline-offset-0"
       >
         <h2 {...headerProps}>{title}</h2>
       </a>
-      <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} icon={false} />
+      <Datetime
+        pubDatetime={pubDatetime}
+        modDatetime={modDatetime}
+        icon={false}
+      />
     </li>
   );
 }

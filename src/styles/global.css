@@ -59,8 +59,7 @@ html[data-theme="dark"] {
   }
 
   body {
-    @apply font-body  flex min-h-svh flex-col bg-background text-foreground
-      selection:bg-accent/70 selection:text-background;
+    @apply font-body bg-background text-foreground selection:bg-accent/70 selection:text-background flex min-h-svh flex-col;
   }
 
   section,
@@ -73,37 +72,19 @@ html[data-theme="dark"] {
   }
 
   svg {
-    @apply inline-block h-6 w-6 fill-foreground group-hover:fill-accent;
+    @apply fill-foreground group-hover:fill-accent inline-block h-6 w-6;
   }
 
   svg.icon-tabler {
-    @apply inline-block h-6 w-6 scale-125 fill-transparent
-      stroke-current stroke-2 opacity-90 group-hover:fill-transparent
-      sm:scale-110;
+    @apply inline-block h-6 w-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110;
   }
 
   .prose {
-    @apply text-prose! prose-headings:mb-3! prose-headings:text-foreground!
-      prose-h3:italic prose-p:text-foreground!
-      prose-a:text-foreground! prose-a:decoration-dashed! prose-a:underline-offset-8
-      hover:prose-a:text-accent prose-blockquote:border-accent/50!
-      prose-blockquote:opacity-80
-      prose-figcaption:text-foreground! prose-figcaption:opacity-70
-      prose-strong:text-foreground!
-
-      prose-code:rounded-sm prose-code:bg-card/75
-      prose-code:p-1
-      prose-code:before:content-none! prose-code:after:content-none!
-      prose-ol:text-foreground!
-      prose-ul:overflow-x-clip prose-ul:text-foreground! prose-li:marker:text-accent!
-      prose-table:text-foreground prose-th:border
-      prose-th:border-border prose-td:border
-      prose-td:border-border prose-img:my-2!
-      prose-img:mx-auto;
+    @apply text-prose! prose-headings:mb-3! prose-headings:text-foreground! prose-h3:italic prose-p:text-foreground! prose-a:text-foreground! prose-a:decoration-dashed! prose-a:underline-offset-8 hover:prose-a:text-accent prose-blockquote:border-accent/50! prose-blockquote:opacity-80 prose-figcaption:text-foreground! prose-figcaption:opacity-70 prose-strong:text-foreground! prose-code:rounded-sm prose-code:bg-card/75 prose-code:p-1 prose-code:before:content-none! prose-code:after:content-none! prose-ol:text-foreground! prose-ul:overflow-x-clip prose-ul:text-foreground! prose-li:marker:text-accent! prose-table:text-foreground prose-th:border prose-th:border-border prose-td:border prose-td:border-border prose-img:my-2! prose-img:mx-auto;
   }
 
   .prose a {
-    @apply break-words hover:text-accent! underline;
+    @apply hover:text-accent! break-words underline;
   }
 
   .prose thead th:first-child,
@@ -117,7 +98,7 @@ html[data-theme="dark"] {
   }
 
   .prose details {
-    @apply inline-block cursor-pointer select-none text-foreground;
+    @apply text-foreground inline-block cursor-pointer select-none;
   }
 
   .prose h2#table-of-contents + p {
@@ -143,11 +124,11 @@ html[data-theme="dark"] {
   }
 
   #main-content a:not(.button) {
-    @apply break-words hover:text-accent! underline decoration-dashed underline-offset-4;
+    @apply hover:text-accent! break-words underline decoration-dashed underline-offset-4;
   }
 
   .button {
-    @apply bg-black text-white! px-6 py-2 rounded-lg text-lg hover:bg-black/80 dark:hover:bg-black/30 transition-opacity inline-block no-underline! mb-10 hover:text-[#FF79C6]!;
+    @apply mb-10 inline-block rounded-lg bg-black px-6 py-2 text-lg text-white! no-underline! transition-opacity hover:bg-black/80 hover:text-[#FF79C6]! dark:hover:bg-black/30;
   }
 }
 
@@ -158,5 +139,5 @@ table {
 
 /* Specific style for about page */
 section[id="about"] li img {
-  @apply w-5 h-5 mr-2 inline-block;
+  @apply mr-2 inline-block h-5 w-5;
 }

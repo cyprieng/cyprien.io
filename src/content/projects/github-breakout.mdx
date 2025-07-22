@@ -7,15 +7,16 @@ slug: github-breakout
 featured: false
 description: Generate a Breakout game SVG from a GitHub user's contributions graph
 logo: /assets/images/github-breakout.png
-link: 'https://github.com/cyprieng/github-breakout'
+link: "https://github.com/cyprieng/github-breakout"
 tags:
   - typescript
 ---
+
 import GithubBreakout from "../../components/GithubBreakout.tsx";
 
 This project will grab your contribution graph through the GitHub API and generate images for light and dark mode:
 
-<div className="bg-[#FFF] p-5 mb-5">
+<div className="mb-5 bg-[#FFF] p-5">
   ![Breakout SVG](assets/images/projects/github-breakout/light.svg)
 </div>
 <div className="bg-[#0d1117] p-5">
@@ -111,4 +112,3 @@ await generateSVG(username, token, false);
 ### Try it
 
 <GithubBreakout client:load />
-

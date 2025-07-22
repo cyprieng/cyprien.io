@@ -20,7 +20,7 @@ async function waitForServer(url, timeout = 30000) {
     try {
       const response = await fetch(url);
       if (response.ok) return true;
-    } catch (e) {
+    } catch {
       await new Promise((resolve) => setTimeout(resolve, 100));
     }
   }

@@ -22,7 +22,7 @@ const { frontmatter } = Astro.props;
   <main id="main-content">
     <section
       id={frontmatter.activeNav}
-      class="prose mb-28 max-w-3xl prose-img:border-0"
+      class="prose prose-img:border-0 mb-28 max-w-3xl"
     >
       <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
       <slot />

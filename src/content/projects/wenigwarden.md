@@ -7,10 +7,11 @@ slug: wenigwarden
 featured: false
 description: Light macos Bitwarden client in the menu bar
 logo: /assets/images/wenigwarden.png
-link: 'https://github.com/cyprieng/wenigwarden'
+link: "https://github.com/cyprieng/wenigwarden"
 tags:
   - swift
 ---
+
 A lightweight **macOS menu bar client** for **Bitwarden** password manager, focused on essential vault access through the menu bar. This is a simplified alternative to the official desktop app.
 
 **Wenigwarden** is designed for users who primarily need read-only access to their vault through a lightweight interface. Perfect for quick password lookups while consuming minimal system resources, with added convenience of keyboard shortcuts for power users.
@@ -47,4 +48,3 @@ The app is **not signed** with an Apple developer certificate. Before running th
 ![cipher list](assets/images/posts/2025/wenigwarden/cipher_list.png)
 
 ![cipher details](assets/images/posts/2025/wenigwarden/cipher_details.png)
-

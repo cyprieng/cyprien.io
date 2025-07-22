@@ -58,7 +58,7 @@ export default function SearchBar({ searchList }: Props) {
   useEffect(() => {
     // Add search result only if
     // input value is more than one character
-    let inputResult = inputVal.length > 1 ? fuse.search(inputVal) : [];
+    const inputResult = inputVal.length > 1 ? fuse.search(inputVal) : [];
     setSearchResults(inputResult);
 
     // Update search string in URL
@@ -83,10 +83,7 @@ export default function SearchBar({ searchList }: Props) {
           <span className="sr-only">Search</span>
         </span>
         <input
-          className="block w-full rounded border 
-        border-foreground/40 py-3 pl-10
-        pr-3 placeholder:italic placeholder:text-opacity-75
-        focus:border-accent focus:outline-none"
+          className="border-foreground/40 placeholder:text-opacity-75 focus:border-accent block w-full rounded border py-3 pr-3 pl-10 placeholder:italic focus:outline-none"
           placeholder="Search for anything..."
           type="text"
           name="search"

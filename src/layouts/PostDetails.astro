@@ -11,9 +11,10 @@ import { SITE } from "@config";
 
 export interface Props {
   post: CollectionEntry<"blog"> | CollectionEntry<"projects">;
+  type: "blog" | "projects";
 }
 
-const { post } = Astro.props;
+const { post, type } = Astro.props;
 
 const {
   title,
@@ -52,7 +53,7 @@ const layoutProps = {
 ---
 
 <Layout {...layoutProps}>
-  <Header />
+  <Header activeNav={type === "projects" ? "projects" : undefined} />
 
   <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
     <button

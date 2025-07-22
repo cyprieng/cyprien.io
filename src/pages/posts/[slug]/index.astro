@@ -38,4 +38,4 @@ const pagination = getPagination({
 });
 ---
 
-{post ? <PostDetails post={post} /> : <Posts {...pagination} />}
+{post ? <PostDetails type="blog" post={post} /> : <Posts {...pagination} />}

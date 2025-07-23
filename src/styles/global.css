@@ -128,6 +128,11 @@ html[data-theme="dark"] {
   .button {
     @apply mb-10 inline-block rounded-lg bg-black px-6 py-2 text-lg text-white! no-underline! transition-opacity hover:bg-black/80 hover:text-[#FF79C6]! dark:hover:bg-black/30;
   }
+
+  input[type="text"],
+  input[type="password"] {
+    @apply text-foreground border-foreground/40 placeholder:text-foreground/75 focus:border-accent rounded border px-3 py-3 placeholder:italic focus:outline-none;
+  }
 }
 
 /* Avoid table overflow on small screens */

@@ -40,28 +40,28 @@ export default function GithubBreakoutForm() {
       {!svg || !svgDark ? (
         <form onSubmit={handleSubmit} autoComplete="off">
           <div className="mb-4">
-            <label className="mb-2">
-              <p className="m-0">GitHub username:</p>
+            <label>
+              <p className="mb-0">GitHub username:</p>
               <input
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 required
                 autoComplete="off"
-                className="mt-2 w-full rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full"
               />
             </label>
           </div>
           <div className="mb-6">
-            <label className="mb-2">
-              <p className="m-0">Token:</p>
+            <label>
+              <p className="mb-0">Token:</p>
               <input
                 type="password"
                 value={token}
                 onChange={(e) => setToken(e.target.value)}
                 required
                 autoComplete="off"
-                className="mt-2 w-full rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full"
               />
             </label>
           </div>

@@ -24,6 +24,12 @@ export const SOCIALS: SocialObjects = [
     active: true,
   },
   {
+    name: "HackerNews",
+    href: "https://news.ycombinator.com/user?id=cyprien_g",
+    linkTitle: `${SITE.title} on Hacker News`,
+    active: true,
+  },
+  {
     name: "Mail",
     href: "mailto:hello@cyprien.io",
     linkTitle: `Send an email to ${SITE.title}`,

@@ -3,8 +3,7 @@ layout: ../layouts/BasicLayout.astro
 title: Uses
 activeNav: uses
 ---
-
-_Updated July 21st, 2025_
+_Updated August 28th, 2025_
 
 ## **Hardware**
 
@@ -28,9 +27,9 @@ As a bonus, here is a picture of my desk:
 
 - [Neovim](https://neovim.io) – My main text editor; I spend most of my time on it.
 - [Ghostty](https://github.com/ghostty-org/ghostty) – A powerful terminal emulator.
-- [Notion](https://www.notion.so/) – For note-taking, project management, and life organization.
+- [Orion Browser](https://kagi.com/orion/) – The best browser on macOS despite some small issues.
+- [Obsidian](https://obsidian.md) – For note-taking, project management, and life organization.
 - [Apple Reminders](https://www.icloud.com/reminders) – To manage my to-do list and recurring chores.
-- [Vaultwarden](https://github.com/dani-garcia/vaultwarden) – My password manager.
 - [Home Assistant](https://www.home-assistant.io/) – For seamless home automation.
 - [OPNsense](https://opnsense.org/) – My home router solution.
 - [Proxmox](https://www.proxmox.com/en/proxmox-ve) – To manage my homelab efficiently.
@@ -46,4 +45,5 @@ As a bonus, here is a picture of my desk:
 - [Spotify](https://www.spotify.com/) – For all my music needs.
 - [GitHub Copilot](https://github.com/features/copilot) – For coding assistance and productivity.
 - [Proton](https://proton.me/mail) – My secure personal email service.
-- [Kagi](https://kagi.com) – Search engine.
+- [Proton Pass](https://proton.me/fr/pass) – My password manager.
+

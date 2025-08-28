@@ -20,7 +20,7 @@ But for Obsidian there is no free and easy solution for this, as I don't really 
 
 So I built my own free publish chain.
 
-## GitHub repo side
+## GitHub repo
 
 I created a repository using <https://github.com/jackyzha0/quartz>
 It's far too powerful for my use case, but it's awesome.
@@ -37,7 +37,7 @@ npx quartz create
 I then pushed this to my repo.
 Then I needed to retrieve the notes from Obsidian.
 
-## Obsidian side
+## Obsidian
 
 I built a little Obsidian extension: <https://github.com/cyprieng/obsidian-github-publisher>  
 It allows you to select a GitHub repo with a folder, and some folders/notes from your vault, and it will automatically sync your notes to the given repo in the given folder:
@@ -47,7 +47,7 @@ It allows you to select a GitHub repo with a folder, and some folders/notes from
 So in my case, every 15 minutes it syncs my notes to the content directory of my GitHub repo.
 `content` is the directory Quartz uses for markdown files.
 
-## Hosting side
+## Hosting
 
 I used Cloudflare Pages to build my website.
 I set up an automatic deployment whenever there is a new commit on my repo.

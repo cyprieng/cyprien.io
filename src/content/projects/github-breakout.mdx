@@ -14,22 +14,50 @@ tags:
 
 import GithubBreakout from "../../components/GithubBreakout.tsx";
 
-This project will grab your contribution graph through the GitHub API and generate images for light and dark mode:
+This project grabs your contribution graph through the GitHub API and generates images for light and dark mode:
 
-<div className="mb-5 bg-[#FFF] p-5">
+<div className="dark:hidden">
   ![Breakout SVG](assets/images/projects/github-breakout/light.svg)
 </div>
-<div className="bg-[#0d1117] p-5">
+<div className="hidden dark:block">
   ![Breakout SVG](assets/images/projects/github-breakout/dark.svg)
+</div>
+
+You can also customize colors:
+
+<div className="dark:hidden">
+  ![Breakout SVG](assets/images/projects/github-breakout/custom-light.svg)
+</div>
+<div className="hidden dark:block">
+  ![Breakout SVG](assets/images/projects/github-breakout/custom-dark.svg)
+</div>
+
+You can also disable ghost bricks for days without activity, so all days count as a brick:
+
+<div className="dark:hidden">
+  ![Breakout SVG](assets/images/projects/github-breakout/light-no-ghost.svg)
+</div>
+<div className="hidden dark:block">
+  ![Breakout SVG](assets/images/projects/github-breakout/dark-no-ghost.svg)
 </div>
 
 ## Usage
 
 ### GitHub Action
 
-You can use the provided GitHub Action to build the SVGs so you can display them like on my profile ([github.com/cyprieng](https://github.com/cyprieng)):
+You can use the provided GitHub Action to build the SVGs so you can display them on your profile (my profile for example: [github.com/cyprieng](https://github.com/cyprieng)).
 
-Generate the SVGs every day and commit them to your repository:
+The action generates dark, light and optionally custom SVGs, and has these inputs:
+
+- github_username (required): GitHub username
+- github_token: GitHub token used to fetch the contributions. Defaults to the action token if empty.
+- enable_ghost_bricks: Enable ghost bricks for days without contribution (default to true)
+- output_path: Output path for SVGs (default is `./output/`)
+- paddle_color: Paddle color for `custom.svg`
+- ball_color: Ball color for `custom.svg`
+- bricks_colors: Bricks colors as a list of colors separated by commas for `custom.svg`
+
+This example GitHub workflow generates the SVGs every day and commits them to your repository:
 
 ```yaml
 name: generate breakout svg
@@ -51,41 +79,45 @@ jobs:
         uses: actions/checkout@v4
 
       - name: generate SVG
-        uses: cyprieng/github-breakout@v1.0.0
+        uses: cyprieng/github-breakout@v1
         with:
           github_username: ${{ github.repository_owner }}
 
-      - name: Move generated SVGs
+      - name: Move generated SVGs to temp
         run: |
-          mkdir -p images
-          mv output/light.svg images/breakout-light.svg
-          mv output/dark.svg images/breakout-dark.svg
+          mkdir -p /tmp/breakout-images
+          mv output/light.svg /tmp/breakout-images/breakout-light.svg
+          mv output/dark.svg /tmp/breakout-images/breakout-dark.svg
 
       - name: Configure git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit and push SVGs
+      - name: Commit and force-push SVGs to target branch
         run: |
-          git add images/breakout-light.svg images/breakout-dark.svg
-          git commit -m "chore: update breakout SVGs" || echo "No changes to commit"
-          git push
+          git checkout --orphan github-breakout
+          git rm -rf .
+          mkdir images
+          mv /tmp/breakout-images/* images/
+          git add images
+          git commit -m "chore: update GitHub breakout SVGs" || echo "No changes to commit"
+          git push --force origin github-breakout
 ```
 
-Add them to your README.md:
+Then retrieve the SVGs URLs from the github-breakout branch and add them to your README.md:
 
 ```html
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
-    srcset="images/breakout-dark.svg"
+    srcset="{YOUR IMAGE URL}/images/breakout-dark.svg"
   />
   <source
     media="(prefers-color-scheme: light)"
-    srcset="images/breakout-light.svg"
+    srcset="{YOUR IMAGE URL}/images/breakout-light.svg"
   />
-  <img alt="Breakout Game" src="images/breakout-light.svg" />
+  <img alt="Breakout Game" src="{YOUR IMAGE URL}/images/breakout-light.svg" />
 </picture>
 ```
 
@@ -93,7 +125,22 @@ Add them to your README.md:
 
 You need to get a GitHub Token, then you can run the following command:
 
-`node dist/cli.js {username} {github token} {dark mode: true/false}`
+`node dist/cli.js --username {username} --token {github token} --dark --light --ball-color "#006064" --paddle-color "#006064" --bricks-colors "#e0f7fa,#b2ebf2,#4dd0e1,#0097a7,#006064"`
+
+Here is the list of available options:
+
+- --username (required): GitHub username
+- --token (required): Token with access to the user activity
+- --dark: Generate dark version
+- --light: Generate light version
+- --no-ghost-bricks: All days are used as bricks
+- --output-path: Change the output path of SVGs (default is `./output/`)
+
+Those options allow you to customize the colors, and will generate a `custom.svg` file:
+
+- --ball-color: Color of the ball
+- --paddle-color: Color of the paddle
+- --bricks-colors: List of 5 colors separated by commas, from least activity to most
 
 ### Library
 
@@ -106,9 +153,14 @@ And then you can use it like this:
 ```javascript
 import { generateSVG } from "github-breakout";
 
-await generateSVG(username, token, false);
+await generateSVG(username, token, {
+  enableGhostBricks: boolean,
+  paddleColor?: string,
+  ballColor?: string,
+  bricksColors?: "github_light" | "github_dark" | ColorPalette
+});
 ```
 
 ### Try it
 
-<GithubBreakout client:load />
+<GithubBreakout client:only />

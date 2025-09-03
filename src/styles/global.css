@@ -130,7 +130,8 @@ html[data-theme="dark"] {
   }
 
   input[type="text"],
-  input[type="password"] {
+  input[type="password"],
+  select {
     @apply text-foreground border-foreground/40 placeholder:text-foreground/75 focus:border-accent rounded border px-3 py-3 placeholder:italic focus:outline-none;
   }
 }

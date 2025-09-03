@@ -10,7 +10,6 @@ description: A description of my homelab setup
 tags:
   - devops
 ---
-
 I have had a homelab for many years, which has evolved many times.  
 Previously, I mainly used my homelab to experiment and learn how some tech worked: Kubernetes, Proxmox, etc.
 
@@ -19,13 +18,13 @@ At least more useful than what it costs me in electricity.
 
 Here is my current setup:
 
-![Photo of the homelab](assets/images/posts/2024/homelab/photo.png)
+![Photo of the homelab](assets/images/posts/2024/homelab/photo.jpg)
 
 The homelab lives in an [Ikea Kallax](https://www.ikea.com/fr/fr/p/kallax-etagere-brun-noir-60275812/#content), with a [door](https://www.ikea.com/fr/fr/p/kallax-bloc-porte-brun-noir-60278170/#content). I have removed the back of the door to allow some airflow at the back.
 
 Here is a simplified schema of the homelab:
 
-![Schema of the homelab](assets/images/posts/2024/homelab/homelab.png)
+![Schema of the homelab](assets/images/posts/2024/homelab/schema.png)
 
 ## Freebox Pop
 
@@ -141,3 +140,4 @@ My homelab is very simple, relying mostly on commercial appliances without custo
 So I’m very happy with this setup, and I probably won’t change it anytime soon.
 
 If you have specific questions on how to set up some of the stuff I use, do not hesitate to contact me (see the email icon in the footer).
+

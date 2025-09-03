@@ -1,11 +1,11 @@
-import github from "./assets/images/icons/github.svg?raw";
-import linkedin from "./assets/images/icons/linkedin.svg?raw";
-import email from "./assets/images/icons/email.svg?raw";
-import hackernews from "./assets/images/icons/hackernews.svg?raw";
-import whatsapp from "./assets/images/icons/whatsapp.svg?raw";
-import facebook from "./assets/images/icons/facebook.svg?raw";
-import x from "./assets/images/icons/x.svg?raw";
-import telegram from "./assets/images/icons/telegram.svg?raw";
+import github from "./assets/icons/github.svg?raw";
+import linkedin from "./assets/icons/linkedin.svg?raw";
+import email from "./assets/icons/email.svg?raw";
+import hackernews from "./assets/icons/hackernews.svg?raw";
+import whatsapp from "./assets/icons/whatsapp.svg?raw";
+import facebook from "./assets/icons/facebook.svg?raw";
+import x from "./assets/icons/x.svg?raw";
+import telegram from "./assets/icons/telegram.svg?raw";
 
 // Social link
 interface SocialLink {

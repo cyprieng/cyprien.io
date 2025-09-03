@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="115pt" height="115pt" version="1.1">
+    <title>Python programming language logo</title>
+    <metadata>
+        <rdf:RDF>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title />
+        </rdf:RDF>
+    </metadata>
+    <defs>
+        <linearGradient id="vlpc" x1="151" x2="112" y1="192.4" y2="137.3"
+            gradientTransform="matrix(.5625 0 0 .568 -9.4 -5.305)" gradientUnits="userSpaceOnUse">
+            <stop style="stop-color:#ffd43b" offset="0" />
+            <stop style="stop-color:#ffe873" offset="1" />
+        </linearGradient>
+        <linearGradient id="vlpb" x1="26.65" x2="135.7" y1="20.6" y2="114.4"
+            gradientTransform="matrix(.5625 0 0 .568 -9.4 -5.305)" gradientUnits="userSpaceOnUse">
+            <stop style="stop-color:#5a9fd4" offset="0" />
+            <stop style="stop-color:#306998" offset="1" />
+        </linearGradient>
+        <radialGradient id="vlpa" cx="61.52" cy="132.3" r="29.04"
+            gradientTransform="matrix(2.383e-8 -.2964 1.437 4.684e-7 -128.5 150.5)"
+            gradientUnits="userSpaceOnUse">
+            <stop style="stop-color:#b8b8b8;stop-opacity:.498" offset="0" />
+            <stop style="stop-color:#7f7f7f;stop-opacity:0" offset="1" />
+        </radialGradient>
+    </defs>
+    <path
+        d="m60.51 6.398c-4.584 0.0213-8.961 0.4122-12.81 1.094-11.35 2.005-13.41 6.2-13.41 13.94v10.22h26.81v3.406h-26.81-10.06c-7.792 0-14.62 4.684-16.75 13.59-2.462 10.21-2.571 16.59 0 27.25 1.906 7.938 6.458 13.59 14.25 13.59h9.219v-12.25c0-8.85 7.657-16.66 16.75-16.66h26.78c7.455 0 13.41-6.138 13.41-13.62v-25.53c0-7.266-6.13-12.72-13.41-13.94-4.606-0.7667-9.385-1.115-13.97-1.094zm-14.5 8.219c2.77 0 5.031 2.299 5.031 5.125-2e-6 2.816-2.262 5.094-5.031 5.094-2.779-1e-6 -5.031-2.277-5.031-5.094-1e-6 -2.826 2.252-5.125 5.031-5.125z"
+        style="fill:url(#vlpb)" />
+    <path
+        d="m91.23 35.05v11.91c0 9.231-7.826 17-16.75 17h-26.78c-7.336 0-13.41 6.278-13.41 13.62v25.53c0 7.266 6.319 11.54 13.41 13.62 8.487 2.496 16.63 2.947 26.78 0 6.75-1.954 13.41-5.888 13.41-13.62v-10.22h-26.78v-3.406h26.78 13.41c7.792 0 10.7-5.435 13.41-13.59 2.799-8.399 2.68-16.48 0-27.25-1.926-7.757-5.604-13.59-13.41-13.59h-10.06zm-15.06 64.66c2.779 3e-6 5.031 2.277 5.031 5.094-2e-6 2.826-2.252 5.125-5.031 5.125-2.77 0-5.031-2.299-5.031-5.125 2e-6 -2.816 2.262-5.094 5.031-5.094z"
+        style="fill:url(#vlpc)" />
+</svg>

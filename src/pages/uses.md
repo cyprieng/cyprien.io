@@ -19,7 +19,7 @@ _Updated August 28th, 2025_
 - [Orbea Vector 20](https://www.orbea.com/gb-en/bicycles/urban/vector/cat/vector-20) – My trusted bike for commuting.
 
 As a bonus, here is a picture of my desk:
-![desk image](assets/images/desk.jpg)
+![desk image](assets/images/uses/desk.jpg)
 
 ---
 

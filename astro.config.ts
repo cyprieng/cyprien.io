@@ -5,7 +5,6 @@ import { defineConfig } from "astro/config";
 import config from "./src/config";
 import mdx from "@astrojs/mdx";
 
-// https://astro.build/config
 export default defineConfig({
   site: config.hostname,
   integrations: [react(), sitemap(), mdx()],

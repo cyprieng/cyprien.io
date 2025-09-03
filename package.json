@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
@@ -19,6 +19,7 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.1",
     "@astrojs/rss": "^4.0.12",
+    "@pagefind/default-ui": "^1.4.0",
     "@phosphor-icons/react": "^2.1.10",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.1.11",
@@ -26,6 +27,7 @@
     "fuse.js": "^7.1.0",
     "github-breakout": "github:cyprieng/github-breakout",
     "github-slugger": "^2.0.0",
+    "pagefind": "^1.4.0",
     "puppeteer": "^24.14.0",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",

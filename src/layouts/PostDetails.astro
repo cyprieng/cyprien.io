@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
-import Datetime from "@components/Datetime";
+import Datetime from "@components/Datetime.astro";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
@@ -68,7 +68,11 @@ const layoutProps = {
       <span>Go back</span>
     </button>
   </div>
-  <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-12">
+  <main
+    data-pagefind-body
+    id="main-content"
+    class="mx-auto w-full max-w-3xl px-4 pb-12"
+  >
     <h1
       transition:name={slugifyStr(title)}
       class="text-accent text-2xl font-semibold"

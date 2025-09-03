@@ -150,3 +150,6 @@ dist
 
 .jampack
 .DS_Store
+
+# Pagefind
+public/pagefind/

@@ -18,7 +18,7 @@ export default function Card({ href, frontmatter }: Props) {
   };
 
   return (
-    <li className="my-6 flex">
+    <li className="my-6 flex place-content-between">
       <a
         href={href}
         className="text-accent mr-2 inline-block text-lg font-medium no-underline! focus-visible:no-underline focus-visible:underline-offset-0"
@@ -29,6 +29,7 @@ export default function Card({ href, frontmatter }: Props) {
         pubDatetime={pubDatetime}
         modDatetime={modDatetime}
         icon={false}
+        className="text-right"
       />
     </li>
   );

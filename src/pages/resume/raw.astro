@@ -1,11 +1,11 @@
 ---
-import { SITE } from "@config";
+import config from "@config";
 import Layout from "@layouts/Layout.astro";
 
 import Resume from "@components/Resume.astro";
 ---
 
-<Layout title={`Résumé | ${SITE.title}`}>
+<Layout title={`Résumé | ${config.title}`}>
   <main id="main-content" class="mx-auto w-full max-w-[65rem] pt-10">
     <Resume />
   </main>

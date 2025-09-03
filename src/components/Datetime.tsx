@@ -1,4 +1,4 @@
-import { LOCALE } from "@config";
+import config from "@config";
 
 interface DatetimesProps {
   pubDatetime: string | Date;
@@ -59,7 +59,7 @@ const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
     modDatetime && modDatetime > pubDatetime ? modDatetime : pubDatetime,
   );
 
-  const date = myDatetime.toLocaleDateString(LOCALE.langTag, {
+  const date = myDatetime.toLocaleDateString(config.locale, {
     year: "numeric",
     month: "short",
     day: "numeric",

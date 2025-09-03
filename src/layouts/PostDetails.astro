@@ -7,7 +7,7 @@ import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
-import { SITE } from "@config";
+import config from "@config";
 
 export interface Props {
   post: CollectionEntry<"blog"> | CollectionEntry<"projects">;
@@ -41,7 +41,7 @@ const ogUrl = new URL(
 ).href;
 
 const layoutProps = {
-  title: `${title} | ${SITE.title}`,
+  title: `${title} | ${config.title}`,
   author,
   description,
   pubDatetime,
@@ -132,7 +132,7 @@ const layoutProps = {
         <span>Back to Top</span>
       </button>
 
-      <ShareLinks />
+      <ShareLinks title={title} />
     </div>
   </main>
   <Footer />

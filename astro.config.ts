@@ -4,12 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
-import { SITE } from "./src/config";
+import config from "./src/config";
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.website,
+  site: config.hostname,
   integrations: [react(), sitemap(), mdx()],
   markdown: {
     remarkPlugins: [

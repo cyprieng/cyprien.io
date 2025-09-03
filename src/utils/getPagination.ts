@@ -1,5 +1,4 @@
-import { SITE } from "@config";
-import getPageNumbers from "./getPageNumbers";
+const POSTS_PER_PAGE = 20;
 
 interface GetPaginationProps<T> {
   posts: T;
@@ -7,7 +6,18 @@ interface GetPaginationProps<T> {
   isIndex?: boolean;
 }
 
-const getPagination = <T>({
+export const getPageNumbers = (numberOfPosts: number) => {
+  const numberOfPages = numberOfPosts / Number(POSTS_PER_PAGE);
+
+  let pageNumbers: number[] = [];
+  for (let i = 1; i <= Math.ceil(numberOfPages); i++) {
+    pageNumbers = [...pageNumbers, i];
+  }
+
+  return pageNumbers;
+};
+
+export const getPagination = <T>({
   posts,
   page,
   isIndex = false,
@@ -21,8 +31,8 @@ const getPagination = <T>({
       ? Number(page)
       : 0;
 
-  const lastPost = isIndex ? SITE.postPerPage : currentPage * SITE.postPerPage;
-  const startPost = isIndex ? 0 : lastPost - SITE.postPerPage;
+  const lastPost = isIndex ? POSTS_PER_PAGE : currentPage * POSTS_PER_PAGE;
+  const startPost = isIndex ? 0 : lastPost - POSTS_PER_PAGE;
   const paginatedPosts = posts.slice(startPost, lastPost);
 
   return {
@@ -31,5 +41,3 @@ const getPagination = <T>({
     paginatedPosts,
   };
 };
-
-export default getPagination;

@@ -3,11 +3,11 @@ import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Terminal from "@components/Terminal.astro";
-import { SITE } from "@config";
+import config from "@config";
 import Layout from "@layouts/Layout.astro";
 ---
 
-<Layout title={`404 Not Found | ${SITE.title}`}>
+<Layout title={`404 Not Found | ${config.title}`}>
   <Header />
 
   <main id="main-content" class="mx-auto w-full pt-10">

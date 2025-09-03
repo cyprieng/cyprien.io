@@ -3,7 +3,7 @@ import Card from "@components/Card";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Pagination from "@components/Pagination.astro";
-import { SITE } from "@config";
+import config from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import type { CollectionEntry } from "astro:content";
@@ -17,7 +17,7 @@ export interface Props {
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
+<Layout title={`Posts | ${config.title}`}>
   <Header />
   <Main pageTitle="Posts" pageDesc="">
     <ul>

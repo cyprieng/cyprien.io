@@ -1,9 +1,9 @@
-import { SITE } from "@config";
+import config from "@config";
 import { defineCollection, z, type ImageFunction } from "astro:content";
 
 const schema = ({ image }: { image: ImageFunction }) =>
   z.object({
-    author: z.string().default(SITE.author),
+    author: z.string().default(config.author),
     pubDatetime: z.date(),
     modDatetime: z.date().optional().nullable(),
     title: z.string(),

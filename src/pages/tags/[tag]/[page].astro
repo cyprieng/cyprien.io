@@ -1,7 +1,6 @@
 ---
 import TagPosts from "@layouts/TagPosts.astro";
-import getPageNumbers from "@utils/getPageNumbers";
-import getPagination from "@utils/getPagination";
+import { getPageNumbers, getPagination } from "@utils/getPagination";
 import getPostsByTag from "@utils/getPostsByTag";
 import getUniqueTags from "@utils/getUniqueTags";
 import { type CollectionEntry, getCollection } from "astro:content";

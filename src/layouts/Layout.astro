@@ -1,5 +1,5 @@
 ---
-import { LOCALE, SITE } from "@config";
+import config from "@config";
 import "@styles/global.css";
 import { ClientRouter } from "astro:transitions";
 
@@ -17,27 +17,21 @@ export interface Props {
 }
 
 const {
-  title = SITE.title,
-  author = SITE.author,
-  description = SITE.desc,
-  ogImage = SITE.ogImage,
+  title = config.title,
+  author = config.author,
+  description = config.description,
+  ogImage,
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
 } = Astro.props;
 
-const socialImageURL = new URL(
-  ogImage ?? SITE.ogImage ?? "og.png",
-  Astro.url.origin,
-).href;
+const socialImageURL = new URL(ogImage ?? "og.png", Astro.url.origin).href;
 ---
 
 <!doctype html>
-<html
-  lang=`${LOCALE.lang ?? "en"}`
-  class={`${scrollSmooth && "scroll-smooth"}`}
->
+<html lang=`${config.locale}` class={`${scrollSmooth && "scroll-smooth"}`}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />

@@ -3,7 +3,7 @@ import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import type { SearchItem } from "@components/Search";
 import SearchBar from "@components/Search";
-import { SITE } from "@config";
+import config from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import getSortedPosts from "@utils/getSortedPosts";
@@ -40,7 +40,7 @@ searchList.push(
 );
 ---
 
-<Layout title={`Search | ${SITE.title}`}>
+<Layout title={`Search | ${config.title}`}>
   <Header activeNav="search" />
   <Main pageTitle="Search" pageDesc="Search any article ...">
     <SearchBar client:load searchList={searchList} />

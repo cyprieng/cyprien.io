@@ -1,26 +1,19 @@
-const primaryColorScheme = ""; // "light" | "dark"
-
-// Get theme data from local storage
-const currentTheme = localStorage.getItem("theme");
-
-function getPreferTheme() {
-  // return theme value in local storage if it is set
+// Get theme value from local storage or user device preference
+function getTheme() {
+  // Return theme value in local storage if it is set
+  const currentTheme = localStorage.getItem("theme");
   if (currentTheme) return currentTheme;
 
-  // return primary color scheme if it is set
-  if (primaryColorScheme) return primaryColorScheme;
-
-  // return user device's prefer color scheme
+  // Return user device's prefer color scheme
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light";
 }
 
-let themeValue = getPreferTheme();
-
+// Store theme preference in local storage
 function setPreference() {
   localStorage.setItem("theme", themeValue);
-  reflectPreference();
+  applyTheme();
 }
 
 // Change giscus theme
@@ -39,7 +32,8 @@ function changeGiscusTheme(theme) {
   });
 }
 
-function reflectPreference() {
+// Apply theme
+function applyTheme() {
   document.firstElementChild.setAttribute("data-theme", themeValue);
 
   // Set the theme for giscus
@@ -65,15 +59,19 @@ function reflectPreference() {
   }
 }
 
-// set early so no page flashes / CSS is made aware
-reflectPreference();
+// Theme value
+let themeValue = getTheme();
 
+// Set early so no page flashes / CSS is made aware
+applyTheme();
+
+// Event for the theme toggle button
 window.onload = () => {
   function setThemeFeature() {
-    // set on load so screen readers can get the latest value on the button
-    reflectPreference();
+    // Set on load so screen readers can get the latest value on the button
+    applyTheme();
 
-    // now this script can find and listen for clicks on the control
+    // Now this script can find and listen for clicks on the control
     document.querySelector("#theme-btn")?.addEventListener("click", () => {
       themeValue = themeValue === "light" ? "dark" : "light";
       setPreference();
@@ -86,7 +84,7 @@ window.onload = () => {
   document.addEventListener("astro:after-swap", setThemeFeature);
 };
 
-// sync with system changes
+// Sync with system changes
 window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", ({ matches: isDark }) => {

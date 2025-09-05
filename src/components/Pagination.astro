@@ -1,6 +1,4 @@
 ---
-import LinkButton from "./LinkButton.astro";
-
 export interface Props {
   currentPage: number;
   totalPages: number;
@@ -17,11 +15,10 @@ const next = currentPage < totalPages ? "" : "disabled";
 {
   totalPages > 1 && (
     <nav class="mt-auto mb-8 flex justify-center" aria-label="Pagination">
-      <LinkButton
-        disabled={prev === "disabled"}
+      <a
         href={prevUrl}
-        className={`mr-4 select-none ${prev === "disabled" ? "pointer-events-none opacity-50 hover:text-base" : ""}`}
-        ariaLabel="Previous"
+        class={`group mr-4 select-none ${prev === "disabled" ? "pointer-events-none opacity-50 hover:text-base" : ""}`}
+        aria-label="Previous"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,13 +27,12 @@ const next = currentPage < totalPages ? "" : "disabled";
           <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z" />
         </svg>
         Prev
-      </LinkButton>
+      </a>
       {currentPage} / {totalPages}
-      <LinkButton
-        disabled={next === "disabled"}
+      <a
         href={nextUrl}
-        className={`ml-4 select-none ${next === "disabled" ? "pointer-events-none opacity-50 hover:text-base" : ""}`}
-        ariaLabel="Next"
+        class={`group ml-4 select-none ${next === "disabled" ? "pointer-events-none opacity-50 hover:text-base" : ""}`}
+        aria-label="Next"
       >
         Next
         <svg
@@ -45,7 +41,7 @@ const next = currentPage < totalPages ? "" : "disabled";
         >
           <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z" />
         </svg>
-      </LinkButton>
+      </a>
     </nav>
   )
 }

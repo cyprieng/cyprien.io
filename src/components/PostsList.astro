@@ -1,5 +1,5 @@
 ---
-import Card from "@components/Card.astro";
+import PostLink from "@components/PostLink.astro";
 import type { CollectionEntry } from "astro:content";
 
 const posts = Astro.props.posts as CollectionEntry<"blog">[];
@@ -13,7 +13,9 @@ const title = Astro.props.title as string;
       <ul>
         {posts.map(
           ({ data, slug }, index) =>
-            index < 10 && <Card href={`/posts/${slug}/`} frontmatter={data} />,
+            index < 10 && (
+              <PostLink href={`/posts/${slug}/`} frontmatter={data} />
+            ),
         )}
       </ul>
     </section>

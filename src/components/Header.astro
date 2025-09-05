@@ -1,6 +1,5 @@
 ---
 import Hr from "./Hr.astro";
-import LinkButton from "./LinkButton.astro";
 
 export interface Props {
   activeNav?:
@@ -109,14 +108,14 @@ const { activeNav } = Astro.props;
           class="hidden items-center justify-end gap-x-5 sm:flex"
         >
           <li>
-            <LinkButton href="/search/" ariaLabel="search">
+            <a href="/search/" aria-label="search" class="group">
               <svg xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
                 ></path>
               </svg>
               <span class="sr-only">Search</span>
-            </LinkButton>
+            </a>
           </li>
           <li>
             <button
@@ -147,7 +146,7 @@ const { activeNav } = Astro.props;
             </button>
           </li>
           <li>
-            <LinkButton href="/rss.xml" ariaLabel="rss-link">
+            <a href="/rss.xml" aria-label="rss-link" class="group">
               <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon">
                 <path
                   d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
@@ -158,7 +157,7 @@ const { activeNav } = Astro.props;
                 <circle cx="6" cy="18" r="2"></circle>
               </svg>
               <span class="sr-only">RSS Feed</span>
-            </LinkButton>
+            </a>
           </li>
         </ul>
       </nav>

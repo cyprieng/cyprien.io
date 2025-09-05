@@ -1,8 +1,8 @@
 ---
-import Card from "@components/Card.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Pagination from "@components/Pagination.astro";
+import PostLink from "@components/PostLink.astro";
 import config from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
@@ -30,7 +30,7 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
     <ul>
       {
         paginatedPosts.map(({ data, slug, collection }) => (
-          <Card
+          <PostLink
             href={
               collection === "projects"
                 ? `/projects/${slug}/`
@@ -52,5 +52,5 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
     nextUrl={`/tags/${tag}/${currentPage + 1}/`}
   />
 
-  <Footer noMarginTop={totalPages > 1} />
+  <Footer />
 </Layout>

@@ -1,4 +1,4 @@
-const POSTS_PER_PAGE = 20;
+const POSTS_PER_PAGE = 2;
 
 interface GetPaginationProps<T> {
   posts: T;

@@ -1,21 +1,16 @@
 ---
 export interface Props {
   tag: string;
-  size?: "sm" | "lg";
 }
 
-const { tag, size = "sm" } = Astro.props;
+const { tag } = Astro.props;
 ---
 
-<li
-  class={`inline-block ${
-    size === "sm" ? "my-1 underline-offset-4" : "my-3 mx-1 underline-offset-8"
-  }`}
->
+<li class="mx-1 my-3 inline-block underline-offset-8">
   <a
     href={`/tags/${tag}/`}
     transition:name={tag}
-    class={`relative underline decoration-dashed hover:-top-0.5 hover:text-accent focus-visible:p-1 ${size === "sm" ? "text-sm" : "text-lg"} pr-2 group`}
+    class="hover:text-accent group relative pr-2 text-lg underline decoration-dashed hover:-top-0.5 focus-visible:p-1"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

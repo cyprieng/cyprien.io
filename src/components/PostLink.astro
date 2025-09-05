@@ -1,7 +1,7 @@
 ---
 import { slugifyStr } from "@utils/slugify";
-import Datetime from "./Datetime.astro";
 import type { CollectionEntry } from "astro:content";
+import PostDatetime from "./PostDatetime.astro";
 
 export interface Props {
   href?: string;
@@ -23,7 +23,7 @@ const headerProps = {
   >
     <h2 {...headerProps}>{title}</h2>
   </a>
-  <Datetime
+  <PostDatetime
     pubDatetime={pubDatetime}
     modDatetime={modDatetime}
     icon={false}

@@ -1,6 +1,5 @@
 ---
 import config from "../config";
-import LinkButton from "./LinkButton.astro";
 
 // Share current url
 const url = Astro.url.toString();
@@ -19,14 +18,14 @@ const { title } = Astro.props;
   <div class="text-center">
     {
       config.sharingSocials.map((social) => (
-        <LinkButton
+        <a
           href={social.href
             .replace("{{url}}", encodeURIComponent(url))
             .replace("{{title}}", encodeURIComponent(title))}
-          className="scale-90 p-2 hover:rotate-6 sm:p-1"
+          class="group scale-90 p-2 no-underline hover:rotate-6 sm:p-1"
         >
           <Fragment set:html={social.icon} />
-        </LinkButton>
+        </a>
       ))
     }
   </div>

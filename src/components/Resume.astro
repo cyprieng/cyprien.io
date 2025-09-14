@@ -17,16 +17,15 @@ import {
   MapPinIcon,
   EnvelopeSimpleIcon,
   CakeIcon,
-  FlagIcon,
   SuitcaseSimpleIcon,
   GithubLogoIcon,
 } from "@phosphor-icons/react/dist/ssr";
 
 // Languages and levels (out of 100)
 const languages = {
-  French: 100,
-  English: 80,
-  Spanish: 30,
+  Français: 100,
+  Anglais: 80,
+  Espagnol: 30,
 };
 ---
 
@@ -55,19 +54,15 @@ const languages = {
             />
             Montpellier, France
           </p>
-          <a href="mailto:job@cyprien.io">
+          <a href="mailto:cyprien@guillemot.me">
             <EnvelopeSimpleIcon
               className="mb-1 h-4 text-slate-600 dark:text-slate-200"
             />
-            job@cyprien.io
+            cyprien@guillemot.me
           </a>
           <p>
             <CakeIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
             2024-08-18
-          </p>
-          <p>
-            <FlagIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
-            French
           </p>
           <a href="https://github.com/cyprieng">
             <GithubLogoIcon
@@ -84,15 +79,17 @@ const languages = {
         class="mb-3 text-xl font-extrabold text-slate-600 uppercase dark:text-slate-200 print:text-base"
       >
         <UserIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
-        Profile
+        Profil
       </h3>
-      Professional software engineer with 8+ years of experience spanning software
-      development, architecture, infrastructure, and leading teams.
+      Software engineer avec plus de 8 ans d'expérience couvrant le développement
+      logiciel, l'architecture, l'infrastructure et la gestion d'équipe.
       <br />
-      Experienced in designing and delivering scalable, efficient solutions.
+      Expérimenté dans la conception et la mise en œuvre de solutions évolutives
+      et performantes.
       <br />
-      Passionate about technology, problem-solving, and continually exploring new
-      tools and frameworks. Seeking to bring my skills to an innovative organization.
+      Passionné par la technologie, la résolution de problèmes et l'exploration continue
+      de nouveaux outils et frameworks. Je souhaite mettre mes compétences au service
+      d'une organisation innovante.
     </div>
 
     <div id="resume-education" class="mt-8">
@@ -102,14 +99,17 @@ const languages = {
         <GraduationCapIcon
           className="mb-1 h-4 text-slate-600 dark:text-slate-200"
         />
-        Education
+        Études
       </h3>
 
       <div class="row mb-8">
         <h4 class="text-lg font-extrabold print:text-sm">
-          Master's degree from Université de Technologie de Troyes
+          Diplôme d'ingénieur de l'Université de Technologie de Troyes
         </h4>
-        <p>Master's degree in Computer Science.</p>
+        <p>
+          Diplôme d'ingénieur en Informatique et Systèmes d'Information
+          (Option&nbsp;:&nbsp;Management de Projets Logiciels).
+        </p>
         <p class="date text-slate-400 dark:text-slate-300">2011–2017</p>
       </div>
 
@@ -117,9 +117,9 @@ const languages = {
         <h4 class="text-lg font-extrabold print:text-sm">
           Franklin W. Olin College of Engineering
         </h4>
-        <p>Exchange semester.</p>
+        <p>Semestre d'échange.</p>
         <p class="date text-slate-400 dark:text-slate-300">
-          September–December 2014
+          Septembre–Décembre 2014
         </p>
       </div>
     </div>
@@ -131,7 +131,7 @@ const languages = {
         <SuitcaseSimpleIcon
           className="mb-1 h-4 text-slate-600 dark:text-slate-200"
         />
-        Work history
+        Expériences professionnelles
       </h3>
 
       <div class="row mb-8">
@@ -143,59 +143,61 @@ const languages = {
         <h4 class="text-lg font-extrabold print:text-sm">Lead developer</h4>
         <h5>Octipas by Chapsvision</h5>
         <p>
-          <ul class="list-disc pl-5">
-            <li>
-              Designed and implemented RESTful APIs, microservices, and
-              databases to ensure robust and efficient backend systems.
-            </li>
-            <li>
-              Developed responsive and intuitive frontend applications using
-              VueJS.
-            </li>
-            <li>
-              Architected and maintained cloud-based infrastructure on AWS and
-              Azure, ensuring high availability, security, and performance.
-            </li>
-            <li>
-              Implemented comprehensive observability solutions using Datadog
-              for monitoring, logging, and APM across the entire application
-              stack.
-            </li>
-            <li>
-              Managed code reviews, provided mentoring, and offered technical
-              guidance as Lead Developer.
-            </li>
-          </ul>
-
+          <ul class="list-disc pl-5"></ul>
+          <li>
+            Conception et mise en œuvre d’API RESTful, de microservices et de
+            bases de données afin de garantir des systèmes backend robustes et
+            efficaces.
+          </li>
+          <li>
+            Développement d’applications front-end réactives et intuitives avec
+            VueJS.
+          </li>
+          <li>
+            Architecture et maintenance d’infrastructures cloud sur AWS et
+            Azure, assurant haute disponibilité, sécurité et performance.
+          </li>
+          <li>
+            Mise en place de solutions d’observabilité complètes avec Datadog
+            pour la supervision, la journalisation et l’APM sur l’ensemble de la
+            stack applicative.
+          </li>
+          <li>
+            Gestion des revues de code, accompagnement et encadrement technique
+            en tant que Lead Developer.
+          </li>
           <br />
-          <b>Stack:</b> Node.js, VueJS, Laravel, Python, MySQL, Clickhouse, MongoDB,
+          <b>Stack :</b> Node.js, VueJS, Laravel, Python, MySQL, ClickHouse, MongoDB,
           Terraform
         </p>
-        <p class="date text-slate-400 dark:text-slate-300">2017–Present</p>
+        <p class="date text-slate-400 dark:text-slate-300">2017–Maintenant</p>
       </div>
 
       <div class="row mb-8">
         <Image src={slb} alt="octipas" class="float-right mr-4 w-20 pl-4" />
         <h4 class="text-lg font-extrabold print:text-sm">
-          Developer (internship)
+          Développeur (Stage)
         </h4>
         <h5>SLB (Schlumberger)</h5>
         <p>
           <ul class="list-disc pl-5">
             <li>
-              Built a Python framework to simplify integration testing of
-              software written in C++/Qt. The framework provides high-level APIs
-              to interact directly with the UI.
+              Création d’un framework Python destiné à simplifier les tests
+              d’intégration de logiciels développés en C++/Qt. Ce framework
+              offre des API de haut niveau pour interagir directement avec
+              l’interface utilisateur.
             </li>
-            <li>Developed and implemented tests using the framework.</li>
             <li>
-              Trained developers and QA teams on how to use the framework
-              effectively.
+              Développement et mise en œuvre de tests en utilisant ce framework.
+            </li>
+            <li>
+              Formation des développeurs et des équipes QA à l’utilisation du
+              framework.
             </li>
           </ul>
         </p>
         <p class="date text-slate-400 dark:text-slate-300">
-          September 2016–February 2017
+          Septembre 2016 – Février 2017
         </p>
       </div>
     </div>
@@ -205,25 +207,21 @@ const languages = {
       <h3
         class="mb-3 text-xl font-extrabold text-slate-600 uppercase dark:text-slate-200 print:text-base"
       >
-        Details
+        Détails
       </h3>
       <p>
         <MapPinIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
         Montpellier, France
       </p>
-      <a href="mailto:job@cyprien.io">
+      <a href="mailto:cyprien@guillemot.me">
         <EnvelopeSimpleIcon
           className="mb-1 h-4 text-slate-600 dark:text-slate-200"
         />
-        job@cyprien.io
+        cyprien@guillemot.me
       </a>
       <p>
         <CakeIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
         2024-08-18
-      </p>
-      <p>
-        <FlagIcon className="mb-1 h-4 text-slate-600 dark:text-slate-200" />
-        French
       </p>
       <a href="https://github.com/cyprieng">
         <GithubLogoIcon
@@ -237,19 +235,19 @@ const languages = {
       <h3
         class="mt-8 mb-3 text-xl font-extrabold text-slate-600 uppercase dark:text-slate-200 print:text-base"
       >
-        Skills
+        Compétences techniques
       </h3>
 
-      <h4 class="mt-4">Programming Languages</h4>
+      <h4 class="mt-4">Langages de programmation</h4>
       JavaScript, TypeScript, Python, Go, PHP, C/C++, Java, Swift, Shell
 
-      <h4 class="mt-4">Frontend</h4>
+      <h4 class="mt-4">Front-end</h4>
       HTML, CSS, VueJS, React, TailwindCSS
 
       <h4 class="mt-4">Frameworks</h4>
       Django, Laravel, Next.js, Serverless
 
-      <h4 class="mt-4">Databases</h4>
+      <h4 class="mt-4">Bases de données</h4>
       MySQL, PostgreSQL, ClickHouse, MongoDB, SQL
 
       <h4 class="mt-4">Cloud & DevOps</h4>
@@ -258,13 +256,15 @@ const languages = {
       <h3
         class="mt-8 mb-3 text-xl font-extrabold text-slate-600 uppercase dark:text-slate-200 print:text-base"
       >
-        Languages
+        Langues
       </h3>
       {
         Object.entries(languages).map(([language, level]) => {
           return (
             <div class="skill mt-4">
-              <h4>{language}</h4>
+              <h4>
+                {language} : {level} %
+              </h4>
               <div class="progress-bar h-2.5 w-full rounded-full bg-gray-200">
                 <div
                   style={{ width: `${level}%` }}

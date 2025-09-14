@@ -8,6 +8,7 @@ import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import config from "@config";
 import PostDatetime from "@components/PostDatetime.astro";
+import { isProject } from "@content/config";
 
 export interface Props {
   post: CollectionEntry<"blog"> | CollectionEntry<"projects">;
@@ -20,23 +21,25 @@ const {
   title,
   author,
   description,
-  ogImage,
   canonicalURL,
-  pubDatetime,
-  modDatetime,
+  publicationDatetime,
+  updateDatetime,
   tags,
-  logo,
-  link,
 } = post.data;
 
+let logo: string | undefined;
+let link: string | undefined;
+
+if (isProject(post)) {
+  logo = post.data.logo;
+  link = post.data.link;
+}
 const { Content } = await post.render();
 
-const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
-  ogImageUrl ??
-    (post.collection === "blog"
-      ? `/posts/${slugifyStr(title)}.png`
-      : `/projects/${slugifyStr(title)}.png`),
+  post.collection === "blog"
+    ? `/posts/${slugifyStr(title)}.png`
+    : `/projects/${slugifyStr(title)}.png`,
   Astro.url.origin,
 ).href;
 
@@ -44,8 +47,8 @@ const layoutProps = {
   title: `${title} | ${config.title}`,
   author,
   description,
-  pubDatetime,
-  modDatetime,
+  publicationDatetime,
+  updateDatetime,
   canonicalURL,
   ogImage: ogUrl,
   scrollSmooth: true,
@@ -80,9 +83,8 @@ const layoutProps = {
       {title}
     </h1>
     <PostDatetime
-      pubDatetime={pubDatetime}
-      modDatetime={modDatetime}
-      size="lg"
+      publicationDatetime={publicationDatetime}
+      updateDatetime={updateDatetime}
       className="my-2"
     />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">

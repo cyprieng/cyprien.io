@@ -1,35 +1,45 @@
 import config from "@config";
-import { defineCollection, z, type ImageFunction } from "astro:content";
+import { defineCollection, z, type CollectionEntry } from "astro:content";
 
-const schema = ({ image }: { image: ImageFunction }) =>
-  z.object({
-    author: z.string().default(config.author),
-    pubDatetime: z.date(),
-    modDatetime: z.date().optional().nullable(),
-    title: z.string(),
-    featured: z.boolean().optional(),
-    draft: z.boolean().optional(),
-    tags: z.array(z.string()).default(["others"]),
-    ogImage: image()
-      .refine((img) => img.width >= 1200 && img.height >= 630, {
-        message: "OpenGraph image must be at least 1200 X 630 pixels!",
-      })
-      .or(z.string())
-      .optional(),
-    description: z.string(),
-    canonicalURL: z.string().optional(),
-    logo: z.string().optional(),
-    link: z.string().optional(),
-  });
+// Base schema for all collections
+const baseSchema = {
+  author: z.string().default(config.author), // Author: default from config
+  publicationDatetime: z.date(), // Publication date
+  updateDatetime: z.date().optional().nullable(), // Update date
+  title: z.string(), // Title
+  featured: z.boolean().optional(),
+  draft: z.boolean().optional(), // Featured post
+  tags: z.array(z.string()).default(["others"]), // Tags
+  description: z.string(), // Description
+  canonicalURL: z.string().optional(), // Url
+};
 
+// Blog collection
 const blog = defineCollection({
   type: "content",
-  schema,
+  schema: z.object(baseSchema),
 });
 
+// Projects collection
 const projects = defineCollection({
   type: "content",
-  schema,
+  schema: z.object({
+    ...baseSchema,
+    logo: z.string(), // Project logo
+    link: z.string().optional(), // Project link
+  }),
 });
+
+/**
+ * Check if a value is a project entry.
+ *
+ * @param value - The value to check.
+ * @returns True if the value is a project entry, false otherwise.
+ */
+export function isProject(
+  value: unknown,
+): value is CollectionEntry<"projects"> {
+  return typeof (value as CollectionEntry<"projects">)?.data.logo === "string";
+}
 
 export const collections = { blog, projects };

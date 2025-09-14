@@ -4,14 +4,21 @@ import config from "@config";
 interface Props {
   className?: string;
   icon?: boolean;
-  pubDatetime: string | Date;
-  modDatetime: string | Date | undefined | null;
+  publicationDatetime: string | Date;
+  updateDatetime: string | Date | undefined | null;
 }
 
-const { className, icon = true, pubDatetime, modDatetime } = Astro.props;
+const {
+  className,
+  icon = true,
+  publicationDatetime,
+  updateDatetime,
+} = Astro.props;
 
 const postDatetime = new Date(
-  modDatetime && modDatetime > pubDatetime ? modDatetime : pubDatetime,
+  updateDatetime && updateDatetime > publicationDatetime
+    ? updateDatetime
+    : publicationDatetime,
 );
 
 const date = postDatetime.toLocaleDateString(config.locale, {
@@ -38,7 +45,7 @@ const date = postDatetime.toLocaleDateString(config.locale, {
   }
 
   {
-    modDatetime && modDatetime > pubDatetime ? (
+    updateDatetime && updateDatetime > publicationDatetime ? (
       <span class="mr-2 text-base italic">Updated:</span>
     ) : (
       <span class="sr-only">Published:</span>

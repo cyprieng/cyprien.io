@@ -1,7 +1,7 @@
 ---
 author: Cyprien
-pubDatetime: 2024-10-24T13:40:00.000Z
-modDatetime: 2024-10-24T13:40:00.000Z
+publicationDatetime: 2024-10-24T13:40:00.000Z
+updateDatetime: 2024-10-24T13:40:00.000Z
 title: Building my small Homelab
 slug: homelab
 featured: false

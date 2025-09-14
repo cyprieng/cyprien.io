@@ -11,10 +11,14 @@ const getSortedPosts = <
     .sort(
       (a, b) =>
         Math.floor(
-          new Date(b.data.modDatetime ?? b.data.pubDatetime).getTime() / 1000,
+          new Date(
+            b.data.updateDatetime ?? b.data.publicationDatetime,
+          ).getTime() / 1000,
         ) -
         Math.floor(
-          new Date(a.data.modDatetime ?? a.data.pubDatetime).getTime() / 1000,
+          new Date(
+            a.data.updateDatetime ?? a.data.publicationDatetime,
+          ).getTime() / 1000,
         ),
     );
 };

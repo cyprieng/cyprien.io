@@ -1,7 +1,7 @@
 ---
 author: Cyprien
-pubDatetime: 2024-09-26T06:12:00.000Z
-modDatetime: 2024-09-26T06:12:00.000Z
+publicationDatetime: 2024-09-26T06:12:00.000Z
+updateDatetime: 2024-09-26T06:12:00.000Z
 title: How I Built My Corner of the Web
 slug: colophon
 featured: false

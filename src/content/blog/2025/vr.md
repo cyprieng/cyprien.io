@@ -1,7 +1,7 @@
 ---
 author: Cyprien
-pubDatetime: 2025-04-19T18:56:00.000Z
-modDatetime: 2025-04-19T18:56:00.000Z
+publicationDatetime: 2025-04-19T18:56:00.000Z
+updateDatetime: 2025-04-19T18:56:00.000Z
 title: Working with a VR headset
 slug: vr
 featured: false

@@ -1,7 +1,7 @@
 ---
 author: Cyprien
-pubDatetime: 2025-08-28T00:00:00.000Z
-modDatetime: 2025-08-28T00:00:00.000Z
+publicationDatetime: 2025-08-28T00:00:00.000Z
+updateDatetime: 2025-08-28T00:00:00.000Z
 title: Obsidian GitHub Publisher
 slug: obsidian-github-publisher
 featured: false

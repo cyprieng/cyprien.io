@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const { href, frontmatter } = Astro.props;
-const { title, pubDatetime, modDatetime } = frontmatter;
+const { title, publicationDatetime, updateDatetime } = frontmatter;
 const headerProps = {
   style: { viewTransitionName: slugifyStr(title) },
   class: "text-lg font-medium no-underline decoration-dashed hover:underline",
@@ -24,8 +24,8 @@ const headerProps = {
     <h2 {...headerProps}>{title}</h2>
   </a>
   <PostDatetime
-    pubDatetime={pubDatetime}
-    modDatetime={modDatetime}
+    publicationDatetime={publicationDatetime}
+    updateDatetime={updateDatetime}
     icon={false}
     className="text-right"
   />

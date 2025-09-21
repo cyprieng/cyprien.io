@@ -1,9 +1,7 @@
-import config from "@config";
 import { defineCollection, z, type CollectionEntry } from "astro:content";
 
 // Base schema for all collections
 const baseSchema = {
-  author: z.string().default(config.author), // Author: default from config
   publicationDatetime: z.date(), // Publication date
   updateDatetime: z.date().optional().nullable(), // Update date
   title: z.string(), // Title

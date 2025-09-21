@@ -1,5 +1,4 @@
 ---
-author: Cyprien
 publicationDatetime: 2025-02-07T11:30:00.000Z
 updateDatetime: 2025-02-07T11:30:00.000Z
 title: Wenigwarden

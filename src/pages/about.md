@@ -1,9 +1,9 @@
 ---
-layout: ../layouts/BasicLayout.astro
+layout: ../layouts/MainLayout.astro
 title: About
 activeNav: about
+prose: true
 ---
-
 Hey, I'm Cyprien.
 
 I'm a software engineer working as a lead developer near Montpellier.
@@ -33,3 +33,4 @@ And here's a random list of things I also enjoy:
 - 📚 Reading
 
 Feel free to reach out to me at [hello@cyprien.io](mailto:hello@cyprien.io). I respond to everyone!
+

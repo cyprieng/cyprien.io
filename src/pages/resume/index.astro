@@ -1,15 +1,10 @@
 ---
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
 import config from "@config";
-import Layout from "@layouts/Layout.astro";
-
 import Resume from "@components/Resume.astro";
+import MainLayout from "@layouts/MainLayout.astro";
 ---
 
-<Layout title={`Résumé | ${config.title}`}>
-  <Header activeNav="resume" />
-
+<MainLayout title={`Résumé | ${config.title}`}>
   <main
     id="main-content"
     class="mx-auto my-5 w-[calc(100%-3rem)] max-w-260 pt-10 md:border md:shadow md:dark:border-slate-400 md:dark:shadow-slate-400"
@@ -20,5 +15,4 @@ import Resume from "@components/Resume.astro";
       <a href="/assets/resume.pdf" class="button"> Download </a>
     </div>
   </main>
-  <Footer />
-</Layout>
+</MainLayout>

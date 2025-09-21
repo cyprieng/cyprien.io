@@ -1,10 +1,7 @@
 ---
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
 import Tag from "@components/Tag.astro";
 import config from "@config";
-import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
+import MainLayout from "@layouts/MainLayout.astro";
 import getUniqueTags from "@utils/getUniqueTags";
 import { getCollection } from "astro:content";
 
@@ -16,12 +13,8 @@ const posts = [
 let tags = getUniqueTags(posts);
 ---
 
-<Layout title={`Tags | ${config.title}`}>
-  <Header />
-  <Main pageTitle="Tags" pageDesc="All the tags used in posts and projects.">
-    <ul>
-      {tags.map(({ tag }) => <Tag {tag} />)}
-    </ul>
-  </Main>
-  <Footer />
-</Layout>
+<MainLayout title={`Tags | ${config.title}`}>
+  <ul>
+    {tags.map(({ tag }) => <Tag {tag} />)}
+  </ul>
+</MainLayout>

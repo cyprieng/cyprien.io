@@ -1,25 +1,20 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
+import MainLayout from "@layouts/MainLayout.astro";
 import Tag from "@components/Tag.astro";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
-import config from "@config";
 import PostDatetime from "@components/PostDatetime.astro";
 import { isProject } from "@content/config";
 
 export interface Props {
   post: CollectionEntry<"blog"> | CollectionEntry<"projects">;
-  type: "blog" | "projects";
 }
 
-const { post, type } = Astro.props;
-
+// Get post data
+const { post } = Astro.props;
 const {
   title,
-  author,
   description,
   canonicalURL,
   publicationDatetime,
@@ -27,13 +22,14 @@ const {
   tags,
 } = post.data;
 
+// Logo and link for projects
 let logo: string | undefined;
 let link: string | undefined;
-
 if (isProject(post)) {
   logo = post.data.logo;
   link = post.data.link;
 }
+
 const { Content } = await post.render();
 
 const ogUrl = new URL(
@@ -44,105 +40,75 @@ const ogUrl = new URL(
 ).href;
 
 const layoutProps = {
-  title: `${title} | ${config.title}`,
-  author,
+  title,
   description,
   publicationDatetime,
   updateDatetime,
   canonicalURL,
   ogImage: ogUrl,
-  scrollSmooth: true,
 };
 ---
 
-<Layout {...layoutProps}>
-  <Header activeNav={type === "projects" ? "projects" : undefined} />
+<MainLayout {...layoutProps} backButton={true} activeNav="home">
+  <PostDatetime
+    publicationDatetime={publicationDatetime}
+    updateDatetime={updateDatetime}
+    className="my-2"
+  />
+  <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+    <!--LOGO-->
+    {
+      logo ? (
+        <>
+          <div class="mx-auto text-center">
+            <img src={logo} alt={title} width="200" height="200" />
+            <h1>{title}</h1>
+            <p>
+              <b>{description}</b>
+            </p>
+          </div>
+        </>
+      ) : null
+    }
 
-  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
+    <!--Project link-->
+    {
+      post.collection === "projects" && link ? (
+        <div class="text-center">
+          <a href={link} class="button" target="_blank">
+            View Project
+          </a>
+        </div>
+      ) : null
+    }
+    <Content />
+  </article>
+
+  <ul class="my-8">
+    {tags.map((tag) => <Tag tag={slugifyStr(tag)} />)}
+  </ul>
+
+  <!-- Giscus comments -->
+  <div class="giscus mb-8"></div>
+
+  <div
+    class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
+  >
     <button
-      class="mt-8 mb-2 flex cursor-pointer hover:opacity-75"
-      onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
+      id="back-to-top"
+      class="cursor-pointer py-1 whitespace-nowrap hover:opacity-75"
     >
-      <svg xmlns="http://www.w3.org/2000/svg">
+      <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
         <path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
       </svg>
-      <span>Go back</span>
+      <span>Back to Top</span>
     </button>
+
+    <ShareLinks title={title} />
   </div>
-  <main
-    data-pagefind-body
-    id="main-content"
-    class="mx-auto w-full max-w-3xl px-4 pb-12"
-  >
-    <h1
-      transition:name={slugifyStr(title)}
-      class="text-accent text-2xl font-semibold"
-    >
-      {title}
-    </h1>
-    <PostDatetime
-      publicationDatetime={publicationDatetime}
-      updateDatetime={updateDatetime}
-      className="my-2"
-    />
-    <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
-      <!--LOGO-->
-      {
-        logo ? (
-          <>
-            <div class="mx-auto text-center">
-              <img src={logo} alt={title} width="200" height="200" />
-              <h1>{title}</h1>
-              <p>
-                <b>{description}</b>
-              </p>
-            </div>
-          </>
-        ) : null
-      }
-
-      <!--Project link-->
-      {
-        post.collection === "projects" && link ? (
-          <div class="text-center">
-            <a href={link} class="button" target="_blank">
-              View Project
-            </a>
-          </div>
-        ) : null
-      }
-      <Content />
-    </article>
-
-    <ul class="my-8">
-      {tags.map((tag) => <Tag tag={slugifyStr(tag)} />)}
-    </ul>
-
-    <!-- Giscus comments -->
-    <div class="giscus mb-8"></div>
-
-    <div
-      class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
-    >
-      <button
-        id="back-to-top"
-        class="cursor-pointer py-1 whitespace-nowrap hover:opacity-75"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
-          <path
-            d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-          ></path>
-        </svg>
-        <span>Back to Top</span>
-      </button>
-
-      <ShareLinks title={title} />
-    </div>
-  </main>
-  <Footer />
-</Layout>
+</MainLayout>
 
 <script is:inline data-astro-rerun>
   /** Create a progress indicator

@@ -1,5 +1,4 @@
 ---
-author: Cyprien
 publicationDatetime: 2025-04-19T18:56:00.000Z
 updateDatetime: 2025-04-19T18:56:00.000Z
 title: Working with a VR headset
@@ -10,7 +9,6 @@ description: My take on working inside a VR environment
 tags:
   - tech
 ---
-
 Working in VR headset has been a thing for some time now.
 
 I have first heard of it around 2017 with <https://www.vrdesktop.net/>.
@@ -71,3 +69,4 @@ But if you are not travelling a lot, or do not need more than your laptop screen
 I sent my headset back to Amazon for a refund. But even if the experience is not that good, I highly encourage you to try it yourself, I find it very impressive and worth a few hours of my time.
 
 I don’t know if the Apple Vision Pro and its successor will push this tech to become more mature. But even in this case, the isolation provided by this kind of device and the lack of social acceptance may remain major dealbreakers for most people. But for tech enthusiasts this may become a popular option.
+

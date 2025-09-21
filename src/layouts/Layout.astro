@@ -3,35 +3,30 @@ import config from "@config";
 import "@styles/global.css";
 import { ClientRouter } from "astro:transitions";
 
-const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
-
 export interface Props {
   title?: string;
-  author?: string;
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
   publicationDatetime?: Date;
   updateDatetime?: Date | null;
-  scrollSmooth?: boolean;
 }
 
 const {
   title = config.title,
-  author = config.author,
   description = config.description,
   ogImage,
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
   publicationDatetime,
   updateDatetime,
-  scrollSmooth = false,
 } = Astro.props;
 
+const author = config.author;
 const socialImageURL = new URL(ogImage ?? "og.png", Astro.url.origin).href;
 ---
 
 <!doctype html>
-<html lang=`${config.locale}` class={`${scrollSmooth && "scroll-smooth"}`}>
+<html lang=`${config.locale}` class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -93,18 +88,6 @@ const socialImageURL = new URL(ogImage ?? "og.png", Astro.url.origin).href;
     <meta property="twitter:image" content={socialImageURL} />
 
     <meta name="theme-color" content="" />
-
-    {
-      // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
-      // include google-site-verification tag in the heading
-      // Learn more: https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag
-      googleSiteVerification && (
-        <meta
-          name="google-site-verification"
-          content={googleSiteVerification}
-        />
-      )
-    }
 
     <ClientRouter />
 

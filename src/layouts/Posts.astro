@@ -1,12 +1,9 @@
 ---
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
 import Pagination from "@components/Pagination.astro";
 import PostLink from "@components/PostLink.astro";
 import config from "@config";
-import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
 import type { CollectionEntry } from "astro:content";
+import MainLayout from "@layouts/MainLayout.astro";
 
 export interface Props {
   currentPage: number;
@@ -17,17 +14,14 @@ export interface Props {
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
 ---
 
-<Layout title={`Posts | ${config.title}`}>
-  <Header />
-  <Main pageTitle="Posts" pageDesc="">
-    <ul>
-      {
-        paginatedPosts.map(({ data, slug }) => (
-          <PostLink href={`/posts/${slug}/`} frontmatter={data} />
-        ))
-      }
-    </ul>
-  </Main>
+<MainLayout title={`Posts | ${config.title}`}>
+  <ul>
+    {
+      paginatedPosts.map(({ data, slug }) => (
+        <PostLink href={`/posts/${slug}/`} frontmatter={data} />
+      ))
+    }
+  </ul>
 
   <Pagination
     {currentPage}
@@ -35,6 +29,4 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
     prevUrl={`/posts${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
     nextUrl={`/posts/${currentPage + 1}/`}
   />
-
-  <Footer />
-</Layout>
+</MainLayout>

@@ -1,7 +1,8 @@
 ---
-layout: ../layouts/BasicLayout.astro
+layout: ../layouts/MainLayout.astro
 title: Now
 activeNav: now
+prose: true
 ---
 Based on the brilliant idea of [nownownow.com](https://nownownow.com/), here is what I'm doing now.
 

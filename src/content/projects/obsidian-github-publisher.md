@@ -1,5 +1,4 @@
 ---
-author: Cyprien
 publicationDatetime: 2025-08-28T00:00:00.000Z
 updateDatetime: 2025-08-28T00:00:00.000Z
 title: Obsidian GitHub Publisher

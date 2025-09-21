@@ -1,19 +1,12 @@
 ---
 import config from "@config";
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
-import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
 import "@pagefind/default-ui/css/ui.css";
+import MainLayout from "@layouts/MainLayout.astro";
 ---
 
-<Layout title={`Search | ${config.title}`}>
-  <Header />
-  <Main pageTitle="Search" pageDesc="Search any article ...">
-    <div id="pagefind-search" transition:persist></div>
-  </Main>
-  <Footer />
-</Layout>
+<MainLayout title={`Search | ${config.title}`}>
+  <div id="pagefind-search" transition:persist></div>
+</MainLayout>
 
 <script>
   function initSearch() {

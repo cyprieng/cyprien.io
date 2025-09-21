@@ -1,11 +1,7 @@
 ---
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
 import Pagination from "@components/Pagination.astro";
 import PostLink from "@components/PostLink.astro";
-import config from "@config";
-import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
+import MainLayout from "@layouts/MainLayout.astro";
 import { type CollectionEntry } from "astro:content";
 
 export interface Props {
@@ -19,29 +15,20 @@ export interface Props {
 const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
 ---
 
-<Layout title={`Tag: ${tagName} | ${config.title}`}>
-  <Header />
-  <Main
-    pageTitle={[`Tag:`, `${tagName}`]}
-    titleTransition={tag}
-    pageDesc={`All the articles with the tag "${tagName}".`}
-  >
-    <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
-    <ul>
-      {
-        paginatedPosts.map(({ data, slug, collection }) => (
-          <PostLink
-            href={
-              collection === "projects"
-                ? `/projects/${slug}/`
-                : `/posts/${slug}/`
-            }
-            frontmatter={data}
-          />
-        ))
-      }
-    </ul>
-  </Main>
+<MainLayout title={`Tag: ${tagName}`}>
+  <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
+  <ul>
+    {
+      paginatedPosts.map(({ data, slug, collection }) => (
+        <PostLink
+          href={
+            collection === "projects" ? `/projects/${slug}/` : `/posts/${slug}/`
+          }
+          frontmatter={data}
+        />
+      ))
+    }
+  </ul>
 
   <Pagination
     {currentPage}
@@ -51,6 +38,4 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
     }/`}
     nextUrl={`/tags/${tag}/${currentPage + 1}/`}
   />
-
-  <Footer />
-</Layout>
+</MainLayout>

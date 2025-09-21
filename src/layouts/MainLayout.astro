@@ -1,0 +1,62 @@
+---
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import config from "@config";
+import Layout from "./Layout.astro";
+
+interface PageProps {
+  title?: string;
+  description?: string;
+  activeNav?: "about" | "search" | "now" | "home" | "resume";
+  backButton?: boolean; // Show a back button at the top of the page
+  prose?: boolean; // Specific main for prose pages
+  ogImage?: string; // Ovveride the default social image
+  canonicalURL?: string; // Ovveride the default canonical URL
+  publicationDatetime?: Date; // Publication date for articles
+  updateDatetime?: Date | null; // Update date for articles
+}
+
+// Allow props in frontmatter too
+export interface Props extends PageProps {
+  frontmatter?: PageProps;
+}
+
+// Merge frontmatter and props
+const { frontmatter } = Astro.props;
+const options = {
+  ...Astro.props,
+  ...frontmatter,
+};
+---
+
+<Layout title={`${options.title} | ${config.title}`} {...options}>
+  <Header activeNav={options.activeNav} />
+  <main id="main-content">
+    <section
+      id={options.activeNav}
+      class={options.prose ? "prose prose-img:border-0 mb-28 max-w-3xl" : ""}
+    >
+      {
+        options.backButton && (
+          <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
+            <button
+              class="mt-8 mb-2 flex cursor-pointer hover:opacity-75"
+              onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
+              </svg>
+              <span>Go back</span>
+            </button>
+          </div>
+        )
+      }
+      <h1 class="text-2xl tracking-wider sm:text-3xl">
+        {options.title}
+      </h1>
+      <p class="mt-2 mb-6 italic">{options.description}</p>
+      <slot />
+    </section>
+  </main>
+  <Footer />
+</Layout>

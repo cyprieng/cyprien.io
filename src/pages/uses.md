@@ -1,7 +1,8 @@
 ---
-layout: ../layouts/BasicLayout.astro
+layout: ../layouts/MainLayout.astro
 title: Uses
 activeNav: uses
+prose: true
 ---
 _Updated August 28th, 2025_
 

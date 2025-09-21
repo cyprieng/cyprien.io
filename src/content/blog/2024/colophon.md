@@ -1,5 +1,4 @@
 ---
-author: Cyprien
 publicationDatetime: 2024-09-26T06:12:00.000Z
 updateDatetime: 2024-09-26T06:12:00.000Z
 title: How I Built My Corner of the Web

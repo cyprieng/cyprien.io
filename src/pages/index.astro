@@ -1,13 +1,11 @@
 ---
 import PostsList from "@components/PostsList.astro";
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
 import Hr from "@components/Hr.astro";
 import Terminal from "@components/Terminal.astro";
-import Layout from "@layouts/Layout.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import MainLayout from "@layouts/MainLayout.astro";
 
 const posts = await getCollection("blog");
 
@@ -30,24 +28,19 @@ sortedPosts.forEach((post) => {
 });
 ---
 
-<Layout>
-  <Header activeNav="home" />
-  <main id="main-content">
-    <section id="hero" class="p-10">
-      <Terminal command="whoami">
-        Hey I'm Cyprien 👋 <br />
-        I'm a software engineer living in Montpellier, France 🇫🇷
-        <br />
-        Welcome to my corner of the web, where I mostly post about technical topics.
-      </Terminal>
-    </section>
+<MainLayout activeNav="home">
+  <section id="hero" class="p-10">
+    <Terminal command="whoami">
+      Hey I'm Cyprien 👋 <br />
+      I'm a software engineer living in Montpellier, France 🇫🇷
+      <br />
+      Welcome to my corner of the web, where I mostly post about technical topics.
+    </Terminal>
+  </section>
 
-    <Hr />
+  <Hr />
 
-    <PostsList posts={categorizedPosts.featured} title="Featured posts" />
-    <PostsList posts={categorizedPosts.tech} title="Tech posts" />
-    <PostsList posts={categorizedPosts.random} title="Random posts" />
-  </main>
-
-  <Footer />
-</Layout>
+  <PostsList posts={categorizedPosts.featured} title="Featured posts" />
+  <PostsList posts={categorizedPosts.tech} title="Tech posts" />
+  <PostsList posts={categorizedPosts.random} title="Random posts" />
+</MainLayout>

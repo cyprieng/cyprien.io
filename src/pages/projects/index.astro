@@ -1,7 +1,5 @@
 ---
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
-import Layout from "@layouts/Layout.astro";
+import MainLayout from "@layouts/MainLayout.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { getCollection } from "astro:content";
 
@@ -10,35 +8,30 @@ const posts = await getCollection("projects");
 const projects = getSortedPosts(posts);
 ---
 
-<Layout>
-  <Header activeNav="projects" />
-  <main id="main-content" class="mx-auto mt-8 w-full max-w-3xl px-4 pb-12">
-    {
-      projects.map(({ data, slug }) => (
-        <div class="mb-10">
-          <div class="flex items-start gap-6">
-            <img
-              src={data.logo}
-              alt={data.title}
-              class="h-16 w-16 rounded-xl object-cover"
-            />
-            <div class="flex-1">
-              <div class="mb-2 flex items-center gap-2">
-                <h2 class="text-xl font-semibold">{data.title}</h2>
-              </div>
-              <p class="mb-4">{data.description}</p>
-              <a
-                href={`/projects/${slug}/`}
-                class="inline-flex items-center text-sm font-medium"
-              >
-                Read more →
-              </a>
+<MainLayout>
+  {
+    projects.map(({ data, slug }) => (
+      <div class="mb-10">
+        <div class="flex items-start gap-6">
+          <img
+            src={data.logo}
+            alt={data.title}
+            class="h-16 w-16 rounded-xl object-cover"
+          />
+          <div class="flex-1">
+            <div class="mb-2 flex items-center gap-2">
+              <h2 class="text-xl font-semibold">{data.title}</h2>
             </div>
+            <p class="mb-4">{data.description}</p>
+            <a
+              href={`/projects/${slug}/`}
+              class="inline-flex items-center text-sm font-medium"
+            >
+              Read more →
+            </a>
           </div>
         </div>
-      ))
-    }
-  </main>
-
-  <Footer />
-</Layout>
+      </div>
+    ))
+  }
+</MainLayout>

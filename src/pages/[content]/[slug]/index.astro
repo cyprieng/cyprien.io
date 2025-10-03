@@ -1,0 +1,66 @@
+---
+import PostDetails from "@layouts/PostDetails.astro";
+import Posts from "@layouts/Posts.astro";
+import { getPageNumbers, getPagination } from "@utils/getPagination";
+import getSortedPosts from "@utils/getSortedPosts";
+import { getCollection } from "astro:content";
+import {
+  CONTENT_TYPES,
+  isValidContentType,
+  getCollectionForContentType,
+  type AnyCollectionEntry,
+} from "@utils/contentConfig";
+
+export interface Props {
+  post: AnyCollectionEntry;
+}
+
+export async function getStaticPaths() {
+  const paths = [];
+
+  for (const [contentType, config] of Object.entries(CONTENT_TYPES)) {
+    const posts = await getCollection(
+      config.collection,
+      ({ data }) => !data.draft,
+    );
+
+    const postPaths = posts.map((post) => ({
+      params: { content: contentType, slug: post.slug },
+      props: { post },
+    }));
+
+    const pagePaths = getPageNumbers(posts.length).map((pageNum) => ({
+      params: { content: contentType, slug: String(pageNum) },
+    }));
+
+    paths.push(...postPaths, ...pagePaths);
+  }
+
+  return paths;
+}
+
+const { content, slug } = Astro.params;
+const { post } = Astro.props;
+
+if (!isValidContentType(content)) {
+  return Astro.redirect("/404");
+}
+
+const collection = getCollectionForContentType(content);
+const posts = await getCollection(collection);
+
+const sortedPosts = getSortedPosts(posts);
+
+const pagination = getPagination({
+  posts: sortedPosts,
+  page: slug,
+});
+---
+
+{
+  post ? (
+    <PostDetails post={post} />
+  ) : (
+    <Posts {...pagination} contentType={content} />
+  )
+}

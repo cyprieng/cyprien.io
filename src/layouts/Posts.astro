@@ -2,23 +2,29 @@
 import Pagination from "@components/Pagination.astro";
 import PostLink from "@components/PostLink.astro";
 import config from "@config";
-import type { CollectionEntry } from "astro:content";
 import MainLayout from "@layouts/MainLayout.astro";
+import {
+  getTitleForContentType,
+  type AnyCollectionEntry,
+  type ContentType,
+} from "@utils/contentConfig";
 
 export interface Props {
   currentPage: number;
   totalPages: number;
-  paginatedPosts: CollectionEntry<"blog">[] | CollectionEntry<"projects">[];
+  paginatedPosts: AnyCollectionEntry[];
+  contentType: ContentType;
 }
 
-const { currentPage, totalPages, paginatedPosts } = Astro.props;
+const { currentPage, totalPages, paginatedPosts, contentType } = Astro.props;
+const title = getTitleForContentType(contentType);
 ---
 
-<MainLayout title={`Posts | ${config.title}`}>
+<MainLayout title={`${title} | ${config.title}`}>
   <ul>
     {
       paginatedPosts.map(({ data, slug }) => (
-        <PostLink href={`/posts/${slug}/`} frontmatter={data} />
+        <PostLink href={`/${contentType}/${slug}/`} frontmatter={data} />
       ))
     }
   </ul>
@@ -26,7 +32,7 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
   <Pagination
     {currentPage}
     {totalPages}
-    prevUrl={`/posts${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-    nextUrl={`/posts/${currentPage + 1}/`}
+    prevUrl={`/${contentType}${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
+    nextUrl={`/${contentType}/${currentPage + 1}/`}
   />
 </MainLayout>

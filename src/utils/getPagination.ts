@@ -17,11 +17,11 @@ export const getPageNumbers = (numberOfPosts: number) => {
   return pageNumbers;
 };
 
-export const getPagination = <T>({
+export function getPagination<T>({
   posts,
   page,
   isIndex = false,
-}: GetPaginationProps<T[]>) => {
+}: GetPaginationProps<T[]>) {
   const totalPagesArray = getPageNumbers(posts.length);
   const totalPages = totalPagesArray.length;
 
@@ -40,4 +40,4 @@ export const getPagination = <T>({
     currentPage,
     paginatedPosts,
   };
-};
+}

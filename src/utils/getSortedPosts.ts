@@ -1,11 +1,7 @@
-import type { CollectionEntry } from "astro:content";
 import postFilter from "./postFilter";
+import type { AnyCollectionEntry } from "./contentConfig";
 
-const getSortedPosts = <
-  T extends CollectionEntry<"blog"> | CollectionEntry<"projects">,
->(
-  posts: T[],
-) => {
+function getSortedPosts(posts: AnyCollectionEntry[]) {
   return posts
     .filter(postFilter)
     .sort(
@@ -21,6 +17,6 @@ const getSortedPosts = <
           ).getTime() / 1000,
         ),
     );
-};
+}
 
 export default getSortedPosts;

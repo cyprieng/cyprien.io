@@ -10,7 +10,6 @@ html[data-theme="light"] {
   --foreground: #282728;
   --accent: #a92257;
   --card: #e6e6e6;
-  --muted: #cdcdcd;
   --border: #ece9e9;
 }
 
@@ -19,7 +18,6 @@ html[data-theme="dark"] {
   --foreground: #eaedf3;
   --accent: #ff79c6;
   --card: #343f60;
-  --muted: #8a3302;
   --border: #ffffff;
 }
 
@@ -30,7 +28,6 @@ html[data-theme="dark"] {
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-card: var(--card);
-  --color-muted: var(--muted);
   --color-border: var(--border);
 
   --text-prose: 1.25rem;
@@ -78,29 +75,17 @@ html[data-theme="dark"] {
   }
 
   .prose {
-    @apply text-prose! prose-headings:mb-3! prose-headings:text-foreground! prose-h3:italic prose-p:text-foreground! prose-a:text-foreground! prose-a:decoration-dashed! prose-a:underline-offset-8 hover:prose-a:text-accent prose-blockquote:border-accent/50! prose-blockquote:opacity-80 prose-figcaption:text-foreground! prose-figcaption:opacity-70 prose-strong:text-foreground! prose-code:rounded-sm prose-code:bg-card/75 prose-code:text-foreground! prose-code:p-1 prose-code:before:content-none! prose-code:after:content-none! prose-ol:text-foreground! prose-ul:overflow-x-clip prose-ul:text-foreground! prose-li:marker:text-accent! prose-table:text-foreground prose-th:border prose-th:border-border prose-td:border prose-td:border-border prose-img:my-2! prose-img:mx-auto;
-  }
-
-  .prose a {
-    @apply hover:text-accent! break-words underline;
+    @apply text-prose! prose-headings:mb-3! prose-headings:text-foreground! prose-h3:italic prose-p:text-foreground! prose-a:text-foreground! prose-a:decoration-dashed! prose-a:underline-offset-8 prose-a:break-words prose-a:underline hover:prose-a:text-accent prose-blockquote:border-accent/50! prose-blockquote:opacity-80 prose-figcaption:text-foreground! prose-figcaption:opacity-70 prose-strong:text-foreground! prose-code:rounded-sm prose-code:bg-card/75 prose-code:text-foreground! prose-code:p-1 prose-code:before:content-none! prose-code:after:content-none! prose-ol:text-foreground! prose-ul:overflow-x-clip prose-ul:text-foreground! prose-li:marker:text-accent! prose-table:text-foreground prose-table:block prose-table:overflow-x-auto prose-th:border prose-th:border-border prose-td:border prose-td:border-border prose-img:my-2! prose-img:mx-auto;
   }
 
   .prose thead th:first-child,
-  tbody td:first-child,
-  tfoot td:first-child {
+  .prose tbody td:first-child,
+  .prose tfoot td:first-child {
     padding-left: 0.5714286em;
-  }
-
-  .prose h2#table-of-contents {
-    @apply mb-2;
   }
 
   .prose details {
     @apply text-foreground inline-block cursor-pointer select-none;
-  }
-
-  .prose h2#table-of-contents + p {
-    @apply hidden;
   }
 
   .prose img + em {
@@ -134,11 +119,6 @@ html[data-theme="dark"] {
   select {
     @apply text-foreground border-foreground/40 placeholder:text-foreground/75 focus:border-accent rounded border px-3 py-3 placeholder:italic focus:outline-none;
   }
-}
-
-/* Avoid table overflow on small screens */
-table {
-  @apply block overflow-x-auto;
 }
 
 /* Specific style for about page */

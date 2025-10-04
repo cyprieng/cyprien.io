@@ -3,10 +3,11 @@ import TagPosts from "@layouts/TagPosts.astro";
 import { getPageNumbers, getPagination } from "@utils/getPagination";
 import getPostsByTag from "@utils/getPostsByTag";
 import getUniqueTags from "@utils/getUniqueTags";
-import { type CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
+import type { AnyCollectionEntry } from "@utils/contentConfig";
 
 export interface Props {
-  post: CollectionEntry<"blog"> | CollectionEntry<"projects">;
+  post: AnyCollectionEntry;
   tag: string;
   tagName: string;
 }

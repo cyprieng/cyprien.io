@@ -1,8 +1,8 @@
 ---
 import PostLink from "@components/PostLink.astro";
-import type { CollectionEntry } from "astro:content";
+import type { AnyCollectionEntry } from "@utils/contentConfig";
 
-const posts = Astro.props.posts as CollectionEntry<"blog">[];
+const posts = Astro.props.posts as AnyCollectionEntry[];
 const title = Astro.props.title as string;
 ---
 

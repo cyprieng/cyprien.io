@@ -1,9 +1,9 @@
 import { Resvg } from "@resvg/resvg-js";
-import { type CollectionEntry } from "astro:content";
 import fs from "fs";
 import satori, { type SatoriOptions } from "satori";
 import postOgImage from "./og-templates/post";
 import siteOgImage from "./og-templates/site";
+import type { AnyCollectionEntry } from "./contentConfig";
 
 // Get dirname
 const __dirname = new URL(".", import.meta.url).pathname;
@@ -46,9 +46,7 @@ function svgBufferToPngBuffer(svg: string) {
   return pngData.asPng();
 }
 
-export async function generateOgImageForPost(
-  post: CollectionEntry<"blog"> | CollectionEntry<"projects">,
-) {
+export async function generateOgImageForPost(post: AnyCollectionEntry) {
   const svg = await satori(postOgImage(post), options);
   return svgBufferToPngBuffer(svg);
 }

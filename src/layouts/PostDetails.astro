@@ -1,14 +1,14 @@
 ---
 import MainLayout from "@layouts/MainLayout.astro";
 import Tag from "@components/Tag.astro";
-import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import PostDatetime from "@components/PostDatetime.astro";
 import { isProject } from "@content/config";
+import type { AnyCollectionEntry } from "@utils/contentConfig";
 
 export interface Props {
-  post: CollectionEntry<"blog"> | CollectionEntry<"projects">;
+  post: AnyCollectionEntry;
 }
 
 // Get post data

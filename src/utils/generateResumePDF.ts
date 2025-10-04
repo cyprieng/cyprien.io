@@ -1,7 +1,7 @@
 import puppeteer from "puppeteer";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
-import { spawn } from "child_process";
+import { spawn, type ChildProcess } from "child_process";
 
 // Get script dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -11,9 +11,9 @@ const __dirname = dirname(__filename);
  * Wait for server to be ready
  *
  * @param url url to check
- * @param [timeout=30000] timeout to wait
+ * @param timeout timeout to wait in milliseconds
  */
-async function waitForServer(url, timeout = 30000) {
+async function waitForServer(url: string, timeout = 30000): Promise<boolean> {
   const startTime = Date.now();
 
   while (Date.now() - startTime < timeout) {
@@ -28,11 +28,11 @@ async function waitForServer(url, timeout = 30000) {
 }
 
 /**
- * Generate PDF
+ * Generate PDF from resume page
  */
-export default async function buildResume() {
+export default async function buildResume(): Promise<void> {
   // Start dev server
-  const devServer = spawn("npm", ["run", "dev"], {
+  const devServer: ChildProcess = spawn("npm", ["run", "dev"], {
     stdio: "inherit",
   });
 

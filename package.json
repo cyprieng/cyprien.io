@@ -13,7 +13,7 @@
     "format:fix": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "generate:resume": "node src/utils/generateResumePDF.js",
+    "generate:resume": "tsx src/utils/generateResumePDF.ts",
     "prepare": "husky"
   },
   "dependencies": {
@@ -26,8 +26,8 @@
     "github-breakout": "github:cyprieng/github-breakout",
     "github-slugger": "^2.0.0",
     "pagefind": "^1.4.0",
-    "tailwindcss": "^4.1.11",
-    "satori": "^0.16.0"
+    "satori": "^0.16.0",
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
@@ -50,6 +50,7 @@
     "puppeteer": "^24.14.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "tsx": "^4.20.6",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",
     "vite": "^6.3.5"

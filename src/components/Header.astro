@@ -1,7 +1,12 @@
 ---
+/**
+ * Header component with navigation menu and theme toggle.
+ */
+
 import Hr from "./Hr.astro";
 
 export interface Props {
+  /** The currently active navigation item */
   activeNav?:
     | "about"
     | "search"

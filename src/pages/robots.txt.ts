@@ -1,3 +1,7 @@
+/**
+ * API endpoint to generate robots.txt file for search engine crawlers.
+ */
+
 import config from "@config";
 import type { APIRoute } from "astro";
 

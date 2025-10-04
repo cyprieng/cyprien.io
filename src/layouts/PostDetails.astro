@@ -1,4 +1,8 @@
 ---
+/**
+ * Layout for displaying individual post or project details with comments and sharing.
+ */
+
 import MainLayout from "@layouts/MainLayout.astro";
 import Tag from "@components/Tag.astro";
 import { slugifyStr } from "@utils/slugify";
@@ -8,7 +12,7 @@ import { isProject } from "@content/config";
 import type { AnyCollectionEntry } from "@utils/contentConfig";
 
 export interface Props {
-  post: AnyCollectionEntry;
+  post: AnyCollectionEntry; // Post or project entry to display
 }
 
 // Get post data
@@ -111,8 +115,9 @@ const layoutProps = {
 </MainLayout>
 
 <script is:inline data-astro-rerun>
-  /** Create a progress indicator
-   *  at the top */
+  /**
+   * Creates a progress indicator bar at the top of the page to show reading progress
+   */
   function createProgressBar() {
     // Create the main container div
     const progressContainer = document.createElement("div");
@@ -132,8 +137,9 @@ const layoutProps = {
   }
   createProgressBar();
 
-  /** Update the progress bar
-   *  when user scrolls */
+  /**
+   * Updates the progress bar width based on scroll position
+   */
   function updateScrollProgress() {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
@@ -150,8 +156,9 @@ const layoutProps = {
   }
   document.addEventListener("scroll", updateScrollProgress);
 
-  /** Attaches links to headings in the document,
-   *  allowing sharing of sections easily */
+  /**
+   * Attaches clickable anchor links to all headings in the document for easy section sharing
+   */
   function addHeadingLinks() {
     const headings = Array.from(
       document.querySelectorAll("h2, h3, h4, h5, h6"),
@@ -168,8 +175,9 @@ const layoutProps = {
   }
   addHeadingLinks();
 
-  /** Attaches copy buttons to code blocks in the document,
-   * allowing users to copy code easily. */
+  /**
+   * Attaches copy buttons to all code blocks in the document for easy code copying
+   */
   function attachCopyButtons() {
     const copyButtonLabel = "Copy";
     const codeBlocks = Array.from(document.querySelectorAll("pre"));
@@ -194,6 +202,12 @@ const layoutProps = {
       });
     }
 
+    /**
+     * Copies the code content from a code block to the clipboard
+     * @param {HTMLElement} block - The code block element containing the code to copy
+     * @param {HTMLElement} button - The button element that triggered the copy action
+     * @returns {Promise<void>}
+     */
     async function copyCode(block, button) {
       const code = block.querySelector("code");
       const text = code?.innerText;
@@ -210,7 +224,9 @@ const layoutProps = {
   }
   attachCopyButtons();
 
-  // Load discus comments
+  /**
+   * Loads and initializes Giscus comments widget on the page with configured settings
+   */
   function loadDiscus() {
     const giscusAttributes = {
       src: "https://giscus.app/client.js",
@@ -237,8 +253,9 @@ const layoutProps = {
   }
   loadDiscus();
 
-  /** Scrolls the document to the top when
-   * the "Back to Top" button is clicked. */
+  /**
+   * Attaches click handler to the "Back to Top" button to scroll document to top
+   */
   function backToTop() {
     document.querySelector("#back-to-top")?.addEventListener("click", () => {
       document.body.scrollTop = 0; // For Safari

@@ -1,6 +1,11 @@
 ---
+/**
+ * Terminal component that displays a command prompt with output.
+ * Renders a macOS-style terminal window with traffic light buttons.
+ */
+
 export interface Props {
-  command: string;
+  command: string; // The command to display in the terminal prompt
 }
 
 const { command } = Astro.props;

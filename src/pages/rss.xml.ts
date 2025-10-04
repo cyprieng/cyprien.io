@@ -1,3 +1,7 @@
+/**
+ * API endpoint to generate RSS feed for blog posts.
+ */
+
 import rss from "@astrojs/rss";
 import config from "@config";
 import getSortedPosts from "@utils/getSortedPosts";

@@ -1,11 +1,15 @@
 ---
+/**
+ * Component to display post publication or update datetime with formatting.
+ */
+
 import config from "@config";
 
 interface Props {
-  className?: string;
-  icon?: boolean;
-  publicationDatetime: string | Date;
-  updateDatetime: string | Date | undefined | null;
+  className?: string; //Additional CSS classes
+  icon?: boolean; // Whether to show the calendar icon
+  publicationDatetime: string | Date; // Original publication datetime
+  updateDatetime: string | Date | undefined | null; // Last update datetime (if updated)
 }
 
 const {

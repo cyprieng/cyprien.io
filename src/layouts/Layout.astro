@@ -1,15 +1,19 @@
 ---
+/**
+ * Base HTML layout component with meta tags, OpenGraph, and analytics.
+ */
+
 import config from "@config";
 import "@styles/global.css";
 import { ClientRouter } from "astro:transitions";
 
 export interface Props {
-  title?: string;
-  description?: string;
-  ogImage?: string;
-  canonicalURL?: string;
-  publicationDatetime?: Date;
-  updateDatetime?: Date | null;
+  title?: string; // Page title
+  description?: string; // Page description
+  ogImage?: string; // Open Graph image URL
+  canonicalURL?: string; // Canonical URL for the page
+  publicationDatetime?: Date; // Publication date for articles
+  updateDatetime?: Date | null; // Update date for articles
 }
 
 const {

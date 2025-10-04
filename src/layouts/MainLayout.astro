@@ -1,24 +1,29 @@
 ---
+/**
+ * Main layout component with header, footer, and content area.
+ * Supports both regular and prose content with optional back button.
+ */
+
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import config from "@config";
 import Layout from "./Layout.astro";
 
 interface PageProps {
-  title?: string;
-  description?: string;
-  activeNav?: "about" | "search" | "now" | "home" | "resume";
+  title?: string; // Page title
+  description?: string; // Page description
+  activeNav?: "about" | "search" | "now" | "home" | "resume"; // Active navigation item
   backButton?: boolean; // Show a back button at the top of the page
   prose?: boolean; // Specific main for prose pages
-  ogImage?: string; // Ovveride the default social image
-  canonicalURL?: string; // Ovveride the default canonical URL
+  ogImage?: string; // Override the default social image
+  canonicalURL?: string; // Override the default canonical URL
   publicationDatetime?: Date; // Publication date for articles
   updateDatetime?: Date | null; // Update date for articles
 }
 
 // Allow props in frontmatter too
 export interface Props extends PageProps {
-  frontmatter?: PageProps;
+  frontmatter?: PageProps; // Frontmatter props for MDX compatibility
 }
 
 // Merge frontmatter and props

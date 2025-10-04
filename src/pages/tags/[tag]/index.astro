@@ -1,10 +1,17 @@
 ---
+/**
+ * First page for each tag, displaying filtered posts.
+ */
+
 import TagPosts from "@layouts/TagPosts.astro";
 import { getPagination } from "@utils/getPagination";
 import getPostsByTag from "@utils/getPostsByTag";
 import getUniqueTags from "@utils/getUniqueTags";
 import { getCollection } from "astro:content";
 
+/**
+ * Generates static paths for all tag pages
+ */
 export async function getStaticPaths() {
   const posts = [
     ...(await getCollection("blog")),

@@ -1,15 +1,19 @@
 ---
+/**
+ * Layout for displaying posts filtered by a specific tag with pagination.
+ */
+
 import Pagination from "@components/Pagination.astro";
 import PostLink from "@components/PostLink.astro";
 import MainLayout from "@layouts/MainLayout.astro";
 import type { AnyCollectionEntry } from "@utils/contentConfig";
 
 export interface Props {
-  currentPage: number;
-  totalPages: number;
-  paginatedPosts: AnyCollectionEntry[];
-  tag: string;
-  tagName: string;
+  currentPage: number; // Current page number
+  totalPages: number; // Total number of pages
+  paginatedPosts: AnyCollectionEntry[]; // Posts to display on this page
+  tag: string; // Slugified tag name for URLs
+  tagName: string; // Display name of the tag
 }
 
 const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;

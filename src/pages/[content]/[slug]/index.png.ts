@@ -1,9 +1,16 @@
+/**
+ * API endpoint to generate Open Graph images for individual posts and projects.
+ */
+
 import { generateOgImageForPost } from "@utils/generateOgImages";
 import { slugifyStr } from "@utils/slugify";
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { CONTENT_TYPES, type AnyCollectionEntry } from "@utils/contentConfig";
 
+/**
+ * Generates static paths for all post and project OG images
+ */
 export async function getStaticPaths() {
   const paths = [];
 

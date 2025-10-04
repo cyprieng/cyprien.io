@@ -1,6 +1,11 @@
 import postFilter from "./postFilter";
 import type { AnyCollectionEntry } from "./contentConfig";
 
+/**
+ * Filters and sorts posts by their publication or update date in descending order.
+ * @param {AnyCollectionEntry[]} posts - Array of blog or project posts to sort
+ * @returns {AnyCollectionEntry[]} Filtered and sorted posts, with most recent posts first
+ */
 function getSortedPosts(posts: AnyCollectionEntry[]) {
   return posts
     .filter(postFilter)

@@ -1,12 +1,15 @@
 ---
+/**
+ * Component to display social sharing links for a post.
+ */
+
 import config from "../config";
 
 // Share current url
 const url = Astro.url.toString();
 
-// Title for sharing purposes
 interface Props {
-  title: string;
+  title: string; // Title of the post to share
 }
 const { title } = Astro.props;
 ---

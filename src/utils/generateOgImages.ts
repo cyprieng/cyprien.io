@@ -8,6 +8,10 @@ import type { AnyCollectionEntry } from "./contentConfig";
 // Get dirname
 const __dirname = new URL(".", import.meta.url).pathname;
 
+/**
+ * Loads the JetBrains Mono fonts required for OG image generation.
+ * @returns {Promise<{jetBrainsMonoRegular: Buffer, jetBrainsMonoBold: Buffer}>} Object containing regular and bold font buffers
+ */
 const fetchFonts = async () => {
   const jetBrainsMonoRegular = await fs.promises.readFile(
     `${__dirname}../../src/utils/og-templates/fonts/JetBrainsMono-Regular.ttf`,
@@ -40,17 +44,31 @@ const options: SatoriOptions = {
   ],
 };
 
+/**
+ * Converts an SVG string to a PNG buffer.
+ * @param {string} svg - The SVG markup string to convert
+ * @returns {Buffer} PNG image buffer
+ */
 function svgBufferToPngBuffer(svg: string) {
   const resvg = new Resvg(svg);
   const pngData = resvg.render();
   return pngData.asPng();
 }
 
+/**
+ * Generates an Open Graph image for a specific post or project.
+ * @param {AnyCollectionEntry} post - The blog post or project entry to generate an OG image for
+ * @returns {Promise<Buffer>} PNG buffer of the generated OG image
+ */
 export async function generateOgImageForPost(post: AnyCollectionEntry) {
   const svg = await satori(postOgImage(post), options);
   return svgBufferToPngBuffer(svg);
 }
 
+/**
+ * Generates the default Open Graph image for the site.
+ * @returns {Promise<Buffer>} PNG buffer of the generated site OG image
+ */
 export async function generateOgImageForSite() {
   const svg = await satori(siteOgImage(), options);
   return svgBufferToPngBuffer(svg);

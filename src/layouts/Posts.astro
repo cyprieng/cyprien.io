@@ -1,4 +1,8 @@
 ---
+/**
+ * Layout for displaying paginated posts or projects.
+ */
+
 import Pagination from "@components/Pagination.astro";
 import PostLink from "@components/PostLink.astro";
 import config from "@config";
@@ -10,10 +14,10 @@ import {
 } from "@utils/contentConfig";
 
 export interface Props {
-  currentPage: number;
-  totalPages: number;
-  paginatedPosts: AnyCollectionEntry[];
-  contentType: ContentType;
+  currentPage: number; // Current page number
+  totalPages: number; // Total number of pages
+  paginatedPosts: AnyCollectionEntry[]; // Posts to display on this page
+  contentType: ContentType; // Type of content (posts or projects)
 }
 
 const { currentPage, totalPages, paginatedPosts, contentType } = Astro.props;

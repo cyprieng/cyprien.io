@@ -1,4 +1,8 @@
 ---
+/**
+ * First page for each content type (posts/projects), displaying all entries.
+ */
+
 import Posts from "@layouts/Posts.astro";
 import { getPagination } from "@utils/getPagination";
 import getSortedPosts from "@utils/getSortedPosts";
@@ -9,6 +13,9 @@ import {
   getCollectionForContentType,
 } from "@utils/contentConfig";
 
+/**
+ * Generates static paths for all content type index pages
+ */
 export async function getStaticPaths() {
   return Object.keys(CONTENT_TYPES).map((content) => ({
     params: { content },

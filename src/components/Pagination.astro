@@ -1,9 +1,13 @@
 ---
+/**
+ * Pagination component for navigating between pages.
+ */
+
 export interface Props {
-  currentPage: number;
-  totalPages: number;
-  prevUrl: string;
-  nextUrl: string;
+  currentPage: number; // The current page number
+  totalPages: number; // The total number of pages
+  prevUrl: string; // URL for the previous page
+  nextUrl: string; // URL for the next page
 }
 
 const { currentPage, totalPages, prevUrl, nextUrl } = Astro.props;

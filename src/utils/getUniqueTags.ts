@@ -7,6 +7,11 @@ interface Tag {
   tagName: string;
 }
 
+/**
+ * Extracts and returns a sorted array of unique tags from all posts.
+ * @param {AnyCollectionEntry[]} posts - Array of blog or project posts to extract tags from
+ * @returns {Tag[]} Sorted array of unique tag objects, each containing the slugified tag and original tag name
+ */
 const getUniqueTags = (posts: AnyCollectionEntry[]) => {
   const tags: Tag[] = posts
     .filter(postFilter)

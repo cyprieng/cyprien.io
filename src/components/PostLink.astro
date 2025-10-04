@@ -1,11 +1,15 @@
 ---
+/**
+ * Component for displaying a single post link with title and datetime.
+ */
+
 import { slugifyStr } from "@utils/slugify";
 import type { AnyCollectionEntry } from "@utils/contentConfig";
 import PostDatetime from "./PostDatetime.astro";
 
 export interface Props {
-  href?: string;
-  frontmatter: AnyCollectionEntry["data"];
+  href?: string; // URL for the post link
+  frontmatter: AnyCollectionEntry["data"]; // Post frontmatter data
 }
 
 const { href, frontmatter } = Astro.props;

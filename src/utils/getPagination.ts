@@ -6,6 +6,11 @@ interface GetPaginationProps<T> {
   isIndex?: boolean;
 }
 
+/**
+ * Calculates an array of page numbers based on the total number of posts.
+ * @param {number} numberOfPosts - The total number of posts to paginate
+ * @returns {number[]} An array of page numbers starting from 1
+ */
 export const getPageNumbers = (numberOfPosts: number) => {
   const numberOfPages = numberOfPosts / Number(POSTS_PER_PAGE);
 
@@ -17,6 +22,15 @@ export const getPageNumbers = (numberOfPosts: number) => {
   return pageNumbers;
 };
 
+/**
+ * Paginates an array of posts and returns pagination metadata.
+ * @template T - The type of items being paginated
+ * @param {GetPaginationProps<T[]>} props - The pagination configuration
+ * @param {T[]} props.posts - Array of posts to paginate
+ * @param {string | number} props.page - The current page number
+ * @param {boolean} [props.isIndex=false] - Whether this is the index page (first page)
+ * @returns {{totalPages: number, currentPage: number, paginatedPosts: T[]}} Object containing total pages, current page number, and the paginated subset of posts
+ */
 export function getPagination<T>({
   posts,
   page,

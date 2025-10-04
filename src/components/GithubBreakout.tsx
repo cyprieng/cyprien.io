@@ -2,7 +2,10 @@ import { useState, type FormEvent } from "react";
 import { generateSVG } from "github-breakout";
 import type { ColorPalette } from "github-breakout/src/svg";
 
-// Github Breakout form to try the svg generation
+/**
+ * Github Breakout form component for SVG generation.
+ * Allows users to generate a breakout game SVG based on their GitHub contribution graph.
+ */
 export default function GithubBreakoutForm() {
   // Generation options
   const [username, setUsername] = useState("");
@@ -21,7 +24,9 @@ export default function GithubBreakoutForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Generate SVGs based on the provided username and token
+  /**
+   * Generate SVGs based on the provided username and token
+   */
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsLoading(true);

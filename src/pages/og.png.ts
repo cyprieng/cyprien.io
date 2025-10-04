@@ -1,3 +1,7 @@
+/**
+ * API endpoint to generate the default Open Graph image for the site.
+ */
+
 import { generateOgImageForSite } from "@utils/generateOgImages";
 import type { APIRoute } from "astro";
 

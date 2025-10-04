@@ -1,4 +1,8 @@
 ---
+/**
+ * Paginated tag pages for browsing posts by tag across multiple pages.
+ */
+
 import TagPosts from "@layouts/TagPosts.astro";
 import { getPageNumbers, getPagination } from "@utils/getPagination";
 import getPostsByTag from "@utils/getPostsByTag";
@@ -7,11 +11,14 @@ import { getCollection } from "astro:content";
 import type { AnyCollectionEntry } from "@utils/contentConfig";
 
 export interface Props {
-  post: AnyCollectionEntry;
-  tag: string;
-  tagName: string;
+  post: AnyCollectionEntry; // Post entry
+  tag: string; // Slugified tag name
+  tagName: string; // Display tag name
 }
 
+/**
+ * Generates static paths for paginated tag pages
+ */
 export async function getStaticPaths() {
   const posts = [
     ...(await getCollection("blog")),

@@ -1,4 +1,8 @@
 ---
+/**
+ * Search page with Pagefind integration for site-wide content search.
+ */
+
 import config from "@config";
 import "@pagefind/default-ui/css/ui.css";
 import MainLayout from "@layouts/MainLayout.astro";
@@ -9,6 +13,9 @@ import MainLayout from "@layouts/MainLayout.astro";
 </MainLayout>
 
 <script>
+  /**
+   * Initializes the Pagefind search UI component with custom configuration
+   */
   function initSearch() {
     const pageFindSearch: HTMLElement | null =
       document.querySelector("#pagefind-search");
@@ -51,6 +58,10 @@ import MainLayout from "@layouts/MainLayout.astro";
       searchInput?.addEventListener("input", resetSearchParam);
       clearButton?.addEventListener("click", resetSearchParam);
 
+      /**
+       * Resets the search parameter in the URL when search input is cleared
+       * @param {Event} e - The input or click event
+       */
       function resetSearchParam(e: Event) {
         if ((e.target as HTMLInputElement)?.value.trim() === "") {
           history.replaceState(history.state, "", window.location.pathname);

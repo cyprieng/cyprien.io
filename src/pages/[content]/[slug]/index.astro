@@ -1,4 +1,8 @@
 ---
+/**
+ * Dynamic route handling both individual post/project pages and pagination pages.
+ */
+
 import PostDetails from "@layouts/PostDetails.astro";
 import Posts from "@layouts/Posts.astro";
 import { getPageNumbers, getPagination } from "@utils/getPagination";
@@ -12,9 +16,12 @@ import {
 } from "@utils/contentConfig";
 
 export interface Props {
-  post: AnyCollectionEntry;
+  post: AnyCollectionEntry; // Post or project entry
 }
 
+/**
+ * Generates static paths for all content detail pages and pagination pages
+ */
 export async function getStaticPaths() {
   const paths = [];
 

@@ -12,7 +12,10 @@ const __dirname = new URL(".", import.meta.url).pathname;
  * Loads the JetBrains Mono fonts required for OG image generation.
  * @returns {Promise<{jetBrainsMonoRegular: Buffer, jetBrainsMonoBold: Buffer}>} Object containing regular and bold font buffers
  */
-const fetchFonts = async () => {
+const fetchFonts = async (): Promise<{
+  jetBrainsMonoRegular: Buffer;
+  jetBrainsMonoBold: Buffer;
+}> => {
   const jetBrainsMonoRegular = await fs.promises.readFile(
     `${__dirname}../../src/utils/og-templates/fonts/JetBrainsMono-Regular.ttf`,
   );
@@ -49,7 +52,7 @@ const options: SatoriOptions = {
  * @param {string} svg - The SVG markup string to convert
  * @returns {Buffer} PNG image buffer
  */
-function svgBufferToPngBuffer(svg: string) {
+function svgBufferToPngBuffer(svg: string): Buffer {
   const resvg = new Resvg(svg);
   const pngData = resvg.render();
   return pngData.asPng();
@@ -60,7 +63,9 @@ function svgBufferToPngBuffer(svg: string) {
  * @param {AnyCollectionEntry} post - The blog post or project entry to generate an OG image for
  * @returns {Promise<Buffer>} PNG buffer of the generated OG image
  */
-export async function generateOgImageForPost(post: AnyCollectionEntry) {
+export async function generateOgImageForPost(
+  post: AnyCollectionEntry,
+): Promise<Buffer> {
   const svg = await satori(postOgImage(post), options);
   return svgBufferToPngBuffer(svg);
 }
@@ -69,7 +74,7 @@ export async function generateOgImageForPost(post: AnyCollectionEntry) {
  * Generates the default Open Graph image for the site.
  * @returns {Promise<Buffer>} PNG buffer of the generated site OG image
  */
-export async function generateOgImageForSite() {
+export async function generateOgImageForSite(): Promise<Buffer> {
   const svg = await satori(siteOgImage(), options);
   return svgBufferToPngBuffer(svg);
 }

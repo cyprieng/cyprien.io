@@ -8,7 +8,7 @@ import type { AnyCollectionEntry } from "./contentConfig";
  * @param {Object} entry.data - The entry's data containing draft and publication date
  * @returns {boolean} True if the post should be included, false otherwise
  */
-const postFilter = ({ data }: AnyCollectionEntry) => {
+const postFilter = ({ data }: AnyCollectionEntry): boolean => {
   const isPublishTimePassed =
     Date.now() > new Date(data.publicationDatetime).getTime();
   return !data.draft && (import.meta.env.DEV || isPublishTimePassed);

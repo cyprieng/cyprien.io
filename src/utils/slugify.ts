@@ -5,11 +5,12 @@ import { slug as slugger } from "github-slugger";
  * @param {string} str - The string to be slugified
  * @returns {string} A lowercase, hyphenated slug suitable for URLs
  */
-export const slugifyStr = (str: string) => slugger(str);
+export const slugifyStr = (str: string): string => slugger(str);
 
 /**
  * Converts an array of strings into URL-friendly slug formats.
  * @param {string[]} arr - Array of strings to be slugified
  * @returns {string[]} Array of lowercase, hyphenated slugs suitable for URLs
  */
-export const slugifyAll = (arr: string[]) => arr.map((str) => slugifyStr(str));
+export const slugifyAll = (arr: string[]): string[] =>
+  arr.map((str) => slugifyStr(str));

@@ -8,7 +8,10 @@ import type { AnyCollectionEntry } from "./contentConfig";
  * @param {string} tag - The slugified tag to filter by
  * @returns {AnyCollectionEntry[]} Sorted array of posts that contain the specified tag
  */
-const getPostsByTag = (posts: AnyCollectionEntry[], tag: string) =>
+const getPostsByTag = (
+  posts: AnyCollectionEntry[],
+  tag: string,
+): AnyCollectionEntry[] =>
   getSortedPosts(
     posts.filter((post) => slugifyAll(post.data.tags).includes(tag)),
   );

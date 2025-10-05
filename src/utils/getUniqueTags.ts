@@ -12,7 +12,7 @@ interface Tag {
  * @param {AnyCollectionEntry[]} posts - Array of blog or project posts to extract tags from
  * @returns {Tag[]} Sorted array of unique tag objects, each containing the slugified tag and original tag name
  */
-const getUniqueTags = (posts: AnyCollectionEntry[]) => {
+const getUniqueTags = (posts: AnyCollectionEntry[]): Tag[] => {
   const tags: Tag[] = posts
     .filter(postFilter)
     .flatMap((post) => post.data.tags)

@@ -11,7 +11,7 @@ interface GetPaginationProps<T> {
  * @param {number} numberOfPosts - The total number of posts to paginate
  * @returns {number[]} An array of page numbers starting from 1
  */
-export const getPageNumbers = (numberOfPosts: number) => {
+export const getPageNumbers = (numberOfPosts: number): number[] => {
   const numberOfPages = numberOfPosts / Number(POSTS_PER_PAGE);
 
   let pageNumbers: number[] = [];
@@ -35,7 +35,11 @@ export function getPagination<T>({
   posts,
   page,
   isIndex = false,
-}: GetPaginationProps<T[]>) {
+}: GetPaginationProps<T[]>): {
+  totalPages: number;
+  currentPage: number;
+  paginatedPosts: T[];
+} {
   const totalPagesArray = getPageNumbers(posts.length);
   const totalPages = totalPagesArray.length;
 

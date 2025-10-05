@@ -6,7 +6,7 @@ import type { AnyCollectionEntry } from "./contentConfig";
  * @param {AnyCollectionEntry[]} posts - Array of blog or project posts to sort
  * @returns {AnyCollectionEntry[]} Filtered and sorted posts, with most recent posts first
  */
-function getSortedPosts(posts: AnyCollectionEntry[]) {
+function getSortedPosts(posts: AnyCollectionEntry[]): AnyCollectionEntry[] {
   return posts
     .filter(postFilter)
     .sort(

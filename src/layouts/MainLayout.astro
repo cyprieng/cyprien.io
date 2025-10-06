@@ -34,7 +34,10 @@ const options = {
 };
 ---
 
-<Layout title={`${options.title} | ${config.title}`} {...options}>
+<Layout
+  title={options.title ? `${options.title} | ${config.title}` : config.title}
+  {...options}
+>
   <Header activeNav={options.activeNav} />
   <main id="main-content">
     <section

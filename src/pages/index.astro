@@ -14,7 +14,7 @@ const posts = getSortedPosts(await getCollection("blog"));
 ---
 
 <MainLayout activeNav="home">
-  <section id="hero" class="p-10">
+  <section id="hero" class="mb-6 p-10">
     <Terminal command="whoami">
       Hey I'm Cyprien 👋 <br />
       I'm a software engineer living in Montpellier, France 🇫🇷
@@ -27,7 +27,7 @@ const posts = getSortedPosts(await getCollection("blog"));
 
   {
     posts.length > 0 && (
-      <section id="recent-posts" class="pt-6">
+      <section id="recent-posts" class="my-10">
         <ul>
           {posts.map(
             ({ data, slug }, index) =>

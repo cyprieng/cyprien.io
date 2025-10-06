@@ -54,7 +54,7 @@ html[data-theme="dark"] {
   }
 
   body {
-    @apply font-body bg-background text-foreground selection:bg-accent/70 selection:text-background flex min-h-svh flex-col;
+    @apply font-body bg-background text-foreground selection:bg-accent/70 selection:text-background min-h-svh;
   }
 
   section,

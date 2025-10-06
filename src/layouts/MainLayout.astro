@@ -42,13 +42,13 @@ const options = {
   <main id="main-content">
     <section
       id={options.activeNav}
-      class={options.prose ? "prose prose-img:border-0 mb-28 max-w-3xl" : ""}
+      class={`max-w-3xl my-6 ${options.prose ? "prose prose-img:border-0" : ""}`}
     >
       {
         options.backButton && (
-          <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
+          <div class="pb-3">
             <button
-              class="mt-8 mb-2 flex cursor-pointer hover:opacity-75"
+              class="flex cursor-pointer hover:opacity-75"
               onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
             >
               <svg xmlns="http://www.w3.org/2000/svg">
@@ -59,10 +59,16 @@ const options = {
           </div>
         )
       }
-      <h1 class="text-2xl tracking-wider sm:text-3xl">
-        {options.title}
-      </h1>
-      <p class="mt-2 mb-6 italic">{options.description}</p>
+      {
+        options.title && (
+          <h1 class="text-2xl tracking-wider sm:text-3xl">{options.title}</h1>
+        )
+      }
+      {
+        options.description && (
+          <p class="mt-2 mb-6 italic">{options.description}</p>
+        )
+      }
       <slot />
     </section>
   </main>

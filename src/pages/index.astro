@@ -1,35 +1,16 @@
 ---
 /**
- * Homepage displaying categorized blog posts (featured, tech, and random).
+ * Homepage displaying last posts
  */
 
-import PostsList from "@components/PostsList.astro";
 import Hr from "@components/Hr.astro";
 import Terminal from "@components/Terminal.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { getCollection } from "astro:content";
 import MainLayout from "@layouts/MainLayout.astro";
-import type { AnyCollectionEntry } from "@utils/contentConfig";
+import PostLink from "@components/PostLink.astro";
 
-const posts = await getCollection("blog");
-
-const sortedPosts = getSortedPosts(posts);
-
-const categorizedPosts = {
-  featured: [] as AnyCollectionEntry[],
-  tech: [] as AnyCollectionEntry[],
-  random: [] as AnyCollectionEntry[],
-};
-
-sortedPosts.forEach((post) => {
-  if (post.data.featured) {
-    categorizedPosts.featured.push(post);
-  } else if (post.data.tags.includes("random")) {
-    categorizedPosts.random.push(post);
-  } else {
-    categorizedPosts.tech.push(post);
-  }
-});
+const posts = getSortedPosts(await getCollection("blog"));
 ---
 
 <MainLayout activeNav="home">
@@ -44,7 +25,18 @@ sortedPosts.forEach((post) => {
 
   <Hr />
 
-  <PostsList posts={categorizedPosts.featured} title="Featured posts" />
-  <PostsList posts={categorizedPosts.tech} title="Tech posts" />
-  <PostsList posts={categorizedPosts.random} title="Random posts" />
+  {
+    posts.length > 0 && (
+      <section id="recent-posts" class="pt-6">
+        <ul>
+          {posts.map(
+            ({ data, slug }, index) =>
+              index < 10 && (
+                <PostLink href={`/posts/${slug}/`} frontmatter={data} />
+              ),
+          )}
+        </ul>
+      </section>
+    )
+  }
 </MainLayout>

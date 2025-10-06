@@ -12,7 +12,7 @@ export const CONTENT_TYPES = {
 } as const;
 
 export type ContentType = keyof typeof CONTENT_TYPES;
-export type CollectionName = (typeof CONTENT_TYPES)[ContentType]["collection"];
+type CollectionName = (typeof CONTENT_TYPES)[ContentType]["collection"];
 
 export type AnyCollectionEntry =
   | CollectionEntry<"blog">

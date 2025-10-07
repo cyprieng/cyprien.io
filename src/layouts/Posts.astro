@@ -5,7 +5,6 @@
 
 import Pagination from "@components/Pagination.astro";
 import PostLink from "@components/PostLink.astro";
-import config from "@config";
 import MainLayout from "@layouts/MainLayout.astro";
 import {
   getTitleForContentType,
@@ -24,7 +23,7 @@ const { currentPage, totalPages, paginatedPosts, contentType } = Astro.props;
 const title = getTitleForContentType(contentType);
 ---
 
-<MainLayout title={`${title} | ${config.title}`}>
+<MainLayout title={title}>
   <ul>
     {
       paginatedPosts.map(({ data, slug }) => (

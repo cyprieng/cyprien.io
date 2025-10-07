@@ -4,11 +4,10 @@
  */
 
 import Terminal from "@components/Terminal.astro";
-import config from "@config";
 import MainLayout from "@layouts/MainLayout.astro";
 ---
 
-<MainLayout title={`404 Not Found | ${config.title}`}>
+<MainLayout title="404 Not Found">
   <section class="w-full">
     <Terminal command="cat /404">cat: /404: No such file or directory</Terminal>
   </section>

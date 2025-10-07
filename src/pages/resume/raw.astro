@@ -3,13 +3,12 @@
  * Raw resume page without header/footer for print or PDF export.
  */
 
-import config from "@config";
 import Layout from "@layouts/Layout.astro";
 
 import Resume from "@components/Resume.astro";
 ---
 
-<Layout title={`Résumé | ${config.title}`}>
+<Layout title="Résumé">
   <main id="main-content" class="mx-auto w-full max-w-[65rem] pt-10">
     <Resume />
   </main>

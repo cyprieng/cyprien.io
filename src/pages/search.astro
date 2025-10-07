@@ -3,12 +3,11 @@
  * Search page with Pagefind integration for site-wide content search.
  */
 
-import config from "@config";
 import "@pagefind/default-ui/css/ui.css";
 import MainLayout from "@layouts/MainLayout.astro";
 ---
 
-<MainLayout title={`Search | ${config.title}`}>
+<MainLayout title="Search">
   <div id="pagefind-search" transition:persist></div>
 </MainLayout>
 

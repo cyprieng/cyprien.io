@@ -4,7 +4,6 @@
  */
 
 import Tag from "@components/Tag.astro";
-import config from "@config";
 import MainLayout from "@layouts/MainLayout.astro";
 import getUniqueTags from "@utils/getUniqueTags";
 import { getCollection } from "astro:content";
@@ -17,7 +16,7 @@ const posts = [
 let tags = getUniqueTags(posts);
 ---
 
-<MainLayout title={`Tags | ${config.title}`}>
+<MainLayout title="Tags">
   <ul>
     {tags.map(({ tag }) => <Tag {tag} />)}
   </ul>

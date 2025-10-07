@@ -29,7 +29,9 @@ const {
 // Logo and link for projects
 let logo: string | undefined;
 let link: string | undefined;
+let isProjectType = false;
 if (isProject(post)) {
+  isProjectType = true;
   logo = post.data.logo;
   link = post.data.link;
 }
@@ -53,7 +55,11 @@ const layoutProps = {
 };
 ---
 
-<MainLayout {...layoutProps} backButton={true} activeNav="home">
+<MainLayout
+  {...layoutProps}
+  backButton={true}
+  activeNav={isProjectType ? "projects" : undefined}
+>
   <PostDatetime
     publicationDatetime={publicationDatetime}
     updateDatetime={updateDatetime}

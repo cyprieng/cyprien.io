@@ -23,7 +23,10 @@ const { currentPage, totalPages, paginatedPosts, contentType } = Astro.props;
 const title = getTitleForContentType(contentType);
 ---
 
-<MainLayout title={title}>
+<MainLayout
+  title={title}
+  activeNav={contentType === "projects" ? "projects" : undefined}
+>
   <ul>
     {
       paginatedPosts.map(({ data, slug }) => (

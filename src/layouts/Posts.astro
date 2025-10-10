@@ -5,6 +5,7 @@
 
 import Pagination from "@components/Pagination.astro";
 import PostLink from "@components/PostLink.astro";
+import { isProject } from "@content/config";
 import MainLayout from "@layouts/MainLayout.astro";
 import {
   getTitleForContentType,
@@ -29,16 +30,51 @@ const title = getTitleForContentType(contentType);
 >
   <ul>
     {
-      paginatedPosts.map(({ data, slug }) => (
-        <PostLink href={`/${contentType}/${slug}/`} frontmatter={data} />
-      ))
-    }
-  </ul>
+      paginatedPosts.map((post) => {
+        const project = isProject(post);
 
-  <Pagination
-    {currentPage}
-    {totalPages}
-    prevUrl={`/${contentType}${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-    nextUrl={`/${contentType}/${currentPage + 1}/`}
-  />
+        // Special layout for projects
+        if (project) {
+          return (
+            <div class="mt-10">
+              <div class="flex items-start gap-6">
+                <img
+                  src={post.data.logo}
+                  alt={post.data.title}
+                  class="h-16 w-16 rounded-xl object-cover"
+                />
+                <div class="flex-1">
+                  <div class="mb-2 flex items-center gap-2">
+                    <h2 class="text-xl font-semibold">{post.data.title}</h2>
+                  </div>
+                  <p class="mb-4">{post.data.description}</p>
+                  <a
+                    href={`/projects/${post.slug}/`}
+                    class="inline-flex items-center text-sm font-medium"
+                  >
+                    Read more →
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        }
+
+        // Default layout for blog posts
+        return (
+          <PostLink
+            href={`/${contentType}/${post.slug}/`}
+            frontmatter={post.data}
+          />
+        );
+      })
+    }
+
+    <Pagination
+      {currentPage}
+      {totalPages}
+      prevUrl={`/${contentType}${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
+      nextUrl={`/${contentType}/${currentPage + 1}/`}
+    />
+  </ul>
 </MainLayout>

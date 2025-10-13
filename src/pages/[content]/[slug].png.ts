@@ -3,7 +3,6 @@
  */
 
 import { generateOgImageForPost } from "@utils/generateOgImages";
-import { slugifyStr } from "@utils/slugify";
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { CONTENT_TYPES, type AnyCollectionEntry } from "@utils/contentConfig";
@@ -20,7 +19,7 @@ export async function getStaticPaths() {
     );
 
     const postPaths = posts.map((post) => ({
-      params: { content: contentType, slug: slugifyStr(post.data.title) },
+      params: { content: contentType, slug: post.slug },
       props: post,
     }));
 

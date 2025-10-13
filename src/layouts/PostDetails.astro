@@ -40,8 +40,8 @@ const { Content } = await post.render();
 
 const ogUrl = new URL(
   post.collection === "blog"
-    ? `/posts/${slugifyStr(title)}.png`
-    : `/projects/${slugifyStr(title)}.png`,
+    ? `/posts/${post.slug}.png`
+    : `/projects/${post.slug}.png`,
   Astro.url.origin,
 ).href;
 

@@ -5,11 +5,13 @@ title: My 6 months review of Kagi
 slug: kagi
 featured: false
 draft: false
-description: ""
+description: >-
+  After 6 months of using Kagi as my primary search engine, here's my honest
+  review of its search quality, AI features, and whether paying $10/month for
+  ad-free search is worth it.
 tags:
   - tech
 ---
-
 Searching the web is becoming increasingly unpleasant.
 
 ![Google results](assets/images/posts/2025/kagi/google.png)
@@ -142,3 +144,4 @@ Sadly, I encountered too many bugs and decided to give up for now. But I will de
 The price is pretty steep for a search engine, but I definitely encourage everyone to test it for a month to see if you find it valuable.
 
 I have tried to go back to Google as a way to save a few bucks, but the experience was too painful for me.
+

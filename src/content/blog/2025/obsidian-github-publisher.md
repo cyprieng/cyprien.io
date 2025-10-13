@@ -5,7 +5,10 @@ title: Easily publish your Obsidian notes through GitHub
 slug: obsidian-github-publisher
 featured: false
 draft: false
-description: ''
+description: >-
+  How I built a free automated publishing system for Obsidian notes using a
+  custom plugin, GitHub, Quartz, and Cloudflare Pages to seamlessly share notes
+  with selective access control.
 tags:
   - tech
   - notes

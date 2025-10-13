@@ -7,12 +7,12 @@ import Terminal from "@components/Terminal.astro";
 import MainLayout from "@layouts/MainLayout.astro";
 ---
 
-<MainLayout title="404 Not Found">
+<MainLayout>
   <section class="w-full">
     <Terminal command="cat /404">cat: /404: No such file or directory</Terminal>
   </section>
 
-  <div class="text-center">
+  <div class="mt-5 text-center">
     <a
       href="/"
       class="group my-6 text-lg underline decoration-dashed underline-offset-8"

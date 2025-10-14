@@ -28,6 +28,7 @@ const { title } = Astro.props;
           class="group scale-90 p-2 no-underline hover:rotate-6 sm:p-1"
         >
           <Fragment set:html={social.icon} />
+          <span class="sr-only">{social.name}</span>
         </a>
       ))
     }

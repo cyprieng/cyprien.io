@@ -6,6 +6,7 @@
 import config from "@config";
 import "@styles/global.css";
 import { ClientRouter } from "astro:transitions";
+import themeScript from "@utils/toggle-theme.js?raw";
 
 export interface Props {
   title?: string; // Page title
@@ -95,7 +96,7 @@ const socialImageURL = new URL(ogImage ?? "og.png", Astro.url.origin).href;
 
     <ClientRouter />
 
-    <script is:inline src="/toggle-theme.js"></script>
+    <script is:inline set:html={themeScript} />
 
     <!-- Analytics -->
     <script

@@ -78,7 +78,13 @@ const layoutProps = {
       logo ? (
         <>
           <div class="mx-auto text-center">
-            <Image src={logo} alt={title} width={200} height={200} />
+            <Image
+              src={logo}
+              alt={title}
+              width={200}
+              height={200}
+              fetchpriority="high"
+            />
             <h1>{title}</h1>
             <p>
               <b>{description}</b>

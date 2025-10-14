@@ -37,7 +37,7 @@ const title = getTitleForContentType(contentType);
         // Special layout for projects
         if (project) {
           return (
-            <div class="mt-10">
+            <li class="mt-10">
               <div class="flex items-start gap-6">
                 <Image
                   src={post.data.logo}
@@ -59,7 +59,7 @@ const title = getTitleForContentType(contentType);
                   </a>
                 </div>
               </div>
-            </div>
+            </li>
           );
         }
 

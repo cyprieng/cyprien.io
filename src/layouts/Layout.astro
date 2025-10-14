@@ -4,7 +4,7 @@
  */
 
 import config from "@config";
-import "@styles/global.css";
+import style from "@styles/global.css?inline";
 import { ClientRouter } from "astro:transitions";
 import themeScript from "@utils/toggle-theme.js?raw";
 
@@ -93,6 +93,8 @@ const socialImageURL = new URL(ogImage ?? "og.png", Astro.url.origin).href;
     <meta property="twitter:image" content={socialImageURL} />
 
     <meta name="theme-color" content="" />
+
+    <style is:global set:html={style}></style>
 
     <ClientRouter />
 

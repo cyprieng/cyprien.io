@@ -1,6 +1,5 @@
 ---
 publicationDatetime: 2025-07-08T11:36:00.000Z
-updateDatetime: 2025-07-08T11:36:00.000Z
 title: My 6 months review of Kagi
 slug: kagi
 featured: false

@@ -1,6 +1,5 @@
 ---
 publicationDatetime: 2024-09-26T06:12:00.000Z
-updateDatetime: 2024-09-26T06:12:00.000Z
 title: How I Built My Corner of the Web
 slug: colophon
 featured: false
@@ -9,7 +8,6 @@ description: A detailed look at the technologies and process behind creating thi
 tags:
   - development
 ---
-
 After years of wanting to build my blog, here it is finally
 
 The first post of this blog will be a quick description of how I built it.
@@ -103,3 +101,4 @@ Your feedback is invaluable! If you notice any issues or have suggestions, you c
 
 1. File an issue on [GitHub](https://github.com/cyprieng/cyprien.io/issues/new).
 2. Contact me directly via email (link in the footer).
+

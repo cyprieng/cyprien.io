@@ -1,6 +1,5 @@
 ---
 publicationDatetime: 2025-08-28T00:00:00.000Z
-updateDatetime: 2025-08-28T00:00:00.000Z
 title: Easily publish your Obsidian notes through GitHub
 slug: obsidian-github-publisher
 featured: false

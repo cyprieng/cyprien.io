@@ -11,6 +11,7 @@ import Layout from "./Layout.astro";
 
 interface PageProps {
   title?: string; // Page title
+  hideTitle?: boolean; // Hide the title on the page
   description?: string; // Page description
   activeNav?: "projects" | "about" | "search" | "now" | "home" | "resume"; // Active navigation item
   backButton?: boolean; // Show a back button at the top of the page
@@ -35,8 +36,8 @@ const options = {
 ---
 
 <Layout
-  title={options.title ? `${options.title} | ${config.title}` : config.title}
   {...options}
+  title={options.title ? `${options.title} | ${config.title}` : config.title}
 >
   <Header activeNav={options.activeNav} />
   <main id="main-content">
@@ -60,7 +61,7 @@ const options = {
         )
       }
       {
-        options.title && (
+        options.title && !options.hideTitle && (
           <h1 class="text-2xl tracking-wider sm:text-3xl">{options.title}</h1>
         )
       }

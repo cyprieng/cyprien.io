@@ -3,6 +3,7 @@
  * Layout for displaying paginated posts or projects.
  */
 
+import { Image } from "astro:assets";
 import Pagination from "@components/Pagination.astro";
 import PostLink from "@components/PostLink.astro";
 import { isProject } from "@content/config";
@@ -38,10 +39,12 @@ const title = getTitleForContentType(contentType);
           return (
             <div class="mt-10">
               <div class="flex items-start gap-6">
-                <img
+                <Image
                   src={post.data.logo}
                   alt={post.data.title}
                   class="h-16 w-16 rounded-xl object-cover"
+                  width={64}
+                  height={64}
                 />
                 <div class="flex-1">
                   <div class="mb-2 flex items-center gap-2">

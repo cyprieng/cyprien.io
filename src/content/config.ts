@@ -21,11 +21,12 @@ const blog = defineCollection({
 // Projects collection
 const projects = defineCollection({
   type: "content",
-  schema: z.object({
-    ...baseSchema,
-    logo: z.string(), // Project logo
-    link: z.string().optional(), // Project link
-  }),
+  schema: ({ image }) =>
+    z.object({
+      ...baseSchema,
+      logo: image(), // Project logo (optimized image)
+      link: z.string().optional(), // Project link
+    }),
 });
 
 /**
@@ -37,7 +38,7 @@ const projects = defineCollection({
 export function isProject(
   value: unknown,
 ): value is CollectionEntry<"projects"> {
-  return typeof (value as CollectionEntry<"projects">)?.data.logo === "string";
+  return (value as CollectionEntry<"projects">)?.data.logo !== undefined;
 }
 
 export const collections = { blog, projects };

@@ -3,6 +3,7 @@
  * Layout for displaying individual post or project details with comments and sharing.
  */
 
+import { Image } from "astro:assets";
 import MainLayout from "@layouts/MainLayout.astro";
 import Tag from "@components/Tag.astro";
 import { slugifyStr } from "@utils/slugify";
@@ -10,6 +11,7 @@ import ShareLinks from "@components/ShareLinks.astro";
 import PostDatetime from "@components/PostDatetime.astro";
 import { isProject } from "@content/config";
 import type { AnyCollectionEntry } from "@utils/contentConfig";
+import type { ImageMetadata } from "astro";
 
 export interface Props {
   post: AnyCollectionEntry; // Post or project entry to display
@@ -27,7 +29,7 @@ const {
 } = post.data;
 
 // Logo and link for projects
-let logo: string | undefined;
+let logo: ImageMetadata | undefined;
 let link: string | undefined;
 let isProjectType = false;
 if (isProject(post)) {
@@ -76,7 +78,7 @@ const layoutProps = {
       logo ? (
         <>
           <div class="mx-auto text-center">
-            <img src={logo} alt={title} width="200" height="200" />
+            <Image src={logo} alt={title} width={200} height={200} />
             <h1>{title}</h1>
             <p>
               <b>{description}</b>

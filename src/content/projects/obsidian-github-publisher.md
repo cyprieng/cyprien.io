@@ -5,7 +5,7 @@ title: Obsidian GitHub Publisher
 slug: obsidian-github-publisher
 featured: false
 description: Push selected notes and folders from Obsidian directly to a GitHub repository
-logo: /assets/images/obsidian.svg
+logo: ../../assets/images/projects/obsidian.svg
 link: 'https://github.com/cyprieng/obsidian-github-publisher'
 tags:
   - notes

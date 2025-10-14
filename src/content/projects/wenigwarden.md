@@ -5,7 +5,7 @@ title: Wenigwarden
 slug: wenigwarden
 featured: false
 description: Light macos Bitwarden client in the menu bar
-logo: /assets/images/wenigwarden.png
+logo: ../../assets/images/projects/wenigwarden.png
 link: "https://github.com/cyprieng/wenigwarden"
 tags:
   - swift

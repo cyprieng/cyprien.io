@@ -1,0 +1,80 @@
+---
+layout: ../layouts/MainLayout.astro
+title: About
+activeNav: about
+prose: true
+---
+
+import { Image } from "astro:assets";
+import photo from "../assets/images/resume/photo.jpeg";
+import packardBell from "../assets/images/about/packard_bell.jpeg";
+import ThemeImage from "@components/ThemeImage";
+import LastfmWidget from "@components/LastfmWidget";
+
+<div class="mt-15">
+  <Image src={photo} alt="me" class="float-left m-5 h-40 w-40 rounded-lg" />
+</div>
+
+## Hi, I'm Cyprien Guillemot 👋
+
+I'm a senior software engineer working and living in Montpellier, France 🇫🇷.
+
+I've been passionate about tech and software development from a young age.
+When I was around 10, I remember tinkering with Microsoft Access to build basic apps on a computer that looked like this:
+
+<Image alt="My first computer" src={packardBell} height="300" />
+
+I'm primarily interested in backend development, but I like every part of the stack, from front development to infrastructure.
+
+Here's a list of technologies I frequently use:
+
+- ![TypeScript logo](assets/icons/typescript.svg) Javascript / Typescript
+- ![React logo](assets/icons/react.svg) React
+- ![Vue.js logo](assets/icons/vuejs.svg) Vuejs
+- ![Python logo](assets/icons/python.svg) Python
+- ![PHP logo](assets/icons/php.svg) PHP
+- ![Go logo](assets/icons/gopher.svg) Go
+- ![Swift logo](assets/icons/swift.svg) Swift
+- ![PostgreSQL logo](assets/icons/postgresql.svg) Postgres
+- ![ClickHouse logo](assets/icons/clickhouse.svg) Clickhouse
+- ![MongoDB logo](assets/icons/mongodb.svg) MongoDB
+- ![Kubernetes logo](assets/icons/kubernetes.svg) Kubernetes
+- ![Azure logo](assets/icons/azure.svg) Azure
+- ![AWS logo](assets/icons/aws.svg) AWS
+
+I love [Open Source](https://github.com/cyprieng), I'm always working on [projects](/projects/) on the side of my day job.
+
+<a href="https://github.com/cyprieng/github-breakout">
+  <ThemeImage
+    client:load
+    lightSrc="https://raw.githubusercontent.com/cyprieng/cyprieng/refs/heads/github-breakout/images/breakout-light.svg"
+    darkSrc="https://raw.githubusercontent.com/cyprieng/cyprieng/refs/heads/github-breakout/images/breakout-dark.svg"
+    alt="Github contributions"
+    height="242px"
+    width="822px"
+  />
+</a>
+
+Outside of tech, here are my other passions:
+
+- 🏃‍♂️ Running: from 10km to marathon
+- 🏊🚴🏃‍♂️ Currently training for my first triathlon
+- 🥾 Hiking and especially the bivouac in the middle of nowhere
+- 📚 Reading fiction and non-fiction books
+
+I'm also really interested in all topics around sports, health and productivity.
+
+Globally, I really love to learn in pretty much any domain.
+
+## Music
+
+Here are my top artists directly pulled from my Last.fm account.
+As you can see, it's mainly metal 🤘.
+
+<LastfmWidget
+  client:load
+  userId="Gunners91"
+  apiKey="ca8768077c99fac0d3c427b0ae3847a3"
+/>
+
+Feel free to reach out to me at [hello@cyprien.io](mailto:hello@cyprien.io). I respond to everyone!

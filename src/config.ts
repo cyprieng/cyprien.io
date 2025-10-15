@@ -28,9 +28,9 @@ interface Config {
 // Configuration object
 const config: Config = {
   hostname: "https://www.cyprien.io/",
-  author: "Cyprien",
+  author: "Cyprien Guillemot",
   description: "Personal site of a software engineer from Montpellier, France",
-  title: "Cyprien",
+  title: "Cyprien Guillemot",
   locale: "en-US",
   socials: [
     {

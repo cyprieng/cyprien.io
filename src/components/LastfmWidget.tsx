@@ -8,7 +8,7 @@ interface Artist {
   mbid: string; // MusicBrainz ID - unique identifier for the artist
   url: string; // Last.fm profile URL for the artist
   playcount: string; // Total number of plays for this artist
-  wikidataImage?: string | null; // URL to artist image from Wikidata/Wikimedia Commons
+  image?: string | null; // URL to artist image
   "@attr": {
     rank: string; // Artist's rank in the top artists list
   };
@@ -23,93 +23,32 @@ interface LastFmWidgetProps {
 }
 
 /**
- * Fetches an artist's image from Wikidata/Wikimedia Commons
+ * Generates a filename slug from an artist name
  *
  * @param artistName - Name of the artist
- * @param mbid - MusicBrainz ID of the artist (optional)
- * @returns URL to the artist's image, or null if not found
+ * @returns Slugified filename
  */
-async function fetchArtistImage(
-  artistName: string,
-  mbid: string,
-): Promise<string | null> {
-  try {
-    let wikidataId = null;
+export function slugifyArtistName(artistName: string): string {
+  return artistName
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
-    // Strategy 1: Use MusicBrainz ID to get Wikidata ID (most reliable)
-    if (mbid) {
-      const mbResponse = await fetch(
-        `https://musicbrainz.org/ws/2/artist/${mbid}?fmt=json&inc=url-rels`,
-      );
-
-      if (mbResponse.ok) {
-        const mbData = await mbResponse.json();
-
-        // Look for the Wikidata relation in the artist's URL relationships
-        const wikidataRel = mbData.relations?.find(
-          (rel: { type: string; url: { resource: string } }) =>
-            rel.type === "wikidata",
-        );
-
-        if (wikidataRel) {
-          // Extract the Wikidata ID from the URL (e.g., "Q1234" from "https://www.wikidata.org/wiki/Q1234")
-          wikidataId = wikidataRel.url.resource.split("/").pop();
-        }
-      }
-    }
-
-    // Strategy 2: Search Wikidata by artist name (fallback when no mbid or mbid lookup fails)
-    if (!wikidataId) {
-      const searchResponse = await fetch(
-        `https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(artistName)}&language=en&format=json&origin=*`,
-      );
-
-      if (!searchResponse.ok) return null;
-
-      const searchData = await searchResponse.json();
-      if (!searchData.search || searchData.search.length === 0) return null;
-
-      // Use the first search result's Wikidata ID
-      wikidataId = searchData.search[0].id;
-    }
-
-    // Now that we have a Wikidata ID, fetch the entity's claims (properties)
-    const response = await fetch(
-      `https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${wikidataId}&props=claims&format=json&origin=*`,
-    );
-
-    if (!response.ok) return null;
-
-    const data = await response.json();
-    const entity = data.entities[wikidataId];
-
-    // Priority 1: Try to get the logo image (P154) - cleaner for brands/bands
-    const logoClaim = entity?.claims?.P154?.[0];
-    const logoFilename = logoClaim?.mainsnak?.datavalue?.value;
-
-    if (logoFilename) {
-      // Return the Wikimedia Commons image URL with 500px width
-      return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(logoFilename)}?width=500`;
-    }
-
-    // Priority 2: Fallback to regular image property (P18) - photos/portraits
-    const imageClaim = entity?.claims?.P18?.[0];
-    const imageFilename = imageClaim?.mainsnak?.datavalue?.value;
-
-    if (imageFilename) {
-      // Return the Wikimedia Commons image URL with 500px width
-      return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(imageFilename)}?width=500`;
-    }
-  } catch {
-    return null;
-  }
-
-  return null;
+/**
+ * Gets the local image URL for an artist
+ * All images are stored as JPG in public/images/music/ directory
+ *
+ * @param artistName - Name of the artist
+ * @returns Local image URL
+ */
+function getLocalImageUrl(artistName: string): string {
+  const slug = slugifyArtistName(artistName);
+  return `/assets/images/about/music/${slug}.jpg`;
 }
 
 /**
  * Widget component that displays a user's top artists from Last.fm
- * with artist images fetched from Wikidata/Wikimedia Commons
  *
  * @param props - Component props
  * @returns React component displaying top artists
@@ -121,8 +60,7 @@ export default function LastFmWidget({ userId, apiKey }: LastFmWidgetProps) {
 
   useEffect(() => {
     /**
-     * Fetches the user's top artists from Last.fm and enriches them with images
-     * from Wikidata/Wikimedia Commons
+     * Fetches the user's top artists from Last.fm and uses local images
      */
     const fetchTopArtists = async () => {
       try {
@@ -138,20 +76,13 @@ export default function LastFmWidget({ userId, apiKey }: LastFmWidgetProps) {
         const data = await response.json();
         const artistsData = data.topartists.artist;
 
-        // Enrich each artist with their image from Wikidata
-        // All image fetches happen in parallel for better performance
-        const enrichedArtists = await Promise.all(
-          artistsData.map(async (artist: Artist) => {
-            const wikidataImage = await fetchArtistImage(
-              artist.name,
-              artist.mbid,
-            );
-            return {
-              ...artist,
-              wikidataImage,
-            };
-          }),
-        );
+        // Enrich each artist with their local image
+        const enrichedArtists = artistsData.map((artist: Artist) => {
+          return {
+            ...artist,
+            image: getLocalImageUrl(artist.name),
+          };
+        });
 
         setArtists(enrichedArtists);
         setLoading(false);
@@ -184,7 +115,7 @@ export default function LastFmWidget({ userId, apiKey }: LastFmWidgetProps) {
   return (
     <div className="space-y-4">
       {artists.map((artist) => {
-        const imageUrl = artist.wikidataImage;
+        const imageUrl = artist.image;
         const hasImage = imageUrl && imageUrl.trim() !== "";
 
         return (

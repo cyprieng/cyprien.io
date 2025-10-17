@@ -25,17 +25,19 @@ const { command } = Astro.props;
   >
   </div>
 </div>
+
 <div
-  class="mx-auto box-border w-full cursor-text rounded-b-[5px] bg-[#151515] p-[20px]"
+  class="mx-auto box-border w-full cursor-text rounded-b-[5px] bg-[#000] p-[20px]"
 >
-  <p class="text-left font-mono text-base whitespace-normal text-[#9cd9f0]">
+  <p class="text-left font-mono text-base whitespace-normal text-[#8caaee]">
     $ {command}
   </p>
-  <p class="text-left font-mono text-base whitespace-normal text-[#cdee69]">
+  <p class="text-left font-mono text-base whitespace-normal text-[#c6d0f5]">
     <slot />
   </p>
-  <p class="text-left font-mono text-base whitespace-normal text-[#9cd9f0]">
-    $ <span class="animate-[blink_1s_0s_infinite_forwards] font-bold text-white"
+  <p class="text-left font-mono text-base whitespace-normal text-[#8caaee]">
+    $ <span
+      class="animate-[blink_1s_0s_infinite_forwards] font-bold text-[#c6d0f5]"
       >_</span
     >
   </p>

@@ -17,6 +17,7 @@ export async function GET() {
     title: config.title,
     description: config.description,
     site: config.hostname,
+    stylesheet: "/pretty-feed-v3.xsl",
     items: sortedPosts.map(({ data, slug, body }) => ({
       link: `posts/${slug}/`,
       title: data.title,

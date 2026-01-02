@@ -14,5 +14,4 @@ _Updated October 31st, 2025_
 - Built a new completely useless small project: [github-breakout](/projects/github-breakout/).
 - Falling back in love with [Obsidian](https://obsidian.md).
 - Exploring Stoic philosophy.
-- 🏊🚴🏃‍♂️ Training for triathlon.
 

@@ -4,7 +4,7 @@ title: Uses
 activeNav: uses
 prose: true
 ---
-_Updated August 28th, 2025_
+_Updated January 02nd, 2026_
 
 ## **Hardware**
 
@@ -14,6 +14,7 @@ _Updated August 28th, 2025_
 - [Kensington SlimBlade Pro](https://www.kensington.com/p/products/electronic-control-solutions/trackball-products/slimblade-pro-trackball/) – My first trackball ever and I love it.
 - [Hot Dox v2](https://alpacakeyboards.com/hot-dox-v2/) – My first split keyboard, and now I understand why people love them.
 - [Kindle Paperwhite](https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB) – My go-to device for reading.
+- [Boox Palma 2](https://shop.boox.com/products/palma2) – Awesome e-ink device for reading on the go.
 - [Belkin USB-C Hub](https://www.belkin.com/p/universal-usb-c-triple-display-dock/P-INC007.html) – One of the few hubs that allows me to connect three external screens to my MacBook.
 - [Apple TV 4K](https://www.apple.com/apple-tv-4k/) – Perfect for streaming and entertainment.
 - [Garmin Fenix 7 Pro Sapphire Solar](https://www.garmin.com/en-US/p/866191/pn/010-02777-11/) – Awesome sport watch that I wear 24/7.
